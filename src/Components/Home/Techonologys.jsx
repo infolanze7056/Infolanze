@@ -47,7 +47,7 @@ function Techonologys() {
                 </div>
             <div>
                 <div className='lg:py-5 md:py-5'>
-                    <div className="flex flex-wrap justify-center gap-12">
+                    <div className="flex flex-wrap justify-center lg:gap-16 md:gap-12 gap-12">
                         {items.map((elem, index) => {
                         const { Name, img } = elem;
                         return (
