@@ -192,7 +192,6 @@ function ContactUS() {
                   <button
                     className="text-white bg-[rgb(25,115,154)] hover:bg-[rgb(25,83,154)] font-semibold rounded-md text-sm px-6 py-3 mt-4 block"
                     type="submit"
-                    // value="Send"
                     onClick={handleSubmit}
                   >
                     Get Started

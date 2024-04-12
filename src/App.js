@@ -7,12 +7,14 @@ import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Service from "./Pages/Service";
 import Career from "./Pages/Career";
+import Free from "./Components/Free";
 
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Header />
+        <Free />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

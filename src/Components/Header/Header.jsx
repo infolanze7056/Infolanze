@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { FaBars } from "react-icons/fa6";
 import { AiOutlineClose } from "react-icons/ai";
 import "./Header.css";
@@ -9,37 +9,65 @@ function Header() {
   const [isActive, setIsActive] = useState(1);
   const [isOpen, setIsOpen] = useState(true);
 
+  const location = useLocation();
+
+  useEffect(() => {
+
+    // Reset isActive based on location pathname
+    switch (location.pathname) {
+      case "/":
+        setIsActive(1);
+        break;
+      case "/about":
+        setIsActive(2);
+        break;
+      case "/contact":
+        setIsActive(3);
+        break;
+      case "/service":
+        setIsActive(4);
+        break;
+      case "/career":
+        setIsActive(5);
+        break;
+      default:
+        setIsActive(1); // Default to Home
+        break;
+    }
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   const handleNavSelected = (e) => {
     setIsActive(e.target.id);
     setIsOpen(true);
   };
 
-  const [isSticky, setIsSticky] = useState(false);
+  // const [isSticky, setIsSticky] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 70) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY > 70) {
+  //       setIsSticky(true);
+  //     } else {
+  //       setIsSticky(false);
+  //     }
+  //   };
 
-    window.addEventListener('scroll', handleScroll);
+  //   window.addEventListener('scroll', handleScroll);
 
-    // Clean up the event listener
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  //   // Clean up the event listener
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
 
   return (
-    <div className={isSticky ? 'Header-p1 Sticky-p1' : 'Header-p1'}>
+    <div className="Header-p1 fixed w-full z-50">
     <div className="shadow-xl w-full bg-[#25aae1] py-3">
       <div className="lg:px-16 md:px-7 px-5 lg:flex justify-between items-center">
         <div className="z-40">
           <span>
-            <img className="w-48" src={Logo} alt="nishant" />
+            <img className="w-48 z-400" src={Logo} alt="nishant" />
           </span>
         </div>
 
@@ -51,10 +79,10 @@ function Header() {
         </div>
 
         <nav
-          className={`nav-menu lg:flex lg:pb-0 lg:py-0 md:py-7 py-7 lg:items-center text-base absolute lg:static bg-[#25aae1] lg:z-auto z-30 right-0 w-full lg:w-auto md:pl-0 transition-all duration-500 ease-in 
+          className={`nav-menu lg:flex lg:pb-0 lg:py-0 md:py-7 py-7 lg:items-center text-base absolute lg:static bg-[#25aae1] z-30 right-0 w-full lg:w-auto md:pl-0 transition-all duration-500 ease-in 
           ${isOpen ? "top-[-600px]" : "top-[65px]"}` }
         >
-          <div className="bg-[#25aae1] lg:flex gap-1 text-start lg:ps-0 md:ps-5 ps-3 font-family z-40">
+          <div className="bg-[#25aae1] lg:flex gap-1 text-start lg:ps-0 md:ps-5 ps-3 font-family z-30">
             <div className="lg:p-0 p-1.5">
               <NavLink
                 to="/"
