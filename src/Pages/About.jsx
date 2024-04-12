@@ -1,8 +1,11 @@
 import React from 'react'
+import AboutSection from '../Components/About/AboutSection'
 
 function About() {
   return (
-    <div>About</div>
+    <div>
+      <AboutSection />
+    </div>
   )
 }
 
