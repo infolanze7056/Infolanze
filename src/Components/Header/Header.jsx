@@ -147,7 +147,7 @@ function Header() {
             {isDropdownVisible && (
               <div onMouseEnter={() => setIsDropdownVisible(true)}
                     onMouseLeave={() => setIsDropdownVisible(false)} 
-                    className="absolute top-full right-0 w-36 pt-2 z-10">
+                    className="absolute top-full left-0 w-36 pt-2 z-10">
                     <div className="bg-white border border-gray-200 rounded shadow-lg">
                 {/* Dropdown content goes here */}
                 <NavLink

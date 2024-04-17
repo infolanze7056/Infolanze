@@ -4,10 +4,10 @@ import { RiArrowRightDoubleFill } from 'react-icons/ri';
 function ServiceData({ imageUrl, title, description, listItems }) {
   return (
     <div className='font-family'>
-      <div className='lg:px-40 md:px-20 px-5 py-20'>
+      <div className='lg:px-40 md:px-20 px-5 py-10 lg:py-16'>
         <div className='grid lg:grid-cols-2 grid-cols-1 items-center'>
           <div className=''><img className='mx-auto' src={imageUrl} alt="web" /></div>
-          <div className='lg:ps-10'>
+          <div className='lg:ps-10 lg:pt-0 pt-8'>
             <div>
               <div className='text-4xl pb-2 font-semibold'>{title}</div>
               <div>{description}</div>
