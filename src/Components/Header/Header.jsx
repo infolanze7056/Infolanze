@@ -147,7 +147,7 @@ function Header() {
             {isDropdownVisible && (
               <div onMouseEnter={() => setIsDropdownVisible(true)}
                     onMouseLeave={() => setIsDropdownVisible(false)} 
-                    className="absolute top-full left-0 w-36 pt-2 z-10">
+                    className="absolute top-full left-0 w-36 pt-2 z-10 lg:hidden md:hidden block ">
                     <div className="bg-white border border-gray-200 rounded shadow-lg">
                 {/* Dropdown content goes here */}
                 <NavLink
@@ -156,6 +156,50 @@ function Header() {
                   className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
                 >
                   UI-UX
+                </NavLink>
+                <NavLink
+                  onClick={(e) => handleNavSelected(e)}
+                  to="/service/web-development"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  Web
+                </NavLink>
+                <NavLink
+                  onClick={(e) => handleNavSelected(e)}
+                  to="/service/app-development"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  App
+                </NavLink>
+                <NavLink
+                  onClick={(e) => handleNavSelected(e)}
+                  to="/service/blockchain"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  Blockchain
+                </NavLink>
+                <NavLink
+                  onClick={(e) => handleNavSelected(e)}
+                  to="/service/seo"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  SEO
+                </NavLink>
+                </div>
+              </div>
+            )}
+            {isDropdownVisible && (
+              <div onMouseEnter={() => setIsDropdownVisible(true)}
+                    onMouseLeave={() => setIsDropdownVisible(false)} 
+                    className="absolute top-full left-0 w-36 pt-2 z-10 lg:block hidden">
+                    <div className="bg-white border border-gray-200 rounded shadow-lg">
+                {/* Dropdown content goes here */}
+                <NavLink
+                  onClick={(e) => handleNavSelected(e)}
+                  to="/service/ui-ux"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  UI-UX 1
                 </NavLink>
                 <NavLink
                   onClick={(e) => handleNavSelected(e)}
