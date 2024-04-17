@@ -4,6 +4,10 @@ import ServiceContent from "./ServiceComponent/ServiceContent";
 import ServiceData from "./ServiceComponent/ServiceData";
 import ServiceTags from "./ServiceComponent/ServiceTags";
 import ServiceBredcumb from "./ServiceComponent/ServiceBredcumb";
+import img1 from "../../Images/app.png"
+import img2 from "../../Images/3543932.jpg"
+import img3 from "../../Images/4799410.jpg"
+import img4 from "../../Images/4851443.jpg"
 
 function AppDevelopment() {
   return (
@@ -25,7 +29,7 @@ function AppDevelopment() {
         ]}
       />
       <ServiceContent
-        imageUrl="../../Images/5779073.jpg"
+        imageUrl={img1}
         title="iOS Development"
         description="Webtual stands high as an IOS Development Company taking bold steps from designing pixel-perfect designs to intuitive backends, to fill each dimension of the modern IOS app development realm. For the quality that IOS devices have, our IOS development services are bound to set the bar high with a product that is bold, intuitive, timely, and innovative."
         listItems={[
@@ -52,7 +56,7 @@ function AppDevelopment() {
         ]}
       />
       <ServiceData
-        imageUrl="../../../Images/5779073.jpg"
+        imageUrl={img2}
         title="Android Development"
         description="Webtual is one of the leading Android app development company providing services in all countries. We boast of delivering the best android application loaded with user-friendly features capable of growing your business with the latest niche technology at an optimum cost."
         listItems={[
@@ -79,7 +83,7 @@ function AppDevelopment() {
         ]}
       />
       <ServiceContent
-        imageUrl="../../../Images/5779073.jpg"
+        imageUrl={img3}
         title="Flutter Development"
         description="Google’s Flutter is the fastest growing cross-platform app development framework that can position your business to the top in your industry for less cost and with a native experience."
         listItems={[
@@ -106,7 +110,7 @@ function AppDevelopment() {
         ]}
       />
       <ServiceData
-        imageUrl="../../../Images/5779073.jpg"
+        imageUrl={img4}
         title="React Native"
         description="Driven by desire, we deliver and delight the users with our React Native development services. Keeping the Hybrid app development commitment we harness the power of React Native and deliver an application with perfect customer experience, quick to market, and compatible on native platforms."
         listItems={[

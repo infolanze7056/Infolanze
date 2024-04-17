@@ -15,7 +15,7 @@ function ServiceMain() {
     <ServiceBredcumb
         serviceName="Service"
       />
-        <div className='lg:px-28 md:px-20 px-5 py-10 servicemain'>
+        <div className='lg:px-28 md:px-20 px-5 lg:py-10 md:pb-10 pb-10 servicemain'>
             <div className='text-center'>
                 <div className='w-max bg-[--main-color] text-sm p-2 rounded-full px-5 text-[--second-color] mx-auto'>Our Solutions</div>
                 <div className='text-3xl font-semibold pt-3 pb-2'>Our Services</div>

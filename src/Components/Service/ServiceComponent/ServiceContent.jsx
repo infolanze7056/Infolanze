@@ -7,7 +7,7 @@ function ServiceContent({ imageUrl, title, description, listItems }) {
       <div className='lg:px-40 md:px-20 px-5 py-20'>
         <div className='grid lg:grid-cols-2 grid-cols-1 items-center'>
           <div className='lg:order-2'><img className='mx-auto' src={imageUrl} alt="web" /></div>
-          <div className='lg:order-1 pe-10'>
+          <div className='lg:order-1 lg:pe-10'>
             <div>
               <div className='text-4xl pb-2 font-semibold'>{title}</div>
               <div>{description}</div>

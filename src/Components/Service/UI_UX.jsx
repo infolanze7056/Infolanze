@@ -4,6 +4,11 @@ import ServiceContent from "./ServiceComponent/ServiceContent";
 import ServiceData from "./ServiceComponent/ServiceData";
 import ServiceTags from "./ServiceComponent/ServiceTags";
 import ServiceBredcumb from "./ServiceComponent/ServiceBredcumb";
+import img1 from "../../Images/2112.i301.031.S.m004.c13.UI and UX designers concepts isometric composition.jpg"
+import img2 from "../../Images/2112.i301.030.S.m004.c13.UI and UX designers concepts isometric composition.jpg"
+import img3 from "../../Images/19197277.jpg"
+import img4 from "../../Images/19197593.jpg"
+import img5 from "../../Images/32238.jpg"
 
 function ServiceSection() {
   return (
@@ -26,7 +31,7 @@ function ServiceSection() {
         ]}
       />
       <ServiceContent
-        imageUrl="../../Images/5779073.jpg"
+        imageUrl={img1}
         title="Website Designing"
         description="While providing the option of unique web design, we also suggest continuous design support services that enable non-stop evolution of your ever-growing web solution. Our company follows a human-centered approach to design. This means we care about the end customer and strive to deliver products that people truly enjoy using."
         listItems={[
@@ -48,7 +53,7 @@ function ServiceSection() {
         ]}
       />
       <ServiceData
-        imageUrl="../../../Images/5779073.jpg"
+        imageUrl={img2}
         title="Mobile App Design"
         description="Number 1 reason for the success of any mobile app is its ability to keep users engaged. Our team of creative mobile app designers guarantees a mobile app design that inspires and brings great engagement. Every interaction with a user transforms into an opportunity to engage them in a substantial way."
         listItems={[
@@ -70,7 +75,7 @@ function ServiceSection() {
         ]}
       />
       <ServiceContent
-        imageUrl="../../../Images/5779073.jpg"
+        imageUrl={img3}
         title="Material Design"
         description="Material Design was introduced in 2014 by Google. The polished design system is backed up by science and technology to create websites and applications. Material Design has a variety of themes, iconography, typography, and templates to serve all your web design requirements."
         listItems={[
@@ -92,7 +97,7 @@ function ServiceSection() {
         ]}
       />
       <ServiceData
-        imageUrl="../../../Images/5779073.jpg"
+        imageUrl={img4}
         title="Product Design"
         description="Product design includes building interactive and intuitive experiences with the end-user in mind and deliver easy to use products. We thoroughly conduct user testing and optimize our code to enhance performance and security. Our experienced UI and UX developers implement the most effective strategies, wireframing and prototyping your product with consumer backed research."
         listItems={[
@@ -109,7 +114,7 @@ function ServiceSection() {
         ]}
       />
       <ServiceContent
-        imageUrl="../../../Images/5779073.jpg"
+        imageUrl={img5}
         title="Logo Design and Branding"
         description="logo designing is its true identity to represent among a crowd of millions of competitors. We create this identity sophisticatedly. Logo designing is meant for creating visual images, lines and other objects for a company or organization to represents its identity."
         listItems={[

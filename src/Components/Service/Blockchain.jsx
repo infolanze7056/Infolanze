@@ -2,7 +2,7 @@ import React from 'react'
 import ServiceHero from './ServiceComponent/ServiceHero';
 import ServiceTags from './ServiceComponent/ServiceTags';
 import ServiceContent from './ServiceComponent/ServiceContent';
-import img from "../../Images/5779073.jpg"
+import img from "../../Images/ai-content-creation-generated-art-music-creative-writing-flowchart-isometric-vector-illustration_1284-82518.jpg"
 import ServiceBredcumb from './ServiceComponent/ServiceBredcumb';
 
 function Blockchain() {

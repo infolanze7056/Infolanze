@@ -2,7 +2,7 @@ import React from "react";
 
 function ServiceTags({ tags }) {
   return (
-    <div className="px-4 py-20">
+    <div className="px-4 lg:py-20 md:py-16 py-12">
       <div className="flex flex-wrap lg:gap-10 gap-5 justify-center">
         {tags.map((tag, index) => (
           <div key={index} className="flex items-center border hover:border-blue-400 p-5 shadow-md hover:shadow-lg rounded-md w-64 justify-center text-center hover:cursor-pointer">

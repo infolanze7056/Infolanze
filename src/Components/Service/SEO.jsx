@@ -4,6 +4,9 @@ import ServiceTags from './ServiceComponent/ServiceTags';
 import ServiceSEO from './ServiceComponent/ServiceSEO';
 import ServiceSEO2 from './ServiceComponent/ServiceSEO2';
 import ServiceBredcumb from './ServiceComponent/ServiceBredcumb';
+import img1 from "../../Images/5287968.jpg"
+import img2 from "../../Images/4950546.jpg"
+import img3 from "../../Images/3675555.jpg"
 
 function SEO() {
   return (
@@ -24,7 +27,7 @@ function SEO() {
         ]}
       />
       <ServiceSEO
-        imageUrl="../../Images/5779073.jpg"
+        imageUrl={img1}
         title="Search Engine Optimization"
         description="Elevate your online presence with our comprehensive IT solutions. Our expert team specializes in optimizing websites, increasing visibility, and driving targeted traffic. Let us boost your business with tailored SEO strategies designed to maximize your digital success."
         listItems={[
@@ -46,7 +49,7 @@ function SEO() {
         ]}
       />
       <ServiceSEO2
-        imageUrl="../../Images/5779073.jpg"
+        imageUrl={img2}
         title="Digital Marketing"
         description="This is where our digital marketing company with years of experience behind their name enters and does what we know best by developing sophisticated online marketing strategies tailored to your business."
         listItems={[
@@ -68,7 +71,7 @@ function SEO() {
         ]}
       />
       <ServiceSEO
-        imageUrl="../../Images/5779073.jpg"
+        imageUrl={img3}
         title="Email marketing"
         description="Email marketing is an excellent form of promotion. This is the most direct and simple track to reach client, However, with the bulky number of people and businesses using email marketing, it can be hard to discriminate."
         listItems={[

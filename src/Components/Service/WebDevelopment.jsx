@@ -4,6 +4,13 @@ import ServiceContent from "./ServiceComponent/ServiceContent";
 import ServiceData from "./ServiceComponent/ServiceData";
 import ServiceTags from "./ServiceComponent/ServiceTags";
 import ServiceBredcumb from "./ServiceComponent/ServiceBredcumb";
+import img1 from "../../Images/1907.i109.039.p.m004.c30.programming development isometric icons-02.jpg"
+import img2 from "../../Images/4799410.jpg"
+import img3 from "../../Images/19198999.jpg"
+import img4 from "../../Images/Wavy_Tech-09_Single-08.jpg"
+import img5 from "../../Images/5395379.jpg"
+import img6 from "../../Images/3099563.jpg"
+import img7 from "../../Images/19362653.jpg"
 
 function WebDevelopment() {
   return (
@@ -26,7 +33,7 @@ function WebDevelopment() {
         ]}
       />
       <ServiceContent
-        imageUrl="../../Images/5779073.jpg"
+        imageUrl={img1}
         title="ASP .Net"
         description="ASP.NET Core is a cross-platform, high-performance, open-source framework for building modern, cloud-based, Internet-connected applications. Our ASP.NET core development company can build web apps and services."
         listItems={[
@@ -38,7 +45,7 @@ function WebDevelopment() {
         ]}
       />
       <ServiceData
-        imageUrl="../../../Images/5779073.jpg"
+        imageUrl={img2}
         title="Wordpress Development"
         description="Webtual provides WordPress website development services. WordPress developer delivers best development & customization solutions to help your business survive in the competitive world while you work on increasing your sales."
         listItems={[
@@ -60,7 +67,7 @@ function WebDevelopment() {
         ]}
       />
       <ServiceContent
-        imageUrl="../../Images/5779073.jpg"
+        imageUrl={img3}
         title="Laravel Development"
         description="Harness the power of the Laravel framework with our Laravel development services to meet the full spectrum of your business requirements from a small portal to a large enterprise solution with complex and thriving challenges."
         listItems={[
@@ -82,7 +89,7 @@ function WebDevelopment() {
         ]}
       />
       <ServiceData
-        imageUrl="../../../Images/5779073.jpg"
+        imageUrl={img4}
         title="React Js Development"
         description="Empower your high-end requirements with enterprise-grade build quality backed by best-in-class react js development services."
         listItems={[
@@ -104,7 +111,7 @@ function WebDevelopment() {
         ]}
       />
       <ServiceContent
-        imageUrl="../../Images/5779073.jpg"
+        imageUrl={img5}
         title="PHP Development"
         description="Ensuring flexibility and scalability in all its operations, Webtual presents the tailor-made and reliable PHP development services which help you establish your business as a brand and target a wide customer base."
         listItems={[
@@ -131,7 +138,7 @@ function WebDevelopment() {
         ]}
       />
       <ServiceData
-        imageUrl="../../../Images/5779073.jpg"
+        imageUrl={img6}
         title="Angular JS Development"
         description="Angular.js is popular because it makes development easier and more efficient. This technology is especially suited for single-page applications though it can be used to create different kinds of websites."
         listItems={[
@@ -153,7 +160,7 @@ function WebDevelopment() {
         ]}
       />
       <ServiceContent
-        imageUrl="../../Images/5779073.jpg"
+        imageUrl={img7}
         title="Codeigniter Development"
         description="A dynamic web application attuned to market needs built for your customers and processes will definitely MAKE YOU WIN the digital game. Our CodeIgniter development services help you to build such full-featured dynamic web platforms."
         listItems={[
