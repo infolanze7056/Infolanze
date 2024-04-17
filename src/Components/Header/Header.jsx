@@ -8,6 +8,7 @@ import Logo from "../../Images/InfoLanze Logo White.webp";
 function Header() {
   const [isActive, setIsActive] = useState(1);
   const [isOpen, setIsOpen] = useState(true);
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
   const location = useLocation();
 
@@ -128,21 +129,66 @@ function Header() {
                 Contact US
               </NavLink>
             </div>
-            <div className="lg:p-0 p-1.5">
-              <NavLink
-                to="/service"
-                activeClassName="active"
-                id="4"
-                onClick={(e) => handleNavSelected(e)}
-                className={
-                  isActive === "4"
-                    ? "active mr-5  hover:text-black  cursor-pointer "
-                    : "mr-5  hover:text-black  cursor-pointer "
-                }
-              >
-                Services
-              </NavLink>
+            <div className="lg:p-0 p-1.5 relative">
+            <NavLink
+              to="/service"
+              activeClassName="active"
+              id="4"
+              onMouseEnter={() => setIsDropdownVisible(true)}
+              onMouseLeave={() => setIsDropdownVisible(false)}
+              className={
+                isActive === "4"
+                  ? "active mr-5 hover:text-black cursor-pointer"
+                  : "mr-5 hover:text-black cursor-pointer"
+              }
+            >
+              Services
+            </NavLink>
+            {isDropdownVisible && (
+              <div onMouseEnter={() => setIsDropdownVisible(true)}
+                    onMouseLeave={() => setIsDropdownVisible(false)} 
+                    className="absolute top-full right-0 w-36 pt-2 z-10">
+                    <div className="bg-white border border-gray-200 rounded shadow-lg">
+                {/* Dropdown content goes here */}
+                <NavLink
+                  onClick={(e) => handleNavSelected(e)}
+                  to="/service/ui-ux"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  UI-UX
+                </NavLink>
+                <NavLink
+                  onClick={(e) => handleNavSelected(e)}
+                  to="/service/web-development"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  Web
+                </NavLink>
+                <NavLink
+                  onClick={(e) => handleNavSelected(e)}
+                  to="/service/app-development"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  App
+                </NavLink>
+                <NavLink
+                  onClick={(e) => handleNavSelected(e)}
+                  to="/service/blockchain"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  Blockchain
+                </NavLink>
+                <NavLink
+                  onClick={(e) => handleNavSelected(e)}
+                  to="/service/seo"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  SEO
+                </NavLink>
+                </div>
               </div>
+            )}
+          </div>
               <div className="lg:p-0 p-1.5">
               <NavLink
                 to="/career"
