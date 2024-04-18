@@ -15,7 +15,7 @@ function ServiceSection() {
     <div className="font-family">
       <ServiceBredcumb
         serviceName="UI - UX Design"
-        serviceNameB="/ UI - UX Design"
+        serviceNameB="/ Service / UI - UX Design"
       />
       <ServiceHero
         title="Leading Web Design Compnany in Ahmedabad"

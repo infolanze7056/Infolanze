@@ -17,7 +17,7 @@ function WebDevelopment() {
     <div>
       <ServiceBredcumb
         serviceName="Web Development"
-        serviceNameB="/ Web Development"
+        serviceNameB="/ Service / Web Development"
       />
       <ServiceHero
         title="Web Development Company In Ahmedabad"

@@ -13,7 +13,7 @@ function SEO() {
     <div>
       <ServiceBredcumb
         serviceName="SEO"
-        serviceNameB="/ SEO"
+        serviceNameB="/ Service / SEO"
       />
       <ServiceHero 
         title="Digital Marketing Company In Ahmedabad"

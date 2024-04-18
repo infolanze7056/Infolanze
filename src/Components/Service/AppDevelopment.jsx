@@ -14,7 +14,7 @@ function AppDevelopment() {
     <div>
       <ServiceBredcumb
         serviceName="App Development"
-        serviceNameB="/ App Development"
+        serviceNameB="/Service / App Development"
       />
       <ServiceHero
         title="Mobile App Development Company In Ahmedabad"
