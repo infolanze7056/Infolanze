@@ -4,10 +4,17 @@ import { FaBars } from "react-icons/fa6";
 import { AiOutlineClose } from "react-icons/ai";
 import "./Header.css";
 import Logo from "../../Images/InfoLanze Logo White.webp";
+import { FaNetworkWired } from "react-icons/fa";
+import { VscCircleFilled } from "react-icons/vsc";
+import { MdWeb } from "react-icons/md";
+import { FaMobileScreenButton } from "react-icons/fa6";
+import { HiOutlineSpeakerphone } from "react-icons/hi";
+import { SiHiveBlockchain } from "react-icons/si";
 
 function Header() {
   const [isActive, setIsActive] = useState(1);
   const [isOpen, setIsOpen] = useState(true);
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
   const location = useLocation();
 
@@ -40,26 +47,17 @@ function Header() {
   const handleNavSelected = (e) => {
     setIsActive(e.target.id);
     setIsOpen(true);
+    if (e.target.id !== "4") {
+      setIsDropdownVisible(false);
+    } else {
+      toggleDropdownVisibility();
+    }
   };
 
-  // const [isSticky, setIsSticky] = useState(false);
+  const toggleDropdownVisibility = () => {
+    setIsDropdownVisible(!isDropdownVisible);
+  };
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (window.scrollY > 70) {
-  //       setIsSticky(true);
-  //     } else {
-  //       setIsSticky(false);
-  //     }
-  //   };
-
-  //   window.addEventListener('scroll', handleScroll);
-
-  //   // Clean up the event listener
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []);
 
   return (
     <div className="Header-p1 fixed w-full z-50">
@@ -128,21 +126,172 @@ function Header() {
                 Contact US
               </NavLink>
             </div>
-            <div className="lg:p-0 p-1.5">
-              <NavLink
-                to="/service"
-                activeClassName="active"
-                id="4"
-                onClick={(e) => handleNavSelected(e)}
-                className={
-                  isActive === "4"
-                    ? "active mr-5  hover:text-black  cursor-pointer "
-                    : "mr-5  hover:text-black  cursor-pointer "
-                }
-              >
-                Services
-              </NavLink>
+            <div className="lg:p-0 p-1.5 relative">
+            <NavLink
+              to="/service"
+              activeClassName="active"
+              id="4"
+              // onClick={(e) => handleNavSelected(e)}
+              onMouseEnter={toggleDropdownVisibility}
+                  onMouseLeave={toggleDropdownVisibility}
+              className={
+                isActive === "4"
+                  ? "active mr-5 hover:text-black cursor-pointer"
+                  : "mr-5 hover:text-black cursor-pointer"
+              }
+            >
+              Services
+            </NavLink>
+            {isDropdownVisible && (
+              <div 
+              onMouseEnter={() => setIsDropdownVisible(true)}
+                    onMouseLeave={() => setIsDropdownVisible(false)} 
+                    className="top-full pt-2 z-10 lg:hidden md:hidden block ">
+                    <div className="bg-white border border-gray-200 rounded shadow-lg">
+                {/* Dropdown content goes here */}
+                <NavLink
+                  onClick={(e) => handleNavSelected(e)}
+                  to="/service/ui-ux"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  UI-UX
+                </NavLink>
+                <NavLink
+                  onClick={(e) => handleNavSelected(e)}
+                  to="/service/web-development"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  Web
+                </NavLink>
+                <NavLink
+                  onClick={(e) => handleNavSelected(e)}
+                  to="/service/app-development"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  App
+                </NavLink>
+                <NavLink
+                  onClick={(e) => handleNavSelected(e)}
+                  to="/service/blockchain"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  Blockchain
+                </NavLink>
+                <NavLink
+                  onClick={(e) => handleNavSelected(e)}
+                  to="/service/seo"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  SEO
+                </NavLink>
+                </div>
               </div>
+            )}
+            {isDropdownVisible && (
+              <div onMouseEnter={() => setIsDropdownVisible(true)}
+                    onMouseLeave={() => setIsDropdownVisible(false)} 
+                    className="absolute top-full right-0 w-[1150px]  pt-2 z-10 lg:block hidden">
+                <div className="bg-white border border-gray-200 rounded shadow-lg p-5">
+                {/* Dropdown content goes here */}
+                <div className="grid grid-cols-5 gap-5">
+                  <div className="">
+                    <div className="flex items-center">
+                    <FaNetworkWired className="text-black" />
+                    <NavLink
+                      onClick={(e) => handleNavSelected(e)}
+                      to="/service/ui-ux"
+                      className="block p-0 text-gray-800 hover:bg-gray-200"
+                    >
+                      UI-UX
+                    </NavLink>
+                    </div>
+                    <ul className="text-black">
+                      <li className="flex items-center"><VscCircleFilled className='text-xs'/>Website Designing</li>
+                      <li className="flex items-center"><VscCircleFilled className='text-xs'/>Mobile App Design</li>
+                      <li className="flex items-center"><VscCircleFilled className='text-xs'/>Material Design</li>
+                      <li className="flex items-center"><VscCircleFilled className='text-xs'/>Product Design</li>
+                      <li className="flex items-center"><VscCircleFilled className='text-sm'/>Logo Design & Branding</li>
+                    </ul>
+                  </div>
+                  <div className="">
+                    <div className="flex items-center">
+                    <MdWeb className="text-black" />
+                    <NavLink
+                      onClick={(e) => handleNavSelected(e)}
+                      to="/service/web-development"
+                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                    >
+                      Web
+                    </NavLink>
+                    </div>
+                    <ul className="text-black">
+                      <li className="flex items-center"><VscCircleFilled className='text-xs'/>.Net Core</li>
+                      <li className="flex items-center"><VscCircleFilled className='text-xs'/>Wordpress</li>
+                      <li className="flex items-center"><VscCircleFilled className='text-xs'/>Laravel</li>
+                      <li className="flex items-center"><VscCircleFilled className='text-xs'/>React JS</li>
+                      <li className="flex items-center"><VscCircleFilled className='text-sm'/>PHP</li>
+                      <li className="flex items-center"><VscCircleFilled className='text-sm'/>Angular JS</li>
+                      <li className="flex items-center"><VscCircleFilled className='text-sm'/>Codeigniter</li>
+                    </ul>
+                  </div>
+                  <div className="">
+                    <div className="flex items-center">
+                    <FaMobileScreenButton className="text-black" />
+                    <NavLink
+                      onClick={(e) => handleNavSelected(e)}
+                      to="/service/app-development"
+                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                    >
+                      App
+                    </NavLink>
+                    </div>
+                    <ul className="text-black">
+                      <li className="flex items-center"><VscCircleFilled className='text-xs'/>IOS Development</li>
+                      <li className="flex items-center"><VscCircleFilled className='text-xs'/>Android Development</li>
+                      <li className="flex items-center"><VscCircleFilled className='text-xs'/>Flutter Development</li>
+                      <li className="flex items-center"><VscCircleFilled className='text-xs'/>React Native</li>
+                    </ul>
+                  </div>
+                  <div className="">
+                    <div className="flex items-center">
+                    <SiHiveBlockchain className="text-black" />
+                    <NavLink
+                      onClick={(e) => handleNavSelected(e)}
+                      to="/service/blockchain"
+                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                    >
+                      Blockchain
+                    </NavLink>
+                    </div>
+                    <ul className="text-black">
+                      <li className="flex items-center"><VscCircleFilled className='text-xs'/>Smart Contracts</li>
+                      <li className="flex items-center"><VscCircleFilled className='text-xs'/>Decentralized Apps - DApps</li>
+                      <li className="flex items-center"><VscCircleFilled className='text-xs'/>Decentralized FTP</li>
+                      <li className="flex items-center"><VscCircleFilled className='text-xs'/>Web3 Game Development</li>
+                    </ul>
+                  </div>
+                  <div className="">
+                    <div className="flex items-center">
+                    <HiOutlineSpeakerphone className="text-black" />
+                    <NavLink
+                      onClick={(e) => handleNavSelected(e)}
+                      to="/service/seo"
+                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                    >
+                      SEO
+                    </NavLink>
+                    </div>
+                    <ul className="text-black">
+                      <li className="flex items-center"><VscCircleFilled className='text-xs'/>SEO</li>
+                      <li className="flex items-center"><VscCircleFilled className='text-xs'/>Digital Marketing</li>
+                      <li className="flex items-center"><VscCircleFilled className='text-xs'/>Email Marketing</li>
+                    </ul>
+                  </div>
+                </div>
+                </div>
+              </div>
+            )}
+          </div>
               <div className="lg:p-0 p-1.5">
               <NavLink
                 to="/career"

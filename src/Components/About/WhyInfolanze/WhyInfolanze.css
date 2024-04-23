@@ -1,0 +1,58 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.leading-company-box {
+  position: relative;
+  padding-left: 100px; /* Adjust this value as needed */
+}
+
+.leading-company-box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 90px;
+  border-radius: 4px;
+  background-size: cover;
+}
+
+.lcb13:before {
+  background-color: #fc9290;
+  background-image: url(../../../Images/hire-services-icon.webp);
+  background-position: center;
+}
+
+.lcb14:before {
+  background-color: #ffb379;
+  background-image: url(../../../Images/hire-services-icon.webp);
+  background-position: center;
+}
+
+.lcb15:before {
+  background-color: #5fdbba;
+  background-image: url(../../../Images/hire-services-icon.webp);
+  background-position: center;
+}
+
+.lcb16:before {
+  background-color: #b2e388;
+  background-image: url(../../../Images/hire-services-icon.webp);
+  background-position: center;
+}
+
+.lcb17:before {
+  background-color: #93d6f2;
+  background-image: url(../../../Images/hire-services-icon.webp);
+  background-position: center;
+}
+
+.lcb18:before {
+  background-color: #fc9290;
+  background-image: url(../../../Images/hire-services-icon.webp);
+  background-position: center;
+}

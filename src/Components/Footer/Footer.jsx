@@ -5,7 +5,7 @@ import "./Footer.css";
 function Footer() {
   return (
     <div className="bg-[#f5f5f5] font-family">
-      <svg
+      {/* <svg
         id="svg-section-2"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="37 0 70.54 17.34"
@@ -13,8 +13,8 @@ function Footer() {
         fill="#f5f5f5"
       >
         <path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path>
-      </svg>
-      <div className="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+      </svg> */}
+      <div className="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-20 lg:px-0">
         <div className="grid gap-7 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
           <div className="">
             <a
