@@ -4,17 +4,17 @@ import "./WhyInfolanze.css";
 const WhyInfolanze = () => {
   return (
     <>
-    <div className="font-family">
+    <div className="font-family lg:px-28 md:px-20 px-5">
       <div className="container mx-auto">
         <h3 className="text-3xl font-bold text-center mt-8">Why Infolanze Technologies?</h3>
-        <p className="mt-4 text-center">
+        <p className="py-4 text-center">
           With more than a decade of experience, Infolanze Technologies has
           possessed the capabilities and skilled resources to offer competitive
           and performance-driven mobile and web development services.
         </p>
       </div>
       <div className="container mx-auto flex flex-wrap">
-        <div className="lg:w-1/2 px-4">
+        <div className="lg:w-1/2 ">
           <div className="leading-company-box lcb13 bg-fc9290 rounded-md p-4 mt-8 pt-0">
             <h3 className="text-lg font-bold manish">Multiple Domain Expertise</h3>
             <p className="mt-2 manish">
@@ -25,7 +25,7 @@ const WhyInfolanze = () => {
             </p>
           </div>
         </div>
-        <div className="lg:w-1/2 px-4 ">
+        <div className="lg:w-1/2 ">
           <div className="leading-company-box lcb14 bg-ffb379 rounded-md p-4 mt-8 manish pt-0">
             <h3 className="text-lg font-bold manish">Intellectual Property Rights Protection</h3>
             <p className="mt-2">
@@ -35,7 +35,7 @@ const WhyInfolanze = () => {
             </p>
           </div>
         </div>
-        <div className="lg:w-1/2 px-4">
+        <div className="lg:w-1/2">
           <div className="leading-company-box lcb15 bg-5fdbba rounded-md p-4 mt-8 pt-0">
             <h3 className="text-lg font-bold manish">Highly Experienced and Productive Professionals</h3>
             <p className="mt-2 manish">
@@ -46,7 +46,7 @@ const WhyInfolanze = () => {
             </p>
           </div>
         </div>
-        <div className="lg:w-1/2 px-4">
+        <div className="lg:w-1/2">
           <div className="leading-company-box lcb16 bg-b2e388 rounded-md p-4 mt-8 pt-0">
             <h3 className="text-lg font-bold manish">Reporting Structure</h3>
             <p className="mt-2 manish">
@@ -57,7 +57,7 @@ const WhyInfolanze = () => {
             </p>
           </div>
         </div>
-        <div className="lg:w-1/2 px-4">
+        <div className="lg:w-1/2">
           <div className="leading-company-box lcb17 bg-93d6f2 rounded-md p-4 mt-8 pt-0">
             <h3 className="text-lg font-bold manish">Proper Hierarchy and Escalation Path</h3>
             <p className="mt-2 manish">
@@ -68,7 +68,7 @@ const WhyInfolanze = () => {
             </p>
           </div>
         </div>
-        <div className="lg:w-1/2 px-4">
+        <div className="lg:w-1/2 ">
           <div className="leading-company-box lcb18 bg-fc9290 rounded-md p-4 mt-8 pt-0">
             <h3 className="text-lg font-bold manish">24x7 Support</h3>
             <p className="mt-2 manish">
