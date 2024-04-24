@@ -4,8 +4,11 @@ import "./Founder.css"
 const Founder = () => {
   return (
     <>
+    <div className="font-family bg-[#e9f6fc] py-10">
+    <h3 className="text-center text-3xl font-bold ">Meet Our Team</h3>
+    <p className="text-center text-2xl">Discover more about our high performing team</p>
       <div className="grid lg:grid-cols-2 grid-cols-1 font-family p-3 lg:px-28 md:px-20 px-5 gap-4 pb-10">
-        <div className="Card border shadow-lg p-4 rounded-2xl founder animate-slide-in-left px-3">
+        <div className="Card border shadow-lg p-4 rounded-2xl founder animate-slide-in-left px-3 bg-white">
           <div className="pb-5">
             <h3 className="text-xl font-semibold">Darshil Patel</h3>
             <p className="">Director/Full-Stack Blockchain Developer</p>
@@ -23,7 +26,7 @@ const Founder = () => {
             <p>+91 7016160435</p>
           </div>
         </div>
-        <div className="Card border shadow-lg p-4 rounded-2xl founder animate-slide-in-right px-3">
+        <div className="Card border shadow-lg p-4 rounded-2xl founder animate-slide-in-right px-3 bg-white">
           <div className="pb-5">
             <h3 className="text-xl font-semibold">Shreya Patel</h3>
             <p>Director/Chief Marketing Head</p>
@@ -43,6 +46,7 @@ const Founder = () => {
             <p>+91 9898228284</p>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

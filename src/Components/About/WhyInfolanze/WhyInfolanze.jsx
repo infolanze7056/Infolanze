@@ -18,8 +18,8 @@ const WhyInfolanze = () => {
         </div>
         <div>
           <div className="flex flex-wrap">
-            <div className="lg:w-1/2">
-              <div className="leading-company-box lcb13 bg-fc9290 rounded-md p-4 mt-8 pt-0 md:pb-7">
+            <div className="xl:w-1/2">
+              <div className="leading-company-box lcb13 bg-fc9290 rounded-md p-4 mt-8 pt-0">
                 <h3 className="text-lg font-bold manish">
                   Expertise in Multiple Domains
                 </h3>
@@ -30,8 +30,8 @@ const WhyInfolanze = () => {
                 </p>
               </div>
             </div>
-            <div className="lg:w-1/2">
-              <div className="leading-company-box lcb14 bg-ffb379 rounded-md p-4 mt-8 manish pt-0 md:pb-7">
+            <div className="xl:w-1/2">
+              <div className="leading-company-box lcb14 bg-ffb379 rounded-md p-4 mt-8 manish pt-0 ">
                 <h3 className="text-lg font-bold manish">
                   Intellectual Property Rights Protection
                 </h3>
@@ -42,8 +42,8 @@ const WhyInfolanze = () => {
                 </p>
               </div>
             </div>
-            <div className="lg:w-1/2">
-              <div className="leading-company-box lcb15 bg-5fdbba rounded-md p-4 mt-8 pt-0 md:pb-7">
+            <div className="xl:w-1/2">
+              <div className="leading-company-box lcb15 bg-5fdbba rounded-md p-4 mt-8 pt-0 ">
                 <h3 className="text-lg font-bold manish">
                   Experienced and Productive Professionals
                 </h3>
@@ -54,8 +54,8 @@ const WhyInfolanze = () => {
                 </p>
               </div>
             </div>
-            <div className="lg:w-1/2">
-              <div className="leading-company-box lcb16 bg-b2e388 rounded-md p-4 mt-8 pt-0 md:pb-7">
+            <div className="xl:w-1/2">
+              <div className="leading-company-box lcb16 bg-b2e388 rounded-md p-4 mt-8 pt-0 ">
                 <h3 className="text-lg font-bold manish">
                   Hierarchy and Reporting Structure
                 </h3>
@@ -66,8 +66,8 @@ const WhyInfolanze = () => {
                 </p>
               </div>
             </div>
-            <div className="lg:w-1/2">
-              <div className="leading-company-box lcb17 bg-93d6f2 rounded-md p-4 mt-8 pt-0 md:pb-7">
+            <div className="xl:w-1/2">
+              <div className="leading-company-box lcb17 bg-93d6f2 rounded-md p-4 mt-8 pt-0">
                 <h3 className="text-lg font-bold manish">
                   Proper Hierarchy and Escalation Path
                 </h3>
@@ -79,8 +79,8 @@ const WhyInfolanze = () => {
                 </p>
               </div>
             </div>
-            <div className="lg:w-1/2">
-              <div className="leading-company-box lcb18 bg-fc9290 rounded-md p-4 mt-8 pt-0 md:pb-7">
+            <div className="xl:w-1/2">
+              <div className="leading-company-box lcb18 bg-fc9290 rounded-md p-4 mt-8 pt-0">
                 <h3 className="text-lg font-bold manish">
                   24/7 Support Availability
                 </h3>
