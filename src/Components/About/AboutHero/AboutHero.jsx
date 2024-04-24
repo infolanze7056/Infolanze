@@ -1,15 +1,15 @@
 import React from "react";
 import "./AboutHero.css";
-import Underline from "../../../Images/angry-underline.svg";
+// import Underline from "../../../Images/angry-underline.svg";
 
 const AboutHero = () => {
   return (
     <>
-    <div className="font-family py-20">
+    <div className="font-family lg:py-28 lg:px-28 md:py-10">
       <div className="text-center text-4xl font-bold">About Us</div>
       {/* <img src={Underline} alt="Underline" className="mx-auto about-under" /> */}
       <div className="About pt-10">
-        <div className="text-center px-20 text-xl">
+        <div className="text-center md:px-20 text-xl sm:px-5">
           Infolanze Technologies is in top software development solutions that
           stimulate your business with our comprehensive modern app development
           services. We offer customized digital solutions that will help engage

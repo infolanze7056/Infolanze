@@ -7,7 +7,7 @@ const OurTeam = () => {
       <div className="font-family lg:px-28 md:px-20 px-5 py-5">
         <h3 className="text-center text-3xl font-bold py-4">One Team, Countless Talents</h3>    
         <div className="lg:grid lg:grid-cols-2 grid-cols-1 gap-4">
-          <div className="text-center">
+          <div className="align-items-center  h-100">
             <img src={OneTeam} alt="oneteam" className="w-full" />
           </div>
           <div>

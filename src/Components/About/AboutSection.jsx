@@ -1,5 +1,5 @@
 import React from 'react'
-import Skills from './Skills/Skills'
+// import Skills from './Skills/Skills'
 import WhyInfolanze from './WhyInfolanze/WhyInfolanze'
 import AboutHero from './AboutHero/AboutHero'
 import MissionAndVission from './MissionAndVission/MissionAndVission'
