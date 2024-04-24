@@ -23,7 +23,7 @@ const WhyInfolanze = () => {
                 <h3 className="text-lg font-bold manish">
                   Expertise in Multiple Domains
                 </h3>
-                <p className="mt-2 manish text-sm">
+                <p className="manish text-sm">
                   We are a team of highly skilled professionals with proven
                   expertise in custom software development across diverse
                   industries and technologies.
@@ -35,7 +35,7 @@ const WhyInfolanze = () => {
                 <h3 className="text-lg font-bold manish">
                   Intellectual Property Rights Protection
                 </h3>
-                <p className="mt-2 text-sm">
+                <p className="text-sm">
                   Our experienced IT professionals are skilled in multiple
                   programming languages and technologies, ensuring competitive
                   and dedicated solutions
@@ -47,7 +47,7 @@ const WhyInfolanze = () => {
                 <h3 className="text-lg font-bold manish">
                   Experienced and Productive Professionals
                 </h3>
-                <p className="mt-2 manish text-sm">
+                <p className="manish text-sm">
                   Our experienced IT professionals have hands-on expertise in
                   various programming languages and technologies. With dedicated
                   resources, we deliver competitive solutions.
@@ -59,7 +59,7 @@ const WhyInfolanze = () => {
                 <h3 className="text-lg font-bold manish">
                   Hierarchy and Reporting Structure
                 </h3>
-                <p className="mt-2 manish text-sm">
+                <p className="manish text-sm">
                   We use various project management tools to efficiently plan,
                   execute, and deploy projects, aiming to generate customized
                   daily or weekly reports for our clients.
@@ -71,7 +71,7 @@ const WhyInfolanze = () => {
                 <h3 className="text-lg font-bold manish">
                   Proper Hierarchy and Escalation Path
                 </h3>
-                <p className="mt-2 manish text-sm">
+                <p className="manish text-sm">
                   We maintain a strict management policy by implementing a
                   proper hierarchy and escalation path. This ensures that
                   employees receive all decisions and orders in a systematic
@@ -84,7 +84,7 @@ const WhyInfolanze = () => {
                 <h3 className="text-lg font-bold manish">
                   24/7 Support Availability
                 </h3>
-                <p className="mt-2 manish text-sm">
+                <p className="manish text-sm">
                   We don't look at the clock when our clients are having any
                   issues. Once you are connected with us then we consider your
                   problems to be ours, thus, providing round the clock support.
