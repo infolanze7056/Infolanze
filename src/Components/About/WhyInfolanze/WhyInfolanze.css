@@ -7,14 +7,17 @@
 
 .leading-company-box {
   position: relative;
-  padding-left: 100px; /* Adjust this value as needed */
+  padding-left: 100px;
+  background-color: white;
+  padding-top: 12px;/* Adjust this value as needed */
+  margin: 6px;
 }
 
 .leading-company-box:before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  /* top: 0; */
+  left: 8px;
   width: 80px;
   height: 90px;
   border-radius: 4px;
@@ -61,4 +64,7 @@
   background-image: url(../../../Images/hire-services-icon.webp);
   background-position: center;
   background-position: -3874px 2px;
+}
+.main{
+  background-color: #e9f6fc;
 }

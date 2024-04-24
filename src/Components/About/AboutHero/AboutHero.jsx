@@ -5,7 +5,7 @@ import "./AboutHero.css";
 const AboutHero = () => {
   return (
     <>
-    <div className="font-family lg:py-28 lg:px-28 md:py-10">
+    <div className="font-family lg:py-28 lg:px-28 md:py-10 py-10 px-5">
       <div className="text-center text-4xl font-bold">About Us</div>
       {/* <img src={Underline} alt="Underline" className="mx-auto about-under" /> */}
       <div className="About pt-10">
