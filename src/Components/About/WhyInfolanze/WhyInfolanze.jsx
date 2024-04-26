@@ -4,9 +4,9 @@ import "./WhyInfolanze.css";
 const WhyInfolanze = () => {
   return (
     <>
-      <div className="font-family lg:px-28 md:px-20 px-5 bg-[#d6eff9] py-20 main">
+      <div className="font-family lg:px-28 md:px-20 px-5 bg-[#d6eff9] py-14 main">
         <div>
-          <h3 className="text-3xl font-bold text-center pt-8 lg:pt-0">
+          <h3 className="text-3xl font-bold text-center lg:pt-0">
             Why Infolanze Technologies?
           </h3>
           <p className="py-4 text-center">
