@@ -1,10 +1,14 @@
 import React from "react";
 import "./AboutHero.css";
+// import ServiceBredcumb from "../../Service/ServiceComponent/ServiceBredcumb";
 // import Underline from "../../../Images/angry-underline.svg";
 
 const AboutHero = () => {
   return (
     <>
+    {/* <ServiceBredcumb
+        serviceName="About"
+      /> */}
     <div className="font-family lg:py-36 lg:px-28 md:py-10 py-10 px-5">
       <div className="text-center text-4xl font-bold">About Us</div>
       {/* <img src={Underline} alt="Underline" className="mx-auto about-under" /> */}

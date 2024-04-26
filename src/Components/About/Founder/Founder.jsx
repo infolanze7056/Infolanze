@@ -1,54 +1,75 @@
 import React from "react";
-import "./Founder.css"
+import Main from "../../../Images/person.jpg";
+import FounderCard from "./FounderCard/FounderCard";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./Founder.css";
 
 const Founder = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerMode: true, // Set centerMode to true
+    centerPadding: "60px", // Adjust the value as per your requirement
+    autoplay: true, // Set autoplay to true
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1
+        }
+      }
+    ]
+  };
+
   return (
-    <>
     <div className="font-family bg-[#e9f6fc] py-10">
-    <h3 className="text-center text-3xl font-bold ">Meet Our Team</h3>
-    <p className="text-center text-2xl">Discover more about our high performing team</p>
-      <div className="grid lg:grid-cols-2 grid-cols-1 font-family p-3 lg:px-28 md:px-20 px-5 gap-4 pb-10">
-        <div className="Card border shadow-lg p-4 rounded-2xl founder animate-slide-in-left px-3 bg-white">
-          <div className="pb-5">
-            <h3 className="text-xl font-semibold">Darshil Patel</h3>
-            <p className="">Director/Full-Stack Blockchain Developer</p>
-          </div>
-          <div className="pb-5">
-            <p>
-              Hello, I'm Darshil Patel, a fervent blockchain developer with a
-              keen interest in pioneering projects that push the boundaries of
-              innovation. My journey is defined by a commitment to excellence
-              and a genuine passion for blockchain technology.
-            </p>
-          </div>
-          <div>
-            <p>darshil.infolanze@gmail.com</p>
-            <p>+91 7016160435</p>
-          </div>
-        </div>
-        <div className="Card border shadow-lg p-4 rounded-2xl founder animate-slide-in-right px-3 bg-white">
-          <div className="pb-5">
-            <h3 className="text-xl font-semibold">Shreya Patel</h3>
-            <p>Director/Chief Marketing Head</p>
-          </div>
-          <div>
-            <p className="pb-5">
-              Hello, I'm Shreya Patel, a forward-thinking individual pursuing a
-              Bachelor's degree in Computer Science from PDEU, leading the charge
-              as Marketing Head, bringing a unique blend of technical expertise
-              and creative flair to the forefront. My passion for technology is
-              coupled with a keen eye for marketing strategies with a commitment
-              to pushing boundaries and embracing challenges.
-            </p>
-          </div>
-          <div>
-            <p>shreya.infolanze@gmail.com</p>
-            <p>+91 9898228284</p>
-          </div>
-        </div>
+      <div className="py-3">
+      <h3 className="text-center text-3xl font-bold ">Meet Our Team</h3>
+      <p className="text-center text-2xl">
+        Discover more about our high performing team
+      </p>
       </div>
+      <div >
+      <Slider {...settings}>
+        <FounderCard
+          name="Darshil Patel"
+          role="Director/Full-Stack Blockchain Developer"
+          description="Hello, I'm Darshil Patel, a fervent blockchain developer with a keen interest in pioneering projects that push the boundaries of innovation."
+          image={Main}
+          link="https://darshil-patel.vercel.app/"
+        />
+        <FounderCard
+          name="Shreya Patel"
+          role="Director/Chief Marketing Head"
+          description="Hello, I'm John Doe, a passionate designer with a focus on creating visually stunning and user-friendly interfaces."
+          image={Main}
+        />
+        <FounderCard
+          name="John Doe"
+          role="Designer"
+          description="Hello, I'm John Doe, a passionate designer with a focus on creating visually stunning and user-friendly interfaces."
+          image={Main}
+        />   
+      </Slider>
       </div>
-    </>
+    </div>
   );
 };
 

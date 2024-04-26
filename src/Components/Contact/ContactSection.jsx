@@ -3,6 +3,7 @@ import emailjs from "emailjs-com";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./ContactSection.css"
+import ServiceBredcumb from "../Service/ServiceComponent/ServiceBredcumb";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -70,6 +71,9 @@ const ContactSection = () => {
 
   return (
     <>
+    <ServiceBredcumb
+        serviceName="Contact"
+      />
     <div className="lg:px-28 md:px-20 px-5">
       <section className="relative z-10 overflow-hidden bg-white py-20 dark:bg-dark lg:py-[80px]">
         <div className="font-family">

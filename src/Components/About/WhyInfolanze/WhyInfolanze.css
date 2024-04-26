@@ -9,62 +9,65 @@
   position: relative;
   padding-left: 100px;
   background-color: white;
-  padding-top: 12px;/* Adjust this value as needed */
+  padding-top: 12px;
   margin: 6px;
+  border-radius: 11px !important;
 }
 
 .leading-company-box:before {
   content: "";
   position: absolute;
-  /* top: 0; */
   left: 8px;
   width: 80px;
   height: 90px;
-  border-radius: 4px;
   background-size: cover;
+  border-radius: 11px !important;
 }
 
 .lcb13:before {
   background-color: #fc9290;
-  background-image: url(../../../Images/hire-services-icon.webp);
+  background-image: url(../../../Images/www\ image.png);
   background-position: center;
-  background-position: -3424px 2px;
+  background-size: 61px;
+  background-repeat: no-repeat;
 }
 
 .lcb14:before {
   background-color: #ffb379;
-  background-image: url(../../../Images/hire-services-icon.webp);
+  background-image: url(../../../Images/security\ image.png);
   background-position: center;
-  background-position: -3514px 2px;
+  background-size: 61px;
+  background-repeat: no-repeat;
 }
 
 .lcb15:before {
   background-color: #5fdbba;
-  background-image: url(../../../Images/hire-services-icon.webp);
+  background-image: url(../../../Images/team\ image.png);
   background-position: center;
-  background-position: -3604px 2px;
+  background-size: 61px;
+  background-repeat: no-repeat;
 }
 
 .lcb16:before {
   background-color: #b2e388;
-  background-image: url(../../../Images/hire-services-icon.webp);
+  background-image: url(../../../Images/reporting\ image.png);
   background-position: center;
-  background-position: -3694px 2px;
+  background-size: 61px;
+  background-repeat: no-repeat;
 }
 
 .lcb17:before {
   background-color: #93d6f2;
-  background-image: url(../../../Images/hire-services-icon.webp);
+  background-image: url(../../../Images/escalation\ image.png);
   background-position: center;
-  background-position: -3784px 2px;
+  background-size: 61px;
+  background-repeat: no-repeat;
 }
 
 .lcb18:before {
   background-color: #fc9290;
-  background-image: url(../../../Images/hire-services-icon.webp);
+  background-image: url(../../../Images/support\ image.png);
   background-position: center;
-  background-position: -3874px 2px;
-}
-.main{
-  background-color: #e9f6fc;
+  background-size: 61px;
+  background-repeat: no-repeat;
 }

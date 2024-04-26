@@ -60,9 +60,9 @@ function AboutSection() {
                 >
                   <div className="flex items-center">
                     <div>
-                      <BiSupport className="bg-[#d6eff9] text-7xl p-5 rounded-lg md:mx-0 lg:mx-0 mx-auto" />
+                      <BiSupport className="bg-[#d6eff9] text-black text-7xl p-5 rounded-lg md:mx-0 lg:mx-0 mx-auto" />
                     </div>
-                    <div className="text-xl font-semibold ps-5 pe-7">
+                    <div className="text-xl text-black font-semibold ps-5 pe-7">
                       Lifetime Web Support
                     </div>
                   </div>
@@ -116,7 +116,7 @@ function AboutSection() {
                   aria-expanded={activeAccordion === 1 ? "true" : "false"}
                   aria-controls="flush-collapseTwo"
                 >
-                  <div className="flex items-center">
+                  <div className="flex text-black items-center">
                     <div>
                       <MdAccountBalanceWallet className="bg-[#d6eff9] text-7xl p-5 rounded-lg md:mx-0 lg:mx-0 mx-auto" />
                     </div>
@@ -174,7 +174,7 @@ function AboutSection() {
                   aria-expanded={activeAccordion === 2 ? "true" : "false"}
                   aria-controls="flush-collapseThree"
                 >
-                  <div className="flex items-center">
+                  <div className="flex text-black items-center">
                     <div>
                       <BsPersonCircle className="bg-[#d6eff9] text-7xl p-5 rounded-lg md:mx-0 lg:mx-0 mx-auto" />
                     </div>
@@ -231,7 +231,7 @@ function AboutSection() {
                   aria-expanded={activeAccordion === 3 ? "true" : "false"}
                   aria-controls="flush-collapseFour"
                 >
-                  <div className="flex items-center">
+                  <div className="flex text-black items-center">
                     <div>
                       <FaRegThumbsUp className="bg-[#d6eff9] text-7xl p-5 rounded-lg md:mx-0 lg:mx-0 mx-auto" />
                     </div>

@@ -4,7 +4,7 @@ import "./WhyInfolanze.css";
 const WhyInfolanze = () => {
   return (
     <>
-      <div className="font-family lg:px-28 md:px-20 px-5 bg-blue-100 py-20 main">
+      <div className="font-family lg:px-28 md:px-20 px-5 bg-[#d6eff9] py-20 main">
         <div>
           <h3 className="text-3xl font-bold text-center pt-8 lg:pt-0">
             Why Infolanze Technologies?
@@ -19,7 +19,7 @@ const WhyInfolanze = () => {
         <div>
           <div className="flex flex-wrap">
             <div className="xl:w-1/2">
-              <div className="leading-company-box lcb13 bg-fc9290 rounded-md p-4 mt-8 pt-0">
+              <div className="leading-company-box lcb13 bg-fc9290 rounded-md p-4 mt-8 pt-0 lg:p-8 xl:p-4 md:p-4 2xl:p-8">
                 <h3 className="text-lg font-bold manish">
                   Expertise in Multiple Domains
                 </h3>
@@ -31,7 +31,7 @@ const WhyInfolanze = () => {
               </div>
             </div>
             <div className="xl:w-1/2">
-              <div className="leading-company-box lcb14 bg-ffb379 rounded-md p-4 mt-8 manish pt-0 ">
+              <div className="leading-company-box lcb14 bg-ffb379 rounded-md p-4 mt-8 manish pt-0 lg:p-8 xl:p-4 md:p-4 2xl:p-8">
                 <h3 className="text-lg font-bold manish">
                   Intellectual Property Rights Protection
                 </h3>
@@ -43,7 +43,7 @@ const WhyInfolanze = () => {
               </div>
             </div>
             <div className="xl:w-1/2">
-              <div className="leading-company-box lcb15 bg-5fdbba rounded-md p-4 mt-8 pt-0 ">
+              <div className="leading-company-box lcb15 bg-5fdbba rounded-md p-4 mt-8 pt-0 lg:p-8 xl:p-4 md:p-4">
                 <h3 className="text-lg font-bold manish">
                   Experienced and Productive Professionals
                 </h3>
@@ -55,7 +55,7 @@ const WhyInfolanze = () => {
               </div>
             </div>
             <div className="xl:w-1/2">
-              <div className="leading-company-box lcb16 bg-b2e388 rounded-md p-4 mt-8 pt-0 ">
+              <div className="leading-company-box lcb16 bg-b2e388 rounded-md p-4 mt-8 pt-0 lg:p-8 xl:p-4 md:p-4">
                 <h3 className="text-lg font-bold manish">
                   Hierarchy and Reporting Structure
                 </h3>
@@ -67,7 +67,7 @@ const WhyInfolanze = () => {
               </div>
             </div>
             <div className="xl:w-1/2">
-              <div className="leading-company-box lcb17 bg-93d6f2 rounded-md p-4 mt-8 pt-0">
+              <div className="leading-company-box lcb17 bg-93d6f2 rounded-md p-4 mt-8 pt-0 lg:p-8 xl:p-4 md:p-4">
                 <h3 className="text-lg font-bold manish">
                   Proper Hierarchy and Escalation Path
                 </h3>
@@ -80,7 +80,7 @@ const WhyInfolanze = () => {
               </div>
             </div>
             <div className="xl:w-1/2">
-              <div className="leading-company-box lcb18 bg-fc9290 rounded-md p-4 mt-8 pt-0">
+              <div className="leading-company-box lcb18 bg-fc9290 rounded-md p-4 mt-8 pt-0 lg:p-8 xl:p-4 md:p-4">
                 <h3 className="text-lg font-bold manish">
                   24/7 Support Availability
                 </h3>
