@@ -1,6 +1,12 @@
 import React from "react";
 import Main from "../../../Images/person.jpg";
+import Darshil from "../../../Images/Darshil Patel.jpeg"
+import Mayur from "../../../Images/Mayur.jpg"
+import Manish from "../../../Images/Manish.jpg"
+import Kush from "../../../Images/Kush.png"
+import Nishant from "../../../Images/Nishant.png"
 import FounderCard from "./FounderCard/FounderCard";
+
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -15,8 +21,8 @@ const Founder = () => {
     slidesToScroll: 1,
     centerMode: true, // Set centerMode to true
     centerPadding: "60px", // Adjust the value as per your requirement
-    autoplay: true, // Set autoplay to true
-    autoplaySpeed: 2000,
+    // autoplay: true, // Set autoplay to true
+    // autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 1024,
@@ -52,7 +58,7 @@ const Founder = () => {
           name="Darshil Patel"
           role="Director/Full-Stack Blockchain Developer"
           description="Hello, I'm Darshil Patel, a fervent blockchain developer with a keen interest in pioneering projects that push the boundaries of innovation."
-          image={Main}
+          image={Darshil}
           link="https://darshil-patel.vercel.app/"
         />
         <FounderCard
@@ -62,11 +68,29 @@ const Founder = () => {
           image={Main}
         />
         <FounderCard
-          name="John Doe"
-          role="Designer"
+          name="Manish Chaudhary"
+          role="Frontend Developer"
           description="Hello, I'm John Doe, a passionate designer with a focus on creating visually stunning and user-friendly interfaces."
-          image={Main}
-        />   
+          image={Manish}
+        /> 
+        <FounderCard
+          name="Nishant Timbadiya"
+          role="Frontend Developer"
+          description="Hello, I'm John Doe, a passionate designer with a focus on creating visually stunning and user-friendly interfaces."
+          image={Nishant}
+        />
+        <FounderCard
+          name="Mayur Prajapati"
+          role="Backend Developer"
+          description="Hello, I'm John Doe, a passionate designer with a focus on creating visually stunning and user-friendly interfaces."
+          image={Mayur}
+        /> 
+        <FounderCard
+          name="Kush Mevada"
+          role="Backend Developer"
+          description="Hello, I'm John Doe, a passionate designer with a focus on creating visually stunning and user-friendly interfaces."
+          image={Kush}
+        /> 
       </Slider>
       </div>
     </div>
