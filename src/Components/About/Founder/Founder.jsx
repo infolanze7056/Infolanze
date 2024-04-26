@@ -90,6 +90,7 @@ const Founder = () => {
           role="Backend Developer"
           description="Hello, I'm John Doe, a passionate designer with a focus on creating visually stunning and user-friendly interfaces."
           image={Kush}
+          link="https://kush-mevada.vercel.app"
         /> 
       </Slider>
       </div>
