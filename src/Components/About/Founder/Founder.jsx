@@ -21,8 +21,8 @@ const Founder = () => {
     slidesToScroll: 1,
     centerMode: true, // Set centerMode to true
     centerPadding: "60px", // Adjust the value as per your requirement
-    // autoplay: true, // Set autoplay to true
-    // autoplaySpeed: 2000,
+    autoplay: true, // Set autoplay to true
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 1024,
