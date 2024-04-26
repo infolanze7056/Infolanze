@@ -6,14 +6,10 @@ import "./AboutHero.css";
 const AboutHero = () => {
   return (
     <>
-    {/* <ServiceBredcumb
-        serviceName="About"
-      /> */}
-    <div className="font-family lg:py-36 lg:px-28 md:py-10 py-10 px-5">
+    <div className="font-family lg:py-36 lg:px-28 md:py-28 py-20 px-5 dinesh xl:py-48 ">
       <div className="text-center text-4xl font-bold">About Us</div>
-      {/* <img src={Underline} alt="Underline" className="mx-auto about-under" /> */}
       <div className="About pt-10">
-        <div className="text-center md:px-20 text-xl sm:px-5">
+        <div className="text-center md:px-20 sm:px-5 aboutus sm:text-sm md:text-lg lg:text-xl"> 
           Infolanze Technologies is in top software development solutions that
           stimulate your business with our comprehensive modern app development
           services. We offer customized digital solutions that will help engage
