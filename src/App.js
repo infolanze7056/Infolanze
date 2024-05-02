@@ -20,7 +20,7 @@ function App() {
   return (
     <div>
       <Helmet>
-        <title>Home | Lead Hunter</title>
+        <title>Home | Infolanze</title>
         <meta name="description" content="Find the perfect leads for you. Explore thousands of skilled professionals ready to bring your ideas to life."/>
       </Helmet>
       <BrowserRouter>

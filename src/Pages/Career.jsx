@@ -4,6 +4,7 @@ import CareerSection from '../Components/Career/CareerSection';
 import CareerProcess from '../Components/Career/CareerProcess';
 import CareerGrowth from '../Components/Career/CareerGrowth';
 import CareerOpening from '../Components/Career/CareerOpening';
+import CareerBenefit from '../Components/Career/CareerBenefit';
 
 function Career() {
   return (
@@ -15,6 +16,7 @@ function Career() {
       <CareerSection />
       <CareerGrowth />
       <CareerProcess />
+      <CareerBenefit />
       <CareerOpening />
     </div>
   )
