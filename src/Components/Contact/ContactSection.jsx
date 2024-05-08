@@ -32,10 +32,10 @@ const ContactSection = () => {
 
     emailjs
       .sendForm(
-        "service_izrxqrf",
-        "template_mtaqgyg",
+        "service_ww7m4up",
+        "template_jvddmch",
         e.target,
-        "K7uMJi0Y5vlmwltXZ"
+        "SGUyLB54dNpl6UGxq"
       )
       .then(
         (result) => {
@@ -72,25 +72,26 @@ const ContactSection = () => {
   return (
     <>
     <ServiceBredcumb
-        serviceName="Contact"
+        serviceName="Contact US"
+        serviceNameB="/ Contact"
       />
     <div className="lg:px-28 md:px-20 px-5">
-      <section className="relative z-10 overflow-hidden bg-white py-20 dark:bg-dark lg:py-[80px]">
+      <section className="relative z-10 overflow-hidden bg-white pb-20 dark:bg-dark lg:py-[80px]">
         <div className="font-family">
           <div className="-mx-4 flex flex-wrap lg:justify-between">
             <div className="w-full px-4 lg:w-1/2 xl:w-6/12 md:text-center sm:text-center lg:text-start xl:text-start text-center">
               <div className="mb-12  lg:mb-0">
-                <h2 className="mb-6 text-[32px] font-bold uppercase text-dark dark:text-black sm:text-[40px] lg:text-[36px] xl:text-[40px]">
+                <h2 className="mb-2 text-[--second-color] text-2xl font-bold uppercase text-dark dark:text-black  lg:text-4xl md:text-3xl">
                   GET IN TOUCH WITH US
                 </h2> 
-                <p className="mb-9 text-base leading-relaxed text-body-color dark:text-dark-6">
+                <p className="mb-9 text-sm md:text-base lg:text-base leading-relaxed opacity-85 text-body-color dark:text-dark-6">
                   Our dedicated team is here to assist you every step of the
                   way. Whether you're seeking technical support, have questions
                   about our products, or want to explore partnership
                   opportunities, we're ready to help.
                 </p>
-                <div className="mb-8 flex w-full">
-                  <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary/5 text-primary sm:h-[70px] sm:max-w-[70px]">
+                <div className="mb-8 flex w-full border items-center rounded-md p-5 shadow-lg">
+                  <div className="mr-4 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary/5 text-primary sm:h-[70px] sm:max-w-[70px]">
                     <svg
                       width="32"
                       height="32"
@@ -105,18 +106,18 @@ const ContactSection = () => {
                     </svg>
                   </div>
                   <div className="w-full manish">
-                    <h4 className="mb-1 text-xl font-bold text-dark dark:text-black">
+                    <h4 className="mb-1 lg:text-xl md:text-xl text-lg font-bold text-dark dark:text-black">
                       Our Location
                     </h4>
-                    <p className="text-base text-body-color dark:text-dark-6">
+                    <p className="lg:text-base md:text-base text-sm text-body-color dark:text-dark-6">
                       A-807, Empire Business Hub, Science City Road, Sola,
                       Ahmedabad, 380060.
                     </p>
                   </div>
                 </div>
 
-                <div className="mb-8 flex w-full">
-                  <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary/5 text-primary sm:h-[70px] sm:max-w-[70px]">
+                <div className="mb-8 flex w-full border rounded-md p-5 items-center shadow-lg">
+                  <div className="mr-4 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary/5 text-primary sm:h-[70px] sm:max-w-[70px]">
                     <svg
                       width="32"
                       height="32"
@@ -146,17 +147,17 @@ const ContactSection = () => {
                     </svg>
                   </div>
                   <div className="w-full manish">
-                    <h4 className="mb-1 text-xl font-bold text-dark dark:text-black">
+                    <h4 className="mb-1 lg:text-xl md:text-xl text-lg font-bold text-dark dark:text-black">
                       Phone Number
                     </h4>
-                    <p className="text-base text-body-color dark:text-dark-6">
-                      (+91)701 616 0435
+                    <p className="lg:text-base md:text-base text-sm text-body-color dark:text-dark-6">
+                      (+91) 701 616 0435
                     </p>
                   </div>
                 </div>
 
-                <div className="mb-8 flex w-full items-start">
-                  <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary/5 text-primary sm:h-[70px] sm:max-w-[70px]">
+                <div className="mb-8 flex w-full border rounded-md p-5 shadow-lg items-center">
+                  <div className="mr-4 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary/5 text-primary sm:h-[70px] sm:max-w-[70px]">
                     <svg
                       width="32"
                       height="32"
@@ -171,10 +172,10 @@ const ContactSection = () => {
                     </svg>
                   </div>
                   <div className="w-full manish">
-                    <h4 className="mb-1 text-xl font-bold text-dark dark:text-black">
+                    <h4 className="mb-1 lg:text-xl md:text-xl text-lg font-bold text-dark dark:text-black">
                       Email Address
                     </h4>
-                    <p className="text-base text-body-color dark:text-dark-6">
+                    <p className="lg:text-base md:text-base text-sm text-body-color dark:text-dark-6">
                       infolanze.tech@gmail.com
                     </p>
                   </div>

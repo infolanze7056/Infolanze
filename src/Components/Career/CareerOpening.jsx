@@ -2,25 +2,28 @@ import React, { useState, useEffect } from "react";
 import img1 from "../../Images/Superior-Support.png";
 import { FaAngleDoubleRight } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
+import emailjs from "emailjs-com";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const openings = [
   {
-    title: "React Js & Node Js developer",
+    apply: "React Js & Node Js developer",
     experience: "6 to 8 years",
     numberOfOpenings: 2,
   },
   {
-    title: "Jr. asp.net mvc developer",
+    apply: "Jr. asp.net mvc developer",
     experience: "1 to 2 years",
     numberOfOpenings: 3,
   },
   {
-    title: "QA Manual and automation",
+    apply: "QA Manual and automation",
     experience: "0 to 0.6 years",
     numberOfOpenings: 1,
   },
   {
-    title: "UI/UX designer",
+    apply: "UI/UX designer",
     experience: "1 to 2 years",
     numberOfOpenings: 1,
   },
@@ -29,6 +32,54 @@ const openings = [
 function CareerOpening() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [selectedOpening, setSelectedOpening] = useState(null);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    number: "",
+    apply: "",
+    resume: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    setFormData({ ...formData, resume: file });
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_ww7m4up",
+        "template_u8nb61p",
+        e.target,
+        "SGUyLB54dNpl6UGxq"
+      )
+      .then(
+        (result) => {
+          console.log("Email sent successfully!", result.text);
+          toast.success("Email sent successfully!");
+          setFormData({
+            name: "",
+            email: "",
+            number: "",
+            resume: "",
+          });
+          setIsPopupOpen(false);
+        },
+        (error) => {
+          console.error("Email could not be sent:", error.text);
+          toast.error("Error sending email");
+        }
+      );
+
+    e.target.reset();
+  };
 
   useEffect(() => {
     if (isPopupOpen) {
@@ -48,11 +99,12 @@ function CareerOpening() {
   const openPopup = (opening) => {
     setSelectedOpening(opening);
     setIsPopupOpen(true);
+    setFormData({ ...formData, apply: opening.apply });
   };
 
   return (
     <div className="font-family">
-      <div className="lg:px-28 md:px-20 px-5 py-10">
+      <div className="lg:px-28 md:px-20 px-5 py-16">
         <div>
           <div className="text-4xl font-semibold uppercase text-center pb-10">
             Current Openings Us?
@@ -68,7 +120,7 @@ function CareerOpening() {
                 <img className="w-20" src={img1} alt="img" />
               </div>
               <div className="pt-4 text-xl font-semibold pb-3">
-                {opening.title}
+                {opening.apply}
               </div>
               <div className="flex items-center">
                 <div className="border-e-2 border-gray-500 pe-2">
@@ -80,7 +132,7 @@ function CareerOpening() {
               </div>
               <div className="pt-5">
                 <button
-                  className="border rounded-full p-3 px-7 border-gray-500 text-sm hover:bg-white flex items-center"
+                  className="rounded-full p-3 px-7 text-sm bg-[--second-color] transition duration-300 ease-in-out  text-white hover:text-black hover:bg-white flex items-center"
                   onClick={() => openPopup(opening)}
                 >
                   Apply Now&nbsp;&nbsp;
@@ -93,15 +145,18 @@ function CareerOpening() {
       </div>
       {isPopupOpen && (
         <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center px-4 z-50">
-          <div className="bg-white p-2 rounded-lg  max-w-lg w-[520px]">
+          <div className="bg-white p-2 rounded-lg  max-w-lg w-[520px] relative">
+            <div className="border rounded-lg">
+            <div className=" flex justify-center">
+            <div className="ps-4 pt-4 text-[--second-color] text-lg font-semibold">Join Our Team</div>
             <div
               onClick={() => setIsPopupOpen(false)}
-              className="hover:cursor-pointer"
+              className="hover:cursor-pointer absolute right-3 top-3"
             >
               <IoCloseSharp className="text-lg" />
             </div>
-            <div className="border rounded-lg p-4">
-            <form action="">
+            </div>
+            <form action="" onSubmit={sendEmail} className="p-4">
             <label
                 for="input-group-1"
                 class="block mb-1 text-sm font-medium text-gray-900 dark:text-white"
@@ -126,8 +181,9 @@ function CareerOpening() {
                   id="input-group-1"
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Technology"
-                  value={selectedOpening.title}
-                  disabled
+                  value={formData.apply}
+                  name="apply"
+                  readOnly
                 />
               </div>
               <label
@@ -154,6 +210,10 @@ function CareerOpening() {
                   id="input-group-1"
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Enter Your Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  name="name"
+                  required
                 />
               </div>
               <label
@@ -180,6 +240,10 @@ function CareerOpening() {
                   id="input-group-1"
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Enter Your Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  name="email"
+                  required
                 />
               </div>
               <label
@@ -206,6 +270,10 @@ function CareerOpening() {
                   id="input-group-1"
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Enter Your Number"
+                  value={formData.number}
+                  onChange={handleChange}
+                  name="number"
+                  required
                 />
               </div>
                 <div class="flex items-center justify-center w-full">
@@ -217,7 +285,7 @@ function CareerOpening() {
                             <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
                             {/* <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p> */}
                         </div>
-                        <input id="dropzone-file" type="file" class="hidden" />
+                        <input id="dropzone-file" name="resume" onChange={handleFileChange} type="file" class="hidden" required />
                     </label>
                 </div> 
               <div className="pt-5 text-center"><button className="w-max bg-[--second-color] border-[--second-color] border hover:text-[--second-color] hover:bg-white text-white text-sm p-2 px-5 rounded-md" type="submit">Submit</button></div>
@@ -226,6 +294,7 @@ function CareerOpening() {
           </div>
         </div>
       )}
+      <ToastContainer />
     </div>
   );
 }

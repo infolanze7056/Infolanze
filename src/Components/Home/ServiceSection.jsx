@@ -11,7 +11,7 @@ function ServiceSection() {
         <div className="text-center pb-10 font-family">
           <div className="uppercase text-4xl font-bold text-[#25a9e0]">Our Services</div>
           <div className="text-sm font-medium pt-2 opacity-90">
-            We turns Your Throughts into Reality with Our Srvices.
+            We turns Your Throughts into Reality with Our Services.
           </div>
         </div>
         <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-16 px-3">

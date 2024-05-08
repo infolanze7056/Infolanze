@@ -159,7 +159,7 @@ function HeroSection() {
                 </div>
                 <div className="py-5 lg:order-1 lg:text-start text-center lg:ps-7 font-family">
                   <div className="text-5xl font-semibold pb-4">
-                    Block-Chain Development
+                    Blockchain Development
                   </div>
                   <div className="text-md pb-4">
                     Whether you're seeking enhanced security, transparent

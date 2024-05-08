@@ -20,7 +20,7 @@ const Founder = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     centerMode: true, // Set centerMode to true
-    centerPadding: "60px", // Adjust the value as per your requirement
+    centerPadding: "0px", // Adjust the value as per your requirement
     autoplay: true, // Set autoplay to true
     autoplaySpeed: 2000,
     responsive: [
@@ -47,8 +47,8 @@ const Founder = () => {
   return (
     <div className="font-family bg-[#e9f6fc] py-10">
       <div className="py-3">
-      <h3 className="text-center text-3xl font-bold ">Meet Our Team</h3>
-      <p className="text-center text-2xl">
+      <h3 className="text-center lg:text-3xl md:text-3xl text-2xl font-bold ">Meet Our Team</h3>
+      <p className="text-center lg:text-lg md:text-lg text-sm">
         Discover more about our high performing team
       </p>
       </div>
@@ -68,17 +68,17 @@ const Founder = () => {
           image={Main}
         />
         <FounderCard
-          name="Manish Chaudhary"
-          role="Frontend Developer"
-          description="Hello, I'm John Doe, a passionate designer with a focus on creating visually stunning and user-friendly interfaces."
-          image={Manish}
-        /> 
-        <FounderCard
           name="Nishant Timbadiya"
           role="Frontend Developer"
           description="Hello, I'm John Doe, a passionate designer with a focus on creating visually stunning and user-friendly interfaces."
           image={Nishant}
         />
+        <FounderCard
+          name="Manish Chaudhary"
+          role="Frontend Developer"
+          description="Hello, I'm John Doe, a passionate designer with a focus on creating visually stunning and user-friendly interfaces."
+          image={Manish}
+        /> 
         <FounderCard
           name="Mayur Prajapati"
           role="Backend Developer"

@@ -3,3 +3,11 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.bg-image{
+    background-image: url(../../Images/pattern-randomized.png) !important;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

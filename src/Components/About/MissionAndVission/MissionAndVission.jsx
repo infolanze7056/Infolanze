@@ -6,7 +6,7 @@ import "./MissionAndVission.css"
 const MissionAndVission = () => {
   return (
     <>  
-      <div className="flex flex-col lg:flex-row lg:px-28 md:px-20 px-5 font-family pt-5">
+      <div className="flex flex-col lg:flex-row lg:px-28 md:px-20 px-5 font-family py-10">
         <div className="lg:w-1/2 bg-pink p-6 p-md-5 h-100">
           <h2 className="text-2xl font-bold">Core Values</h2>
           <p className="mt-4">

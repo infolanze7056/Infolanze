@@ -10,6 +10,7 @@ import { MdWeb } from "react-icons/md";
 import { FaMobileScreenButton } from "react-icons/fa6";
 import { HiOutlineSpeakerphone } from "react-icons/hi";
 import { SiHiveBlockchain } from "react-icons/si";
+import { FaAngleDown } from "react-icons/fa";
 
 function Header() {
   const [isActive, setIsActive] = useState(1);
@@ -61,7 +62,7 @@ function Header() {
 
   return (
     <div className="Header-p1 fixed w-full z-50">
-    <div className="shadow-xl w-full bg-[#25aae1] py-3">
+    <div className="shadow-xl w-full bg-[--second-color] py-3">
       <div className="lg:px-16 md:px-7 px-5 lg:flex justify-between items-center">
         <div className="z-40">
           <span>
@@ -77,20 +78,20 @@ function Header() {
         </div>
 
         <nav
-          className={`nav-menu lg:flex lg:pb-0 lg:py-0 md:py-7 py-7 lg:items-center text-base absolute lg:static bg-[#25aae1] z-30 right-0 w-full lg:w-auto md:pl-0 transition-all duration-500 ease-in 
-          ${isOpen ? "top-[-600px]" : "top-[65px]"}` }
+          className={`nav-menu lg:flex lg:pb-0 lg:py-0 md:py-7 py-7 lg:items-center text-base absolute lg:static bg-[--second-color] z-30 right-0 w-full lg:w-auto md:pl-0 transition-all duration-500 ease-in 
+          ${isOpen ? "top-[-230px] z-[-1] lg:z-0 transition-all duration-500" : "top-[65px] z-[-1] lg:z-0 transition-all duration-500"}` }
         >
-          <div className="bg-[#25aae1] lg:flex gap-1 text-start lg:ps-0 md:ps-5 ps-3 font-family z-30">
+          <div className="bg-[--second-color] lg:flex gap-1 text-start lg:ps-0 md:ps-5 ps-3 font-family z-30">
             <div className="lg:p-0 p-1.5">
               <NavLink
                 to="/"
-                activeClassName="active"
+                activeclassname="active"
                 id="1"
                 onClick={(e) => handleNavSelected(e)}
                 className={
                   isActive === "1"
-                    ? "active mr-5  hover:text-black  cursor-pointer "
-                    : "mr-5  hover:text-black  cursor-pointer "
+                    ? "active mr-5  hover:text-black  cursor-pointer flex"
+                    : "mr-5  hover:text-black  cursor-pointer flex"
                 }
               >
                 Home
@@ -100,12 +101,12 @@ function Header() {
               <NavLink
                 to="/about"
                 id="2"
-                activeClassName="active"
+                activeclassname="active"
                 onClick={(e) => handleNavSelected(e)}
                 className={
                   isActive === "2"
-                    ? "active mr-5  hover:text-black  cursor-pointer "
-                    : "mr-5  hover:text-black  cursor-pointer "
+                    ? "active mr-5  hover:text-black  cursor-pointer flex"
+                    : "mr-5  hover:text-black  cursor-pointer flex"
                 }
               >
                 About US
@@ -114,13 +115,13 @@ function Header() {
             <div className="lg:p-0 p-1.5">
               <NavLink
                 to="/contact"
-                activeClassName="active"
+                activeclassname="active"
                 id="3"
                 onClick={(e) => handleNavSelected(e)}
                 className={
                   isActive === "3"
-                    ? "active mr-5  hover:text-black  cursor-pointer "
-                    : "mr-5  hover:text-black  cursor-pointer "
+                    ? "active mr-5  hover:text-black  cursor-pointer flex"
+                    : "mr-5  hover:text-black  cursor-pointer flex"
                 }
               >
                 Contact US
@@ -129,18 +130,18 @@ function Header() {
             <div className="lg:p-0 p-1.5 relative">
             <NavLink
               to="/service"
-              activeClassName="active"
+              activeclassname="active"
               id="4"
               // onClick={(e) => handleNavSelected(e)}
               onMouseEnter={toggleDropdownVisibility}
                   onMouseLeave={toggleDropdownVisibility}
               className={
                 isActive === "4"
-                  ? "active mr-5 hover:text-black cursor-pointer"
-                  : "mr-5 hover:text-black cursor-pointer"
+                  ? "active mr-5 hover:text-black cursor-pointer flex"
+                  : "mr-5 hover:text-black cursor-pointer flex items-center"
               }
             >
-              Services
+              Services&nbsp;<FaAngleDown />
             </NavLink>
             {isDropdownVisible && (
               <div 
@@ -295,13 +296,13 @@ function Header() {
               <div className="lg:p-0 p-1.5">
               <NavLink
                 to="/career"
-                activeClassName="active"
+                activeclassname="active"
                 id="5"
                 onClick={(e) => handleNavSelected(e)}
                 className={
                   isActive === "5"
-                    ? "active mr-5  hover:text-black  cursor-pointer "
-                    : "mr-5  hover:text-black  cursor-pointer "
+                    ? "active mr-5  hover:text-black  cursor-pointer flex"
+                    : "mr-5  hover:text-black  cursor-pointer flex"
                 }
               >
                 Careers

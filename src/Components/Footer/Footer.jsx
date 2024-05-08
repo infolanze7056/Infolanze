@@ -4,7 +4,7 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <div className="bg-[#f5f5f5] font-family">
+    <div className="bg-[--main-color] border-t font-family">
       {/* <svg
         id="svg-section-2"
         xmlns="http://www.w3.org/2000/svg"

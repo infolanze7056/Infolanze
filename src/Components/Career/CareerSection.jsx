@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import "./Career.css";
 
 function CareerSection() {
   return (
-    <div className='font-family'>
+    <div className='font-family bg-image'>
       <div className='lg:px-28 md:px-20 px-5 lg:py-36 md:py-40 py-24'>
         <div className='text-center max-w-3xl mx-auto'>
           <div className='lg:text-5xl text-3xl'>Join With Us</div>

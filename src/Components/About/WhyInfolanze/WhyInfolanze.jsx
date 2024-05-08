@@ -4,12 +4,12 @@ import "./WhyInfolanze.css";
 const WhyInfolanze = () => {
   return (
     <>
-      <div className="font-family lg:px-28 md:px-20 px-5 bg-[#d6eff9] py-14 main">
-        <div>
-          <h3 className="text-3xl font-bold text-center lg:pt-0">
+      <div className="font-family lg:px-28 md:px-20 px-5 bg-[--main-color] py-14 main">
+        <div className="pb-10">
+          <h3 className="lg:text-3xl text-2xl font-bold text-center lg:pt-0">
             Why Infolanze Technologies?
           </h3>
-          <p className="py-4 text-center">
+          <p className="pt-2 text-center text-sm lg:text-base md:text-base lg:px-36">
             With more than a decade of experience, Infolanze Technologies has
             possessed the capabilities and skilled resources to offer
             competitive and performance-driven mobile and web development
@@ -17,9 +17,9 @@ const WhyInfolanze = () => {
           </p>
         </div>
         <div>
-          <div className="flex flex-wrap">
-            <div className="xl:w-1/2">
-              <div className="leading-company-box lcb13 bg-fc9290 rounded-md p-4 mt-8 pt-0 lg:p-8 xl:p-4 md:p-4 2xl:p-8">
+          <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-10 md:gap-6 gap-6">
+            <div className="">
+              <div className="leading-company-box lcb13 bg-fc9290 rounded-md p-4 lg:p-8 xl:p-4 md:p-4 2xl:p-8">
                 <h3 className="text-lg font-bold manish">
                   Expertise in Multiple Domains
                 </h3>
@@ -30,19 +30,17 @@ const WhyInfolanze = () => {
                 </p>
               </div>
             </div>
-            <div className="xl:w-1/2">
-              <div className="leading-company-box lcb14 bg-ffb379 rounded-md p-4 mt-8 manish pt-0 lg:p-8 xl:p-4 md:p-4 2xl:p-8">
+            <div className="">
+              <div className="leading-company-box lcb14 bg-ffb379 rounded-md p-4 lg:p-8 xl:p-4 md:p-4 2xl:p-8">
                 <h3 className="text-lg font-bold manish">
                   Intellectual Property Rights Protection
                 </h3>
                 <p className="text-sm">
-                  Our experienced IT professionals are skilled in multiple
-                  programming languages and technologies, ensuring competitive
-                  and dedicated solutions
+                Our experienced and IT professionals are skilled in multiple programming languages, ensuring competitive and dedicated solutions.
                 </p>
               </div>
             </div>
-            <div className="xl:w-1/2">
+            <div className="">
               <div className="leading-company-box lcb15 bg-5fdbba rounded-md p-4 mt-8 pt-0 lg:p-8 xl:p-4 md:p-4">
                 <h3 className="text-lg font-bold manish">
                   Experienced and Productive Professionals
@@ -54,7 +52,7 @@ const WhyInfolanze = () => {
                 </p>
               </div>
             </div>
-            <div className="xl:w-1/2">
+            <div className="">
               <div className="leading-company-box lcb16 bg-b2e388 rounded-md p-4 mt-8 pt-0 lg:p-8 xl:p-4 md:p-4">
                 <h3 className="text-lg font-bold manish">
                   Hierarchy and Reporting Structure
@@ -66,7 +64,7 @@ const WhyInfolanze = () => {
                 </p>
               </div>
             </div>
-            <div className="xl:w-1/2">
+            <div className="">
               <div className="leading-company-box lcb17 bg-93d6f2 rounded-md p-4 mt-8 pt-0 lg:p-8 xl:p-4 md:p-4">
                 <h3 className="text-lg font-bold manish">
                   Proper Hierarchy and Escalation Path
@@ -79,7 +77,7 @@ const WhyInfolanze = () => {
                 </p>
               </div>
             </div>
-            <div className="xl:w-1/2">
+            <div className="">
               <div className="leading-company-box lcb18 bg-fc9290 rounded-md p-4 mt-8 pt-0 lg:p-8 xl:p-4 md:p-4">
                 <h3 className="text-lg font-bold manish">
                   24/7 Support Availability

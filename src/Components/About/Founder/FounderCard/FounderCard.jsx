@@ -3,7 +3,7 @@ import "./FounderCard.css";
 
 const FounderCard = ({ name, role, description, image, link }) => {
   return (
-    <div className="h-full flex py-10 px-5">
+    <div className="h-full flex py-5 lg:py-10 md:py-10 px-5">
       <div className="card border bg-white text-center py-4 shadow rounded m-auto">
         <img src={image} alt={name} className="rounded-full image mx-auto" />
         <h3 className="text-xl font-bold">{name}</h3>

@@ -1,9 +1,7 @@
-.about-under {
-    width: 204px;
-}
 .dinesh{
-    background-image: url(../../../Images/smoke.png) !important;
+    background-image: url(../../../Images/pattern-randomized.png) !important;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
