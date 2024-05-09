@@ -5,7 +5,7 @@ import "../ServiceSection.css";
 function ServiceBredcumb({ serviceName, serviceNameB }) {
   return (
     <div className="font-family">
-      <div className="pb-20 pt-12">
+      <div className="pb-24 pt-12">
         <div className="text-center">
           <div className="lg:text-4xl md:text-3xl text-2xl pb-3">{serviceName}</div>
           <div className="bg-[--main-color] lg:p-3 md:p-3 md:px-10 p-2 lg:px-10 px-5 lg:text-sm md:text-sm text-xs rounded-full w-max mx-auto opacity-90 z-50">
