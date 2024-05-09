@@ -10,14 +10,17 @@ import { MdWeb } from "react-icons/md";
 import { FaMobileScreenButton } from "react-icons/fa6";
 import { HiOutlineSpeakerphone } from "react-icons/hi";
 import { SiHiveBlockchain } from "react-icons/si";
-import { FaAngleDown } from "react-icons/fa";
+import { FaAngleUp, FaAngleDown } from "react-icons/fa";
 
 function Header() {
   const [isActive, setIsActive] = useState(1);
   const [isOpen, setIsOpen] = useState(true);
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
-
   const location = useLocation();
+
+  // const toggleDropdownVisibility = () => {
+  //   setIsDropdownOpen(!isDropdownOpen);
+  // };
 
   useEffect(() => {
 
@@ -141,13 +144,15 @@ function Header() {
                   : "mr-5 hover:text-black cursor-pointer flex items-center"
               }
             >
-              Services&nbsp;<FaAngleDown />
+              {/* Services&nbsp;<FaAngleDown className="lg:block hidden" /> */}
+              Services&nbsp;
+              {isDropdownVisible ? <FaAngleUp className="" onClick={() => setIsDropdownVisible(false)} /> : <FaAngleDown className="" onClick={() => setIsDropdownVisible(true)}  />}
             </NavLink>
             {isDropdownVisible && (
               <div 
-              onMouseEnter={() => setIsDropdownVisible(true)}
-                    onMouseLeave={() => setIsDropdownVisible(false)} 
-                    className="top-full pt-2 z-10 lg:hidden md:hidden block ">
+              // onMouseEnter={() => setIsDropdownVisible(true)}
+              //       onMouseLeave={() => setIsDropdownVisible(false)} 
+                    className="top-full pt-2 z-10 lg:hidden block transition duration-400 ease-in-out mr-5">
                     <div className="bg-white border border-gray-200 rounded shadow-lg">
                 {/* Dropdown content goes here */}
                 <NavLink
@@ -191,9 +196,8 @@ function Header() {
             {isDropdownVisible && (
               <div onMouseEnter={() => setIsDropdownVisible(true)}
                     onMouseLeave={() => setIsDropdownVisible(false)} 
-                    className="absolute top-full right-0 w-[1150px]  pt-2 z-10 lg:block hidden">
+                    className="absolute top-full right-0 w-[1150px]  pt-2 z-10 lg:block hidden md:hidden">
                 <div className="bg-white border border-gray-200 rounded shadow-lg p-5">
-                {/* Dropdown content goes here */}
                 <div className="grid grid-cols-5 gap-5">
                   <div className="">
                     <div className="flex items-center">
