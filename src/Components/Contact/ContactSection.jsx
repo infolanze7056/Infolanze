@@ -90,8 +90,8 @@ const ContactSection = () => {
                   about our products, or want to explore partnership
                   opportunities, we're ready to help.
                 </p>
-                <div className="mb-8 flex w-full border items-center rounded-md p-5 shadow-lg">
-                  <div className="mr-4 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary/5 text-primary sm:h-[70px] sm:max-w-[70px]">
+                <div className="mb-8 flex w-full border border-gray-100 items-center rounded-md p-4 shadow-md">
+                  <div className="mr-6 flex bg-[--main-color] h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary/5 text-primary sm:h-[70px] sm:max-w-[70px]">
                     <svg
                       width="32"
                       height="32"
@@ -106,18 +106,18 @@ const ContactSection = () => {
                     </svg>
                   </div>
                   <div className="w-full manish">
-                    <h4 className="mb-1 lg:text-xl md:text-xl text-lg font-bold text-dark dark:text-black">
+                    <h4 className="mb-1 lg:text-lg md:text-lg text-base font-bold text-[--second-color]">
                       Our Location
                     </h4>
-                    <p className="lg:text-base md:text-base text-sm text-body-color dark:text-dark-6">
+                    <p className="lg:text-base md:text-base text-sm text-body-color opacity-90 dark:text-dark-6">
                       A-807, Empire Business Hub, Science City Road, Sola,
                       Ahmedabad, 380060.
                     </p>
                   </div>
                 </div>
 
-                <div className="mb-8 flex w-full border rounded-md p-5 items-center shadow-lg">
-                  <div className="mr-4 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary/5 text-primary sm:h-[70px] sm:max-w-[70px]">
+                <div className="mb-8 flex w-full border border-gray-100 rounded-md p-5 items-center shadow-md">
+                  <div className="mr-6 flex bg-[--main-color] h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary/5 text-primary sm:h-[70px] sm:max-w-[70px]">
                     <svg
                       width="32"
                       height="32"
@@ -147,17 +147,17 @@ const ContactSection = () => {
                     </svg>
                   </div>
                   <div className="w-full manish">
-                    <h4 className="mb-1 lg:text-xl md:text-xl text-lg font-bold text-dark dark:text-black">
+                    <h4 className="mb-1 lg:text-lg md:text-lg text-base font-bold text-[--second-color]">
                       Phone Number
                     </h4>
-                    <p className="lg:text-base md:text-base text-sm text-body-color dark:text-dark-6">
+                    <p className="lg:text-base md:text-base text-sm text-body-color opacity-90 dark:text-dark-6">
                       (+91) 701 616 0435
                     </p>
                   </div>
                 </div>
 
-                <div className="mb-8 flex w-full border rounded-md p-5 shadow-lg items-center">
-                  <div className="mr-4 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary/5 text-primary sm:h-[70px] sm:max-w-[70px]">
+                <div className="mb-8 flex w-full border border-gray-100 rounded-md p-5 shadow-md items-center">
+                  <div className="mr-6 flex bg-[--main-color] h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary/5 text-primary sm:h-[70px] sm:max-w-[70px]">
                     <svg
                       width="32"
                       height="32"
@@ -172,10 +172,10 @@ const ContactSection = () => {
                     </svg>
                   </div>
                   <div className="w-full manish">
-                    <h4 className="mb-1 lg:text-xl md:text-xl text-lg font-bold text-dark dark:text-black">
+                    <h4 className="mb-1 lg:text-lg md:text-lg text-base font-bold text-[--second-color]">
                       Email Address
                     </h4>
-                    <p className="lg:text-base md:text-base text-sm text-body-color dark:text-dark-6">
+                    <p className="lg:text-base md:text-base text-sm text-body-color opacity-90 dark:text-dark-6">
                       infolanze.tech@gmail.com
                     </p>
                   </div>

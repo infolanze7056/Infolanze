@@ -41,7 +41,7 @@ function CareerOpening() {
     <div className="font-family">
       <div className="lg:px-28 md:px-20 px-5 py-16">
         <div>
-          <div className="text-4xl font-semibold uppercase text-center pb-10">
+          <div className="text-4xl font-semibold uppercase text-[--second-color] text-center pb-10">
             Current Openings Us?
           </div>
         </div>

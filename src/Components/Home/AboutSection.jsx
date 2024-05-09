@@ -31,7 +31,7 @@ function AboutSection() {
   return (
     <div className="py-10 lg:px-24 md:px-14 px-5 bg-img">
       <div className="text-center pb-10 font-family">
-        <div className="uppercase text-4xl font-bold text-[#25a9e0]">
+        <div className="uppercase text-4xl font-bold text-[--second-color]">
           Why Choose Us
         </div>
         <div className="text-sm font-medium pt-2 opacity-90">
@@ -60,7 +60,7 @@ function AboutSection() {
                 >
                   <div className="flex items-center">
                     <div>
-                      <BiSupport className="bg-[#d6eff9] text-black text-7xl p-5 rounded-lg md:mx-0 lg:mx-0 mx-auto" />
+                      <BiSupport className="bg-[--main-color] text-black text-7xl p-5 rounded-lg md:mx-0 lg:mx-0 mx-auto" />
                     </div>
                     <div className="text-xl text-black font-semibold ps-5 pe-7">
                       Lifetime Web Support
@@ -118,7 +118,7 @@ function AboutSection() {
                 >
                   <div className="flex text-black items-center">
                     <div>
-                      <MdAccountBalanceWallet className="bg-[#d6eff9] text-7xl p-5 rounded-lg md:mx-0 lg:mx-0 mx-auto" />
+                      <MdAccountBalanceWallet className="bg-[--main-color] text-7xl p-5 rounded-lg md:mx-0 lg:mx-0 mx-auto" />
                     </div>
                     <div className="text-xl font-semibold ps-5">
                       Awesome and Affordable
@@ -176,7 +176,7 @@ function AboutSection() {
                 >
                   <div className="flex text-black items-center">
                     <div>
-                      <BsPersonCircle className="bg-[#d6eff9] text-7xl p-5 rounded-lg md:mx-0 lg:mx-0 mx-auto" />
+                      <BsPersonCircle className="bg-[--main-color] text-7xl p-5 rounded-lg md:mx-0 lg:mx-0 mx-auto" />
                     </div>
                     <div className="text-xl font-semibold ps-5">
                       Experience and Expertise
@@ -233,7 +233,7 @@ function AboutSection() {
                 >
                   <div className="flex text-black items-center">
                     <div>
-                      <FaRegThumbsUp className="bg-[#d6eff9] text-7xl p-5 rounded-lg md:mx-0 lg:mx-0 mx-auto" />
+                      <FaRegThumbsUp className="bg-[--main-color] text-7xl p-5 rounded-lg md:mx-0 lg:mx-0 mx-auto" />
                     </div>
                     <div className="text-xl font-semibold ps-5">
                       Quality Standards

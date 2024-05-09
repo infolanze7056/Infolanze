@@ -13,7 +13,7 @@ function Process() {
     <div>
     <div className="lg:px-36 md:px-24 px-4 py-10 bg-[#e9f6fc] font-family">
         <div className="text-center pb-10">
-            <div className="uppercase text-4xl font-bold text-[#25a9e0]">Our Process</div>
+            <div className="uppercase text-4xl font-bold text-[--second-color]">Our Process</div>
             <div className="text-sm font-medium pt-2 opacity-90">We are with you always...From analysis of your requirement to Maintenance & Support phase.</div>
         </div>
         <div className='grid lg:grid-cols-6 md:grid-cols-2 grid-cols-1 gap-10 px-5 lg:text-left md:text-left text-center py-5'>

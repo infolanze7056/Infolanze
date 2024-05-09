@@ -5,7 +5,7 @@ import AboutHero from './AboutHero/AboutHero'
 import MissionAndVission from './MissionAndVission/MissionAndVission'
 import OurTeam from './OurTeam/OurTeam'
 import Founder from './Founder/Founder'
-import Whatsapp from '../../CommonComponent/Whatsapp'
+// import Whatsapp from '../../CommonComponent/Whatsapp'
 
 function AboutSection() {
   return (
@@ -17,7 +17,7 @@ function AboutSection() {
         
       <OurTeam/>
       <Founder/>
-      <Whatsapp/>
+      {/* <Whatsapp/> */}
       
     </div>
   )

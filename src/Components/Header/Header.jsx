@@ -137,7 +137,7 @@ function Header() {
               id="4"
               // onClick={(e) => handleNavSelected(e)}
               onMouseEnter={toggleDropdownVisibility}
-                  onMouseLeave={toggleDropdownVisibility}
+              onMouseLeave={toggleDropdownVisibility}
               className={
                 isActive === "4"
                   ? "active mr-5 hover:text-black cursor-pointer flex"
@@ -194,9 +194,10 @@ function Header() {
               </div>
             )}
             {isDropdownVisible && (
-              <div onMouseEnter={() => setIsDropdownVisible(true)}
+              <div 
+                    onMouseEnter={() => setIsDropdownVisible(true)}
                     onMouseLeave={() => setIsDropdownVisible(false)} 
-                    className="absolute top-full right-0 w-[1150px]  pt-2 z-10 lg:block hidden md:hidden">
+                    className="absolute top-full right-0 w-[1150px] pt-2 z-10 lg:block hidden md:hidden">
                 <div className="bg-white border border-gray-200 rounded shadow-lg p-5">
                 <div className="grid grid-cols-5 gap-5">
                   <div className="">

@@ -9,7 +9,7 @@ function Testimonials() {
     <div className='bg-img font-family'>
         <div className='py-10 lg:px-36 md:px-20 px-5'>
             <div className='text-center'>
-                <div className='uppercase text-3xl font-bold text-[#25a9e0]'>Testimonials</div>
+                <div className='uppercase text-3xl font-bold text-[--second-color]'>Testimonials</div>
                 <div className='text-sm font-medium pt-1 opacity-90'>Words of praise by my valuable clients.</div>
             </div>
             <div className='grid lg:grid-cols-2 grid-cols-1 gap-10 py-10'>

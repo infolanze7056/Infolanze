@@ -7,18 +7,18 @@ import { FaBug } from "react-icons/fa";
 function ServiceSection() {
   return (
     <div>
-      <div className="lg:px-24 md:px-14 px-4 py-10 pb-20 bg-[#e9f6fc]">
+      <div className="lg:px-24 md:px-14 px-4 py-10 pb-20 bg-[--main-color]">
         <div className="text-center pb-10 font-family">
-          <div className="uppercase text-4xl font-bold text-[#25a9e0]">Our Services</div>
+          <div className="uppercase text-4xl font-bold text-[--second-color]">Our Services</div>
           <div className="text-sm font-medium pt-2 opacity-90">
             We turns Your Throughts into Reality with Our Services.
           </div>
         </div>
         <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-16 px-3">
           <div className="p-4 bg-white rounded-lg hover:shadow-xl">
-            <div className=" border-2 border-dashed border-spacing-5 hover:border-blue-500 text-center bg-white p-5 rounded-lg h-full font-family">
+            <div className=" border-2 border-dashed border-spacing-5 hover:border-[--second-color] text-center bg-white p-5 rounded-lg h-full font-family">
               <div className="py-5">
-                <CgWebsite className="bg-[#eaf7fc] text-8xl p-5 mx-auto rounded-lg" />
+                <CgWebsite className="bg-[--main-color] text-8xl p-5 mx-auto rounded-lg" />
               </div>
               <div className="text-xl pb-2 pt-4 font-semibold">
                 Website Desiging
@@ -31,9 +31,9 @@ function ServiceSection() {
             </div>
           </div>
           <div className="p-4 bg-white rounded-lg hover:shadow-xl">
-            <div className=" border-2 border-dashed border-spacing-5 hover:border-blue-500 text-center bg-white p-5 rounded-lg h-full font-family">
+            <div className=" border-2 border-dashed border-spacing-5 hover:border-[--second-color] text-center bg-white p-5 rounded-lg h-full font-family">
               <div className="py-5">
-                <FaAppStore className="bg-[#eaf7fc] text-8xl p-5 mx-auto rounded-lg" />
+                <FaAppStore className="bg-[--main-color] text-8xl p-5 mx-auto rounded-lg" />
               </div>
               <div className="text-xl pb-2 pt-4 font-semibold">
                 Web Application Development
@@ -45,9 +45,9 @@ function ServiceSection() {
             </div>
           </div>
           <div className="p-4 bg-white rounded-lg hover:shadow-xl">
-            <div className=" border-2 border-dashed border-spacing-5 hover:border-blue-500 text-center bg-white p-5 rounded-lg h-full font-family">
+            <div className=" border-2 border-dashed border-spacing-5 hover:border-[--second-color] text-center bg-white p-5 rounded-lg h-full font-family">
               <div className="py-5">
-                <FaBug className="bg-[#eaf7fc] text-8xl p-5 mx-auto rounded-lg" />
+                <FaBug className="bg-[--main-color] text-8xl p-5 mx-auto rounded-lg" />
               </div>
               <div className="text-xl pb-2 pt-4 font-semibold">
                 Software Development
@@ -59,9 +59,9 @@ function ServiceSection() {
             </div>
           </div>
           <div className="p-4 bg-white rounded-lg hover:shadow-xl">
-            <div className=" border-2 border-dashed border-spacing-5 hover:border-blue-500 text-center bg-white p-5 rounded-lg h-full font-family">
+            <div className=" border-2 border-dashed border-spacing-5 hover:border-[--second-color] text-center bg-white p-5 rounded-lg h-full font-family">
               <div className="py-5">
-                <IoSettingsOutline className="bg-[#eaf7fc] text-8xl p-5 mx-auto rounded-lg" />
+                <IoSettingsOutline className="bg-[--main-color] text-8xl p-5 mx-auto rounded-lg" />
               </div>
               <div className="text-xl pb-2 pt-4 font-semibold">
                 BlockChain Development

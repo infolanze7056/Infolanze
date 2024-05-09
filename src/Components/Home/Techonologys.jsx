@@ -32,7 +32,7 @@ function Techonologys() {
     <div className='bg-img-2 font-family'>
         <div className='py-20 lg:px-40 md:px-10 px-5'>
             <div className='text-center'>
-                <div className='uppercase text-4xl font-bold '><span className='text-[#25a9e0]'>Technologies</span> We are Magnificent at</div>
+                <div className='uppercase text-4xl font-bold '><span className='text-[--second-color]'>Technologies</span> We are Magnificent at</div>
             </div>
             <div>
                 <div className="text-center py-10">

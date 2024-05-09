@@ -109,12 +109,12 @@ function ContactUS() {
   };
 
   return (
-    <div className="bg-[#e9f6fc] svg-1 font-family">
+    <div className="bg-[--main-color] svg-1 font-family">
       <div className="lg:px-36 md:px-20 px-5 py-16">
         <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 items-center">
           <div className=" lg:px-10 md:px-4">
             <div className="text-4xl font-bold pb-5">
-              Explore how to our services can be integrated with <span className="text-[#25a9e0]">Your Business.</span>
+              Explore how to our services can be integrated with <span className="text-[--second-color]">Your Business.</span>
             </div>
             <div className="font-semibold">We're just a conversation away!</div>
           </div>
@@ -190,7 +190,7 @@ function ContactUS() {
                 
                 <div>
                   <button
-                    className="text-white bg-[rgb(25,115,154)] hover:bg-[rgb(25,83,154)] font-semibold rounded-md text-sm px-6 py-3 mt-4 block"
+                    className="text-white bg-[--second-color] hover:bg-[rgb(105,145,221)] font-semibold rounded-md text-sm px-6 py-3 mt-4 block"
                     type="submit"
                     onClick={handleSubmit}
                   >
