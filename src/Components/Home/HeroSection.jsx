@@ -10,7 +10,7 @@ function HeroSection() {
   return (
     <div>
       <TECarousel
-        showControls
+        // showControls
         showIndicators
         crossfade
         ride="carousel"
@@ -82,6 +82,7 @@ function HeroSection() {
                   </div>
                 </div>
                 <div className="py-5 lg:order-1 lg:text-start text-center lg:ps-7 font-family">
+                  {/* <div className="bg-[--main-color] w-max px-7 rounded-sm mb-3 py-2 text-sm text-gray-900">UI Design</div> */}
                   <div className="text-5xl font-semibold pb-4">
                     Web Design And Development
                   </div>
