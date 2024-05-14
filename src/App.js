@@ -14,6 +14,7 @@ import AppDevelopment from "./Components/Service/AppDevelopment";
 import Blockchain from "./Components/Service/Blockchain";
 import SEO from "./Components/Service/SEO";
 import { Helmet } from "react-helmet";
+import Courses from "./Pages/Courses";
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/career" element={<Career />} />
             <Route path="/service" element={<Service />} />
+            <Route path="/courses" element={<Courses />} />
             <Route path="/service/ui-ux" element={<UI_UX />} />
             <Route path="/service/web-development" element={<WebDevelopment />} />
             <Route path="/service/app-development" element={<AppDevelopment />} />

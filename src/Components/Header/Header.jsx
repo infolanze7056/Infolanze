@@ -425,6 +425,21 @@ function Header() {
                   Careers
                 </NavLink>
               </div>
+              <div className="lg:px-2">
+                <NavLink
+                  to="/courses"
+                  activeclassname="active"
+                  id="6"
+                  onClick={(e) => handleNavSelected(e)}
+                  className={
+                    isActive === "6"
+                      ? "active mr-5  hover:text-black  cursor-pointer flex link"
+                      : "mr-5  hover:text-black  cursor-pointer flex link"
+                  }
+                >
+                  Courses
+                </NavLink>
+              </div>
             </div>
           </nav>
         </div>
