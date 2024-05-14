@@ -9,7 +9,7 @@ function ServiceSEO({ imageUrl, title, description, listItems }) {
           <div className='lg:order-2'><img className='mx-auto' src={imageUrl} alt="web" /></div>
           <div className='lg:order-1 lg:pe-10 lg:pt-0 pt-8'>
             <div>
-              <div className='text-4xl pb-2 font-semibold'>{title}</div>
+              <div className='text-3xl pb-2 font-semibold'>{title}</div>
               <div>{description}</div>
             </div>
             <ol className='pt-3'>

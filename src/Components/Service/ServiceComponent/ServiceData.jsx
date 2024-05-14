@@ -9,15 +9,15 @@ function ServiceData({ imageUrl, title, description, listItems }) {
           <div className=''><img className='mx-auto' src={imageUrl} alt="web" /></div>
           <div className='lg:ps-10 lg:pt-0 pt-8'>
             <div>
-              <div className='text-4xl pb-2 font-semibold'>{title}</div>
+              <div className='text-3xl pb-2 font-semibold'>{title}</div>
               <div>{description}</div>
             </div>
             <ol>
               {listItems.map((item, index) => (
                 <li key={index} className='flex pt-6'>
-                  <div className='pe-1'><RiArrowRightDoubleFill className='text-3xl'/></div>
+                  <div className='pe-1 pt-1'><RiArrowRightDoubleFill className='text-xl'/></div>
                   <div>
-                    <div className='text-2xl font-semibold'>{item.title}</div>
+                    <div className='text-xl font-semibold'>{item.title}</div>
                     <div className='pt-2'>{item.description}</div>
                   </div>
                 </li>

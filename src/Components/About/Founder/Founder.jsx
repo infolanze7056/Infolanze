@@ -57,38 +57,38 @@ const Founder = () => {
         <FounderCard
           name="Darshil Patel"
           role="Director/Full-Stack Blockchain Developer"
-          description="Hello, I'm Darshil Patel, a fervent blockchain developer with a keen interest in pioneering projects that push the boundaries of innovation."
+          description="Darshil Patel, our CEO at Infolanze, leads with vision and innovation, driving our company towards growth and success in the tech industry."
           image={Darshil}
           link="https://darshil-patel.vercel.app/"
         />
         <FounderCard
           name="Shreya Patel"
           role="Director/Chief Marketing Head"
-          description="Hello, I'm John Doe, a passionate designer with a focus on creating visually stunning and user-friendly interfaces."
+          description="Shreya Patel, our Chief Marketing Head, drives strategic initiatives, enhancing brand presence and market reach with innovative and effective marketing campaigns."
           image={Main}
         />
         <FounderCard
           name="Nishant Timbadiya"
           role="Frontend Developer"
-          description="Hello, I'm John Doe, a passionate designer with a focus on creating visually stunning and user-friendly interfaces."
+          description="Nishant, Our Frontend Developer, crafts stunning, intuitive user interfaces with cutting-edge web technologies, ensuring exceptional performance."
           image={Nishant}
         />
         <FounderCard
           name="Manish Chaudhary"
-          role="Frontend Developer"
-          description="Hello, I'm John Doe, a passionate designer with a focus on creating visually stunning and user-friendly interfaces."
+          role="Backend Developer"
+          description="Manish, our Backend Developer, crafting scalable server-side apps with seamless integration and optimal performance for your project's success."
           image={Manish}
         /> 
         <FounderCard
           name="Mayur Prajapati"
-          role="Backend Developer"
-          description="Hello, I'm John Doe, a passionate designer with a focus on creating visually stunning and user-friendly interfaces."
+          role="Graphic Designer"
+          description="Mayur, our Graphic Designer, creates stunning visuals and impactful designs, ensuring our brand's aesthetic excellence and visual appeal."
           image={Mayur}
         /> 
         <FounderCard
           name="Kush Mevada"
-          role="Backend Developer"
-          description="Hello, I'm John Doe, a passionate designer with a focus on creating visually stunning and user-friendly interfaces."
+          role="UI-UX Designer"
+          description="Kush, our UI/UX Developer, designs intuitive, user-friendly interfaces, enhancing user experience with innovative and efficient solutions."
           image={Kush}
           link="https://kush-mevada.vercel.app"
         /> 

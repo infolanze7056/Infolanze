@@ -47,7 +47,7 @@ const MissionAndVission = () => {
             <div>
               <h2 className="text-2xl font-bold">Our Mission</h2>
               <p className="mt-2">
-                At Hyperlink InfoSystem, we believe in empowering businesses
+                At Infolanze Tech, we believe in empowering businesses
                 with complete digital transformation by engineering
                 groundbreaking and scalable solutions. Our mission is to tackle
                 every tech challenge and pave the path for fresh opportunities
