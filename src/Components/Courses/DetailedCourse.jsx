@@ -8,7 +8,7 @@ const DetailedCourse = () => {
     <div>
       <div className="bg-white lg:px-28 md:px-20 px-5 py-10">
         <div className="grid grid-cols-1 lg:grid-cols-3 py-5">
-          <div className="w-[180px] h-[180px] lg:h-[230px] lg:w-[230px] m-auto lg:m-3">
+          <div className="w-[180px] h-[180px] lg:h-[230px] lg:w-[230px] m-auto">
             <img src={Web} alt="" className="w-full h-full" />
           </div>
           <div className="lg:border-l-4 lg:pl-12 lg:col-span-2 border-[--second-color]">
@@ -43,7 +43,7 @@ const DetailedCourse = () => {
               data and ensures compliance with privacy regulations.
             </p>
           </div>
-          <div className="w-[180px] h-[180px] lg:h-[230px] lg:w-[230px] m-auto lg:m-5 order-1 lg:order-2">
+          <div className="w-[180px] h-[180px] lg:h-[230px] lg:w-[230px] m-auto order-1 lg:order-2">
             <img src={App} alt="" className="" />
           </div>
         </div>
