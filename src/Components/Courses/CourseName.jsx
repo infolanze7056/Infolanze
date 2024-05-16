@@ -96,11 +96,16 @@
 import React, { useEffect, useState } from "react";
 import { createClient } from "contentful";
 import { FaRegUser } from "react-icons/fa";
+import { IoMdClose } from "react-icons/io";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Slider from "react-slick";
+import Modal from "react-modal";
+import { FaAngleDoubleRight } from "react-icons/fa";
 
 const CourseName = () => {
   const [trainings, setTrainings] = useState([]);
+  const [selectedTraining, setSelectedTraining] = useState(null);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
   const client = createClient({
     space: "12qkvm4jqb2e",
     accessToken: "pgRRIDXKevCERzwL5l5VyDaygyU70L7PVuCRy4P5FrQ",
@@ -118,7 +123,7 @@ const CourseName = () => {
     getAllEntries();
   }, [client]);
 
-  const openPopup = (training) => {
+  const openMailto = (training) => {
     if (training && training.fields && training.fields.trainingTitle) {
       const subject = `Enroll in the ${training.fields.trainingTitle} Training Program`;
       const encodedSubject = encodeURIComponent(subject);
@@ -150,6 +155,17 @@ const CourseName = () => {
       },
     ],
   };
+
+  const openModal = (training) => {
+    setSelectedTraining(training);
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+    setSelectedTraining(null);
+  };
+
 
   return (
     <div>
@@ -192,7 +208,7 @@ const CourseName = () => {
                           </span>
                           &nbsp; : {post.fields.trainingOpenings}
                         </p>
-                        <button className="text-[--second-color]">
+                        <button className="text-[--second-color]" onClick={() => openModal(post)}>
                           View Details
                         </button>
                       </div>
@@ -202,6 +218,49 @@ const CourseName = () => {
               )
           )}
         </Slider>
+        {selectedTraining && (
+        <Modal
+          isOpen={modalIsOpen}
+          onRequestClose={closeModal}
+          contentLabel="Training Details"
+          className="modal"
+          overlayClassName="overlay"
+        >
+          <div className="bg-white p-5 rounded-lg shadow-lg max-w-lg m-auto relative">
+          <button
+              className="text-[--second-color] text-2xl border-2 border-[--second-color] rounded-md absolute right-5 top-0"
+              onClick={closeModal}
+            >
+            <IoMdClose />
+            </button>
+            <h2 className="text-2xl mb-4">{selectedTraining.fields.trainingTitle}</h2>
+            <div className="mb-4">
+              <img
+                src={selectedTraining.fields.trainingImage.fields.file.url}
+                alt=""
+                className="w-full h-full rounded-xl"
+              />
+            </div>
+            <div className="mb-4">
+              {documentToReactComponents(selectedTraining.fields.trainingDescription)}
+            </div>
+            <p className="py-2 flex text-sm mb-5">
+              <span>
+                <FaRegUser />
+              </span>
+              &nbsp; : {selectedTraining.fields.trainingOpenings}
+            </p>
+            <button
+                      className="rounded-full p-3 px-7 text-sm bg-[--second-color] transition duration-300 ease-in-out  text-white hover:text-black hover:border-[--second-color] hover:border hover:bg-white flex items-center"
+                      onClick={() => openMailto(selectedTraining)}
+
+                    >
+                      Apply Now&nbsp;&nbsp;
+                      <FaAngleDoubleRight />
+                    </button>
+          </div>
+        </Modal>
+      )}
       </div>
     </div>
   );
