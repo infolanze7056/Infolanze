@@ -5,7 +5,7 @@ const HeroCourses = () => {
   return (
     <div>
       <div className="background-image lg:px-28 md:px-20 px-5 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
           <div className="order-2 md:order-2 lg:order-1">
             <h1 className="font-semibold lg:text-4xl md:text-3xl text-3xl text-[--second-color]">
             Trainings Programs

@@ -131,10 +131,10 @@ const CourseName = () => {
             isOpen={modalIsOpen}
             onRequestClose={closeModal}
             contentLabel="Training Details"
-            className="modal"
+            className="modal lg:w-[60%] xl:w-[70%] w-[90%]"
             overlayClassName="overlay"
           >
-            <div className="bg-white p-5 rounded-lg shadow-lg max-w-lg m-auto relative">
+            <div className="bg-white p-5 rounded-lg shadow-lg m-auto relative">
               <button
                 className="text-[--second-color] text-2xl border-2 border-[--second-color] rounded-md absolute right-5 top-0"
                 onClick={closeModal}
