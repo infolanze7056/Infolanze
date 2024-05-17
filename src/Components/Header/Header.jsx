@@ -440,6 +440,21 @@ function Header() {
                   Courses
                 </NavLink>
               </div>
+              <div className="lg:px-2">
+                <NavLink
+                  to="/portfolio"
+                  activeclassname="active"
+                  id="7"
+                  onClick={(e) => handleNavSelected(e)}
+                  className={
+                    isActive === "7"
+                      ? "active mr-5  hover:text-black  cursor-pointer flex link"
+                      : "mr-5  hover:text-black  cursor-pointer flex link"
+                  }
+                >
+                  Portfolio
+                </NavLink>
+              </div>
             </div>
           </nav>
         </div>

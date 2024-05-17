@@ -15,6 +15,7 @@ import Blockchain from "./Components/Service/Blockchain";
 import SEO from "./Components/Service/SEO";
 import { Helmet } from "react-helmet";
 import Courses from "./Pages/Courses";
+import Portfolio from "./Pages/Portfolio";
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
             <Route path="/career" element={<Career />} />
             <Route path="/service" element={<Service />} />
             <Route path="/courses" element={<Courses />} />
+            <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/service/ui-ux" element={<UI_UX />} />
             <Route path="/service/web-development" element={<WebDevelopment />} />
             <Route path="/service/app-development" element={<AppDevelopment />} />
