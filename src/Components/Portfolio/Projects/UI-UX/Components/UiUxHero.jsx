@@ -14,7 +14,7 @@ const UiUxHero = () => {
         <p className='py-2'><b>UX (User Experience) : </b> design, on the other hand, emphasizes the overall feel and functionality of the product. It involves understanding user needs, creating user journeys, and ensuring the product is easy to use and provides value.UX design considers usability, accessibility, and satisfaction to enhance user interactions and achieve seamless experiences.</p>
         </div>
         <div className='order-1 lg:order-2'>
-          <div className='w-full h-full'>
+          <div className='w-full h-full pb-3 lg:pb-0'>
             <img src={UI} alt="" />
           </div>
         </div>

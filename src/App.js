@@ -50,8 +50,8 @@ function App() {
             <Route path="/service/blockchain" element={<Blockchain />} />
             <Route path="/service/seo" element={<SEO />} />
           </Routes>
-      </BrowserRouter>
       <Footer />
+      </BrowserRouter>
     </div>
   );
 }

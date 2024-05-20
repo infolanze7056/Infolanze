@@ -9,11 +9,11 @@ const BlockHero = () => {
         <h1 className='text-[--second-color] text-2xl md:text-3xl lg:text-4xl font-semibold text-center lg:text-left pb-2'>
           Blockchain Devlopment
         </h1>
-        <p className='py-2'><b>UI (User Interface) :</b> design focuses on the aesthetics and layout of a digital product, including buttons, icons, spacing, typography, and color schemes. It's about creating visually appealing interfaces that guide users intuitively.</p>
-        <p className='py-2'><b>UX (User Experience) : </b> design, on the other hand, emphasizes the overall feel and functionality of the product. It involves understanding user needs, creating user journeys, and ensuring the product is easy to use and provides value.UX design considers usability, accessibility, and satisfaction to enhance user interactions and achieve seamless experiences.</p>
+              <p className='py-1'>
+Blockchain is a distributed ledger technology that securely records data across multiple computers, making it transparent and tamper-proof. Unlike centralized databases controlled by a single entity, blockchain is decentralized, with each node in the network maintaining a copy of the entire ledger. This decentralization enhances security and trust, as no single point of failure exists.</p>
         </div>
         <div className='order-1 lg:order-2'>
-          <div className='w-full h-full'>
+          <div className='w-full h-full pb-3 lg:pb-0'>
             <img src={Block} alt="" />
           </div>
         </div>
