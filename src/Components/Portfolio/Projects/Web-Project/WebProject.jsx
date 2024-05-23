@@ -5,7 +5,7 @@ import WebProjects from './Components/WebProjects'
 
 const WebProject = () => {
   return (
-    <div>
+    <div className='font-family'>
       <WebHero/>
       <WebAbout/>
       <WebProjects/>

@@ -7,7 +7,7 @@ import HeroSection from '../Components/Portfolio/HeroPortfolio/HeroSection';
 
 const Portfolio = () => {
   return (
-    <div>
+    <div className="font-family">
       {/* <HeroSection/> */}
       <HeroPortfolio />
       <DevelopmentsProject/>

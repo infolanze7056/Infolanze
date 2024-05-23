@@ -9,17 +9,20 @@ import App from "../../../Images/app development.jpg";
 import AppSmall from "../../../Images/appsmall.jpg";
 import Blockchain from "../../../Images/blockchainnew.avif";
 import BlockchainSmall from "../../../Images/blockchainnewsmall.jpg";
-import "./DevelopmentsProject.css"
+import "./DevelopmentsProject.css";
 
 const DevelopmentsProject = () => {
   return (
-    <div className="px-5 lg:px-28 md:px-20">
+    <div className="px-5 lg:px-28 md:px-20 pb-10 ">
       <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold mb-2 text-[--second-color]">Our Works</h1>
+        <h1 className="text-3xl font-bold mb-2 text-[--second-color]">
+          Our Works
+        </h1>
         <p className="text-gray-600 max-w-xl mx-auto text-sm">
-          In today's cutting-edge era, failure to implement an application or an
-          unpredicted downtime can result in losing your consumers' trust.
-          </p>
+          In the rapidly evolving digital landscape, delivering reliable and
+          efficient applications is crucial to maintaining consumer trust and
+          staying ahead of the competition.
+        </p>
         <div className="relative bg-gradient-to-r from-[#25aae1] to-[#1189bd] h-1.5 w-24 rounded-full my-5 mx-auto heading-line"></div>
       </div>
       <nav className="">
