@@ -1,4 +1,5 @@
 import React from "react";
+import {Link } from 'react-router-dom';
 import Flogo from "../../Images/Logo 1 (1).webp";
 import "./Footer.css";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -50,15 +51,15 @@ function Footer() {
               Services
             </p>
             <div className="text-sm text-gray-800">
-              <p className="pb-1">Web Design</p>
-              <p className="pb-1">Web Application Development</p>
-              <p className="pb-1">Android Application</p>
-              <p className="pb-1">IOS Application</p>
-              <p className="pb-1">API Integration & Development</p>
-              <p className="pb-1">Payment Gateway Integration</p>
-              <p className="pb-1">E-Commerce Website</p>
-              <p className="pb-1">Cloud Based ERP Solutions</p>
-              <p>Website Maintenance Service</p>
+             <li className="list-none hover:text-[--second-color]"><Link className="pb-1" to="/service/web-development">Web Design</Link></li> 
+             <li className="list-none hover:text-[--second-color]"> <Link className="pb-1" to="/service/web-development">Web Application Development</Link></li> 
+             <li className="list-none hover:text-[--second-color]"> <Link className="pb-1" to="/service/app-development">Android Application</Link></li> 
+             <li className="list-none hover:text-[--second-color]"> <Link className="pb-1" to="/service/app-development">IOS Application</Link></li> 
+             <li className="list-none hover:text-[--second-color]"> <Link className="pb-1" to="/service/web-development">API Integration & Development</Link></li> 
+             <li className="list-none hover:text-[--second-color]"> <Link className="pb-1" to="/service/web-development">Payment Gateway Integration</Link></li> 
+             <li className="list-none hover:text-[--second-color]"> <Link className="pb-1" to="/service/web-development">E-Commerce Website</Link></li> 
+             <li className="list-none hover:text-[--second-color]"> <Link className="pb-1" to="/service/web-development">Cloud Based ERP Solutions</Link></li> 
+             <li className="list-none hover:text-[--second-color]"> <Link to="/service/web-development">Website Maintenance Service</Link></li> 
             </div>
           </div>
 
@@ -69,18 +70,18 @@ function Footer() {
             <div className="flex text-sm text-gray-800">
               <p className="mr-1 text-gray-800">Phone:</p>
               <a
-                href="tel:850-123-5021"
+                href="tel:+91 7016160435"
                 aria-label="Our phone"
                 title="Our phone"
                 className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
               >
-                701-616-0435
+                +91 7016160435
               </a>
             </div>
             <div className="flex text-sm text-gray-800">
               <p className="mr-1 text-gray-800">Email:</p>
               <a
-                href="mailto:info@lorem.mail"
+                href="mailto:infolanze.tech@gmail.com"
                 aria-label="Our email"
                 title="Our email"
                 className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
@@ -144,7 +145,7 @@ function Footer() {
             © Copyright 2023 InfoLanze Tech. All rights reserved.
           </p>
           <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
-            <li>
+            <li className="list-none hover:text-[--second-color]">
               <a
                 href="/"
                 className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
@@ -152,7 +153,7 @@ function Footer() {
                 F.A.Q
               </a>
             </li>
-            <li>
+            <li className="list-none hover:text-[--second-color]">
               <a
                 href="/"
                 className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
@@ -160,7 +161,7 @@ function Footer() {
                 Privacy Policy
               </a>
             </li>
-            <li>
+            <li className="list-none hover:text-[--second-color]">
               <a
                 href="/"
                 className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"

@@ -4,8 +4,8 @@ import Block from '../../../../../Images/Blockchain.webp'
 const BlockProjects = () => {
   return (
     <div className='bg-white lg:px-28 md:px-20 px-5 py-10 pb-20'>
-    <h1 className='lg:text-4xl text-[--second-color] font-semibold pb-8 text-center'>UI / UX Projects</h1>
-  <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 xl:gap-10 md:gap-5 gap-5'>
+    <h1 className='lg:text-4xl text-xl text-[--second-color] font-semibold pb-8 text-center'>Blockchain Devlopment Projects</h1>
+  <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 xl:gap-10 md:gap-5 gap-8'>
     <div className='shadow-2xl rounded-3xl border border-[#eee]'>
         <div className='relative m-auto overflow-hidden rounded-t-3xl'>
         <img src={Block} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
