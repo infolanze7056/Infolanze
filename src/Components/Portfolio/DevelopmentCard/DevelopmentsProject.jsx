@@ -30,7 +30,7 @@ const DevelopmentsProject = () => {
                 imageSrc={UiUx}
                 imageSrcSmall={UiUxSmall}
                 title="UI/UX Development"
-                technology="React, Node"
+                technology="Figma, Axure"
               />
             </Link>
           </li>
@@ -40,7 +40,7 @@ const DevelopmentsProject = () => {
                 imageSrc={Web}
                 imageSrcSmall={WebSmall}
                 title="Web Development"
-                technology="HTML, CSS, JavaScript"
+                technology="React Js, Node Js"
               />
             </Link>
           </li>

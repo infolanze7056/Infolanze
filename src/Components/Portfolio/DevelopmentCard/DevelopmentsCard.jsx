@@ -3,7 +3,6 @@ import React from 'react';
 const DevelopmentsCard = ({ imageSrc, imageSrcSmall, title, technology }) => {
   return (
     <>
-    
     <div className="w-full max-w-1/3 p-2.5 relative">
       <div className="relative">
         <img src={imageSrc} alt={title} className="w-full hover:opacity-70 transition duration-300 ease-in-out" />
