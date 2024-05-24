@@ -1,8 +1,11 @@
 import React from 'react'
 // import Web from '../../../../../Images/web-design.jpg';
 import xbeat from "../../../../../Images/x-beat.png"
-import flowcart from "../../../../../Images/flow-cart.png"
+import flowcart from "../../../../../Images/flowy-cart.png"
 import fastpizza from "../../../../../Images/fast-pizza.png"
+import shopit from "../../../../../Images/shopit.png"
+import beach from "../../../../../Images/beach.png"
+import teaofassam from "../../../../../Images/teaofassam.png"
 
 const WebProjects = () => {
   return (
@@ -14,7 +17,7 @@ const WebProjects = () => {
             <div className='relative m-auto overflow-hidden rounded-t-3xl'>
             <img src={xbeat} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
             </div>
-            <div className='bg-white text-black text-center lg:text-xl rounded-b-3xl p-2'>
+            <div className='bg-white text-black text-center lg:text-sm rounded-b-3xl p-2'>
                 <h1>X-BEAT</h1>
             </div>
         </div>
@@ -24,7 +27,7 @@ const WebProjects = () => {
             <div className='relative m-auto overflow-hidden rounded-t-3xl'>
             <img src={flowcart} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
             </div>
-            <div className='bg-white text-black text-center lg:text-xl rounded-b-3xl p-2'>
+            <div className='bg-white text-black text-center lg:text-sm rounded-b-3xl p-2'>
                 <h1>FLOWY CART</h1>
             </div>
         </div>
@@ -34,35 +37,41 @@ const WebProjects = () => {
             <div className='relative m-auto overflow-hidden rounded-t-3xl'>
             <img src={fastpizza} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
             </div>
-            <div className='bg-white text-black text-center lg:text-xl rounded-b-3xl p-2'>
+            <div className='bg-white text-black text-center lg:text-sm rounded-b-3xl p-2'>
                 <h1>FAST PIZZA</h1>
             </div>
         </div>
         </a>
-        {/* <div className='shadow-2xl rounded-3xl border border-[#eee]'>
-            <div className='relative m-auto overflow-hidden rounded-t-3xl'>
-            <img src={Web} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
-            </div>
-            <div className='bg-white text-black text-center lg:text-xl rounded-b-3xl p-2'>
-                <h1>PixelPioneers Inc</h1>
-            </div>
-        </div>
+        <a href='https://demo-e-shop.vercel.app/' target="_blank" rel="noopener noreferrer">
         <div className='shadow-2xl rounded-3xl border border-[#eee]'>
             <div className='relative m-auto overflow-hidden rounded-t-3xl'>
-            <img src={Web} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
+            <img src={shopit} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
             </div>
-            <div className='bg-white text-black text-center lg:text-xl rounded-b-3xl p-2'>
-                <h1>TechThrive Solutions</h1>
+            <div className='bg-white text-black text-center lg:text-sm rounded-b-3xl p-2'>
+                <h1>SHOP IT</h1>
             </div>
         </div>
+        </a>
+        <a href='https://demo-resort.vercel.app/' target="_blank" rel="noopener noreferrer">
         <div className='shadow-2xl rounded-3xl border border-[#eee]'>
             <div className='relative m-auto overflow-hidden rounded-t-3xl'>
-            <img src={Web} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
+            <img src={beach} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
             </div>
-            <div className='bg-white text-black text-center lg:text-xl rounded-b-3xl p-2'>
-                <h1>InfinityInk Design</h1>
+            <div className='bg-white text-black text-center lg:text-sm rounded-b-3xl p-2'>
+                <h1>BEACH RESORT</h1>
             </div>
-        </div>  */}
+        </div>
+        </a>
+        <a href='https://demo-tea-of-assam.vercel.app/' target="_blank" rel="noopener noreferrer">
+        <div className='shadow-2xl rounded-3xl border border-[#eee]'>
+            <div className='relative m-auto overflow-hidden rounded-t-3xl'>
+            <img src={teaofassam} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
+            </div>
+            <div className='bg-white text-black text-center lg:text-sm rounded-b-3xl p-2'>
+                <h1>TEA OF ASSAM</h1>
+            </div>
+        </div>
+        </a>
       </div>
     </div>
   )
