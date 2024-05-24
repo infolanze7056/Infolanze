@@ -42,7 +42,7 @@ const WebProjects = () => {
             </div>
         </div>
         </a>
-        <a href='https://demo-e-shop.vercel.app/' target="_blank" rel="noopener noreferrer">
+        <a href='https://demo-shop-it.vercel.app/' target="_blank" rel="noopener noreferrer">
         <div className='shadow-2xl rounded-3xl border border-[#eee]'>
             <div className='relative m-auto overflow-hidden rounded-t-3xl'>
             <img src={shopit} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
