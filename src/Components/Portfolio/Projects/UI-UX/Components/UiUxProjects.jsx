@@ -1,10 +1,10 @@
 import React from 'react'
-import xbeat from '../../../../../Images/x-beat-ui-ux.png'
+import xbeat from '../../../../../Images/xbeatnew.png'
 import flowycart from '../../../../../Images/flowy-cart-ui-ux.png'
 import fastpizza from '../../../../../Images/fast-pizza-ui-ux.png'
-import shopit from '../../../../../Images/shopit-ui-ux.png'
-import beach from '../../../../../Images/beach-ui-ux.png'
-import teamofassam from '../../../../../Images/teaofassamui-ux.png'
+import shopit from '../../../../../Images/shopitnew.png'
+import beach from '../../../../../Images/beachnew.png'
+import teamofassam from '../../../../../Images/teaofassamnew.png'
 
 const UiUxProjects = () => {
   return (
