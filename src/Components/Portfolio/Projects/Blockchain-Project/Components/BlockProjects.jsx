@@ -1,61 +1,72 @@
-import React from 'react'
-import Block from '../../../../../Images/Blockchain.webp'
-
+import React from 'react';
+import AID from '../../../../../Images/KyivAid.com.png';
+import LION from '../../../../../Images/roaringlion.png';
+import FROG from '../../../../../Images/Defrogs.png';
+import CAPY from '../../../../../Images/Capybara world.png';
+import MARKET from '../../../../../Images/Market Move.png'
+import ATL from '../../../../../Images/Altn.png'
 const BlockProjects = () => {
   return (
     <div className='bg-white lg:px-28 md:px-20 px-5 py-10 pb-20'>
-    <h1 className='lg:text-4xl text-xl text-[--second-color] font-semibold pb-8 text-center'>Blockchain Devlopment Projects</h1>
-  <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 xl:gap-10 md:gap-5 gap-8'>
-    <div className='shadow-2xl rounded-3xl border border-[#eee]'>
-        <div className='relative m-auto overflow-hidden rounded-t-3xl'>
-        <img src={Block} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
+        <h1 className='text-xl lg:text-4xl text-[--second-color] font-semibold pb-8 text-center'>Blockchain Devlopment Projects</h1>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 xl:gap-10 md:gap-5 gap-8'>
+      
+        <div className='shadow-2xl rounded-3xl border border-[#eee]'>
+            <div className='relative m-auto overflow-hidden rounded-t-3xl'>
+            <img src={AID} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
+            </div>
+            <div className='bg-white text-black text-center lg:text-sm rounded-b-3xl p-2'>
+                <h1>Kyiv Aid</h1>
+            </div>
         </div>
-        <div className='bg-white text-black text-center lg:text-xl rounded-b-3xl p-2'>
-            <h1>EthereumMax</h1>
+    
+        <div className='shadow-2xl rounded-3xl border border-[#eee]'>
+            <div className='relative m-auto overflow-hidden rounded-t-3xl'>
+            <img src={LION} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
+            </div>
+            <div className='bg-white text-black text-center lg:text-sm rounded-b-3xl p-2'>
+                <h1>Roaring Lion</h1>
+            </div>
         </div>
+
+        <div className='shadow-2xl rounded-3xl border border-[#eee]'>
+            <div className='relative m-auto overflow-hidden rounded-t-3xl'>
+            <img src={FROG} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
+            </div>
+            <div className='bg-white text-black text-center lg:text-sm rounded-b-3xl p-2'>
+                <h1>Defrogs</h1>
+            </div>
+        </div>
+       
+        <div className='shadow-2xl rounded-3xl border border-[#eee]'>
+            <div className='relative m-auto overflow-hidden rounded-t-3xl'>
+            <img src={CAPY} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
+            </div>
+            <div className='bg-white text-black text-center lg:text-sm rounded-b-3xl p-2'>
+                <h1>Capybara World</h1>
+            </div>
+        </div>
+
+        <div className='shadow-2xl rounded-3xl border border-[#eee]'>
+            <div className='relative m-auto overflow-hidden rounded-t-3xl'>
+            <img src={MARKET} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
+            </div>
+            <div className='bg-white text-black text-center lg:text-sm rounded-b-3xl p-2'>
+                <h1>Market Move</h1>
+            </div>
+        </div>
+        
+        <div className='shadow-2xl rounded-3xl border border-[#eee]'>
+            <div className='relative m-auto overflow-hidden rounded-t-3xl'>
+            <img src={ATL} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
+            </div>
+            <div className='bg-white text-black text-center lg:text-sm rounded-b-3xl p-2'>
+                <h1>Altn Token</h1>
+            </div>
+        </div>
+g
+      </div>
     </div>
-    <div className='shadow-2xl rounded-3xl border border-[#eee]'>
-        <div className='relative m-auto overflow-hidden rounded-t-3xl'>
-        <img src={Block} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
-        </div>
-        <div className='bg-white text-black text-center lg:text-xl rounded-b-3xl p-2'>
-            <h1>AslCoins</h1>
-        </div>
-    </div>
-    <div className='shadow-2xl rounded-3xl border border-[#eee]'>
-        <div className='relative m-auto overflow-hidden rounded-t-3xl'>
-        <img src={Block} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
-        </div>
-        <div className='bg-white text-black text-center lg:text-xl rounded-b-3xl p-2'>
-            <h1>Decentraland</h1>
-        </div>
-    </div>
-    <div className='shadow-2xl rounded-3xl border border-[#eee]'>
-        <div className='relative m-auto overflow-hidden rounded-t-3xl'>
-        <img src={Block} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
-        </div>
-        <div className='bg-white text-black text-center lg:text-xl rounded-b-3xl p-2'>
-            <h1>Axie Infinity</h1>
-        </div>
-    </div>
-    <div className='shadow-2xl rounded-3xl border border-[#eee]'>
-        <div className='relative m-auto overflow-hidden rounded-t-3xl'>
-        <img src={Block} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
-        </div>
-        <div className='bg-white text-black text-center lg:text-xl rounded-b-3xl p-2'>
-            <h1>Somnium Space</h1>
-        </div>
-    </div>
-    <div className='shadow-2xl rounded-3xl border border-[#eee]'>
-        <div className='relative m-auto overflow-hidden rounded-t-3xl'>
-        <img src={Block} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
-        </div>
-        <div className='bg-white text-black text-center lg:text-xl rounded-b-3xl p-2'>
-            <h1>Enjin Coin</h1>
-        </div>
-    </div> 
-  </div>
-</div>
   )
 }
 
