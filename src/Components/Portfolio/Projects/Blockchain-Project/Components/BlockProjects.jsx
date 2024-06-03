@@ -64,7 +64,6 @@ const BlockProjects = () => {
                 <h1>Altn Token</h1>
             </div>
         </div>
-g
       </div>
     </div>
   )
