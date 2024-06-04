@@ -16,6 +16,23 @@
     --main-color:#e9f6fc;
     --second-color: #25aae1;
 }
+
+::-webkit-scrollbar
+{
+    width: 0.5rem;
+}
+::-webkit-scrollbar-track
+{
+    background-color: #cccccc ;
+}
+::-webkit-scrollbar-thumb
+{
+    background-color:#25aae1;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    background-clip:content-box;
+}
+
 /* Add this CSS to your stylesheet or within a <style> tag in your component */
   
 /* --main-color:#e9f6fc;
