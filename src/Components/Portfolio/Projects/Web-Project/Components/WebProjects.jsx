@@ -12,6 +12,7 @@ const WebProjects = () => {
     <div className='bg-white lg:px-28 md:px-20 px-5 py-10 pb-20'>
         <h1 className='text-xl lg:text-4xl text-[--second-color] font-semibold pb-8 text-center'>Web Devlopment Projects</h1>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 xl:gap-10 md:gap-5 gap-8'>
+       
        <a href='https://demo-x-beat.vercel.app/' target="_blank" rel="noopener noreferrer">
         <div className='shadow-2xl rounded-3xl border border-[#eee]'>
             <div className='relative m-auto overflow-hidden rounded-t-3xl'>
@@ -22,6 +23,7 @@ const WebProjects = () => {
             </div>
         </div>
         </a>
+        
         <a href='https://demo-flowycart.vercel.app/' target="_blank" rel="noopener noreferrer">
         <div className='shadow-2xl rounded-3xl border border-[#eee]'>
             <div className='relative m-auto overflow-hidden rounded-t-3xl'>
@@ -32,6 +34,7 @@ const WebProjects = () => {
             </div>
         </div>
         </a>
+        
         <a href='https://react-node-pizza-store.vercel.app/' target="_blank" rel="noopener noreferrer">
         <div className='shadow-2xl rounded-3xl border border-[#eee]'>
             <div className='relative m-auto overflow-hidden rounded-t-3xl'>
@@ -42,6 +45,7 @@ const WebProjects = () => {
             </div>
         </div>
         </a>
+       
         <a href='https://demo-shop-it.vercel.app/' target="_blank" rel="noopener noreferrer">
         <div className='shadow-2xl rounded-3xl border border-[#eee]'>
             <div className='relative m-auto overflow-hidden rounded-t-3xl'>
@@ -52,6 +56,7 @@ const WebProjects = () => {
             </div>
         </div>
         </a>
+        
         <a href='https://demo-resort.vercel.app/' target="_blank" rel="noopener noreferrer">
         <div className='shadow-2xl rounded-3xl border border-[#eee]'>
             <div className='relative m-auto overflow-hidden rounded-t-3xl'>
@@ -62,6 +67,7 @@ const WebProjects = () => {
             </div>
         </div>
         </a>
+       
         <a href='https://demo-tea-of-assam.vercel.app/' target="_blank" rel="noopener noreferrer">
         <div className='shadow-2xl rounded-3xl border border-[#eee]'>
             <div className='relative m-auto overflow-hidden rounded-t-3xl'>
@@ -72,6 +78,7 @@ const WebProjects = () => {
             </div>
         </div>
         </a>
+      
       </div>
     </div>
   )

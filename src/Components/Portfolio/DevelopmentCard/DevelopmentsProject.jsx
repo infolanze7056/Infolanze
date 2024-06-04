@@ -1,13 +1,13 @@
 import React from "react";
 import DevelopmentsCard from "../DevelopmentCard/DevelopmentsCard";
 import { Link } from "react-router-dom";
-import UiUx from "../../../Images/UiUxNew.jpg";
+import UiUx from "../../../Images/UIUX.jpg";
 import UiUxSmall from "../../../Images/UiUxSmall.jpg";
-import Web from "../../../Images/webnew.avif";
+import Web from "../../../Images/web dev.jpg";
 import WebSmall from "../../../Images/web development small.jpg";
-import App from "../../../Images/app development.jpg";
+import App from "../../../Images/app dev.jpg";
 import AppSmall from "../../../Images/appsmall.jpg";
-import Blockchain from "../../../Images/blockchainnew.avif";
+import Blockchain from "../../../Images/block dev.jpg";
 import BlockchainSmall from "../../../Images/blockchainnewsmall.jpg";
 import "./DevelopmentsProject.css";
 
