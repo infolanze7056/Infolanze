@@ -22,14 +22,14 @@ const UiUxProjects = () => {
         </div>
         
         
-        <div className='shadow-2xl rounded-3xl border border-[#eee]'>
+        {/* <div className='shadow-2xl rounded-3xl border border-[#eee]'>
             <div className='relative m-auto overflow-hidden rounded-t-3xl'>
             <img src={flowycart} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
             </div>
             <div className='bg-white text-black text-center lg:text-sm rounded-b-3xl p-2'>
                 <h1>FLOWY-CART</h1>
             </div>
-        </div>
+        </div> */}
         
         
         <div className='shadow-2xl rounded-3xl border border-[#eee]'>

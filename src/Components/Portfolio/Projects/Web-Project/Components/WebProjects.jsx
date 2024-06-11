@@ -24,7 +24,7 @@ const WebProjects = () => {
         </div>
         </a>
         
-        <a href='https://demo-flowycart.vercel.app/' target="_blank" rel="noopener noreferrer">
+        {/* <a href='https://demo-flowycart.vercel.app/' target="_blank" rel="noopener noreferrer">
         <div className='shadow-2xl rounded-3xl border border-[#eee]'>
             <div className='relative m-auto overflow-hidden rounded-t-3xl'>
             <img src={flowcart} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
@@ -33,7 +33,7 @@ const WebProjects = () => {
                 <h1>FLOWY CART</h1>
             </div>
         </div>
-        </a>
+        </a> */}
         
         <a href='https://react-node-pizza-store.vercel.app/' target="_blank" rel="noopener noreferrer">
         <div className='shadow-2xl rounded-3xl border border-[#eee]'>
