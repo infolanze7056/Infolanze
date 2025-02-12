@@ -4,7 +4,7 @@ const WebAbout = () => {
   return (
     <div>
        <div className='bg-[--main-color] lg:px-28 md:px-20 px-5 py-10'>
-        <h1 className='lg:text-4xl text-xl text-[--second-color] font-semibold pb-8 text-center'>Web Devlopment Technology</h1>
+        <h1 className='lg:text-4xl text-xl text-[--second-color] font-semibold pb-8 text-center'>Web Development Technology</h1>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:items-center gap-6'>
             <div className='grid grid-cols-6 items-center bg-white rounded-2xl shadow'>
                 <div className='col-span-2'>

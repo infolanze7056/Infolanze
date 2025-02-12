@@ -20,17 +20,17 @@ const OfferedCourses = () => {
             </h1>
             <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 pt-10 gap-6">
                 <div>
-                    <h1 className=" text-[--second-color]">| Website Devlopment</h1>
+                    <h1 className=" text-[--second-color]">| Website Development</h1>
                     <p className="md:text-sm text-sm">Website development focuses on creating visually appealing and
                 user-friendly.</p>
                 </div>
                 <div>
-                    <h1 className=" text-[--second-color]">| Application Devlopment</h1>
+                    <h1 className=" text-[--second-color]">| Application Development</h1>
                     <p className="md:text-sm text-sm">Application development involves building software tailored for
                 specific platforms.</p>
                 </div>
                 <div>
-                    <h1 className=" text-[--second-color]">| Blockchain Devlopment</h1>
+                    <h1 className=" text-[--second-color]">| Blockchain Development</h1>
                     <p className="md:text-sm text-sm"> Blockchain development revolves around decentralized ledger
                 systems, enabling transparent and secure transactions.</p>
                 </div>
@@ -43,7 +43,7 @@ const OfferedCourses = () => {
               <img src={Web} alt="" className="w-full h-full border border-[#eeeeee]" />
               </div>
               <h1 className="lg:text-xl md:text-lg text-lg text-[--second-color] col-span-5 pl-2 py-1.5 lg:py-2.5">
-                Website Devlopment
+                Website Development
               </h1>
               <p className="col-span-6 pt-2 lg:pt-1 text-sm">
                 Website development focuses on creating visually appealing and
@@ -57,7 +57,7 @@ const OfferedCourses = () => {
               <img src={App} alt="" className="w-full h-full border border-[#eeeeee]"  />
               </div>
               <h1 className="lg:text-xl md:text-lg text-lg text-[--second-color] col-span-5 pl-2 py-1.5 lg:py-2.5">
-                Application Devlopment
+                Application Development
               </h1>
               <p className="col-span-6 pt-2 lg:pt-1 text-sm">
                 Application development involves building software tailored for
@@ -70,7 +70,7 @@ const OfferedCourses = () => {
               <img src={Block} alt="" className="w-full h-full border border-[#eeeeee]"/>
               </div>
               <h1 className="lg:text-xl md:text-lg text-lg text-[--second-color] col-span-5 pl-2 py-1.5 lg:py-2.5">
-                Blockchain Devlopment
+                Blockchain Development
               </h1>
               <p className="col-span-6 pt-2 lg:pt-1 text-sm">
                 Blockchain development revolves around decentralized ledger

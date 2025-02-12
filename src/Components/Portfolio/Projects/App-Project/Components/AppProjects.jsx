@@ -7,7 +7,7 @@ import Oda from '../../../../../Images/oda-app.png';
 const AppProjects = () => {
   return (
     <div className='bg-white lg:px-28 md:px-20 px-5 py-10 pb-20'>
-        <h1 className='text-xl lg:text-4xl text-[--second-color] font-semibold pb-8 text-center'>App Devlopment Projects</h1>
+        <h1 className='text-xl lg:text-4xl text-[--second-color] font-semibold pb-8 text-center'>App Development Projects</h1>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 xl:gap-10 md:gap-5 gap-8'>
        
        <a href='https://play.google.com/store/apps/details?id=com.kikuu' target="_blank" rel="noopener noreferrer">

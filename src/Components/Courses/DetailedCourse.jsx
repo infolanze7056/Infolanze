@@ -13,7 +13,7 @@ const DetailedCourse = () => {
           </div>
           <div className="lg:border-l-4 lg:pl-12 lg:col-span-2 border-[--second-color]">
             <h1 className="lg:text-4xl md:text-4xl text-xl font-semibold uppercase text-[--second-color] py-5 lg:text-left text-center">
-              Website Devlopment
+              Website Development
             </h1>
             <p className="text-base">
               website development, it's crucial to focus on user experience (UX)
@@ -30,7 +30,7 @@ const DetailedCourse = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 py-5">
           <div className="lg:border-r-4 lg:border-[--second-color] lg:pr-12 lg:col-span-2 order-2 lg:order-1">
             <h1 className="lg:text-4xl md:text-4xl text-xl font-semibold uppercase text-[--second-color] py-5 lg:text-left text-center">
-              Application Devlopment
+              Application Development
             </h1>
             <p className="text-base">
               application development, prioritizing scalability, security, and
@@ -53,7 +53,7 @@ const DetailedCourse = () => {
           </div>
           <div className="lg:border-l-4 lg:border-[--second-color] lg:pl-12 lg:col-span-2">
             <h1 className="lg:text-4xl md:text-4xl text-xl font-semibold uppercase text-[--second-color] py-5 lg:text-left text-center">
-              Blockchain Devlopment
+              Blockchain Development
             </h1>
             <p className="text-base">
               blockchain development, the emphasis lies on decentralization,
