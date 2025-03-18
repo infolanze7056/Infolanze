@@ -1,7 +1,7 @@
 import React from "react";
 import Main from "../../../Images/person.jpg";
 import Darshil from "../../../Images/Darshil Patel.jpeg"
-import Mayur from "../../../Images/Mayur.jpg"
+// import Mayur from "../../../Images/Mayur.jpg"
 import Manish from "../../../Images/Manish.jpg"
 import Kush from "../../../Images/Kush.png"
 import Nishant from "../../../Images/Nishant.png"
@@ -75,16 +75,16 @@ const Founder = () => {
         />
         <FounderCard
           name="Manish Chaudhary"
-          role="Backend Developer"
-          description="Manish, our Backend Developer, crafting scalable server-side apps with seamless integration and optimal performance for your project's success."
+          role="Full Stack Developer"
+          description="Manish, our Full Stack Developer, specializes in building dynamic and scalable web applications using React.js and Node.js."
           image={Manish}
         /> 
-        <FounderCard
+        {/* <FounderCard
           name="Mayur Prajapati"
           role="Graphic Designer"
           description="Mayur, our Graphic Designer, creates stunning visuals and impactful designs, ensuring our brand's aesthetic excellence and visual appeal."
           image={Mayur}
-        /> 
+        />  */}
         <FounderCard
           name="Kush Mevada"
           role="UI-UX Designer"

@@ -6,6 +6,8 @@ import Process from '../Components/Home/Process'
 import Techonologys from '../Components/Home/Techonologys'
 import ContactUS from '../Components/Home/ContactUS'
 import Testimonials from '../Components/Home/Testimonials'
+import CompanyLogo from '../Components/Home/CompanyLogo'
+import Whatsapp from '../CommonComponent/Whatsapp'
 
 function Home() {
   return (
@@ -16,7 +18,9 @@ function Home() {
       <Process />
       <Techonologys />
       <ContactUS />
-      <Testimonials />
+      <CompanyLogo />
+      {/* <Testimonials /> */}
+      <Whatsapp />
     </div>
   )
 }

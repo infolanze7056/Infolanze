@@ -19,7 +19,7 @@ function ServiceSection() {
             <div className=" border-2 border-dashed border-spacing-5 hover:border-[--second-color] text-center bg-white p-5 rounded-lg h-full font-family">
               <div className="py-5">
                 <CgWebsite className="bg-[--main-color] text-8xl p-5 mx-auto rounded-lg" />
-              </div>
+               </div>
               <div className="text-xl pb-2 pt-4 font-semibold">
                 Website Desiging
               </div>

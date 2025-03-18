@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import ContactSection from '../Components/Contact/ContactSection';
+import Whatsapp from '../CommonComponent/Whatsapp';
 
 function Contact() {
   return (
@@ -9,6 +10,7 @@ function Contact() {
         <title>Contact | Infolanze</title>
       </Helmet>
     <ContactSection/>
+    <Whatsapp />
     </div>
   )
 }

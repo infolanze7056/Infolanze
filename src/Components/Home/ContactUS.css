@@ -2,6 +2,7 @@
     background-image: url("../../Images/subtle-prism.png") !important;
     background-position: center;
     background-size: cover;
+    /* padding-top: ; */
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
     z-index: 5 !important;
