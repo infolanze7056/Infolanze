@@ -75,9 +75,9 @@ const CourseName = () => {
   return (
     <div>
       <div className="bg-white lg:px-28 md:px-20 px-5 py-10">
-        <h1 className="lg:text-4xl md:text-4xl text-2xl font-semibold uppercase text-[--second-color] pb-10 text-center">
+        {/* <h1 className="lg:text-4xl md:text-4xl text-2xl font-semibold uppercase text-[--second-color] pb-10 text-center">
           Training Programs
-        </h1>
+        </h1> */}
         <Slider {...settings}>
           {trainings.map(
             (post, index) =>
@@ -94,7 +94,7 @@ const CourseName = () => {
                           className="w-full h-full rounded-xl"
                         />
                       </div>
-                      <div className="col-span-6 lg:col-span-5 pl-2 md:pl-0 lg:pl-5 pt-2">
+                      <div className="col-span-6 lg:col-span-5 pl-2 md:pl-0 lg:pl-10 pt-2">
                         <h1 className="text-black text-lg md:text-xl lg:text-2xl">
                           {post.fields.trainingTitle}
                         </h1>

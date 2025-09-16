@@ -1,5 +1,5 @@
 import React from "react";
-import {Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Flogo1 from "../../Images/logo-1.png";
 import Flogo2 from "../../Images/footer-logo.png";
 import "./Footer.css";
@@ -29,7 +29,7 @@ function Footer() {
               className="inline-flex items-center"
             >
               <div className="flex gap-2 items-center relative">
-                <img src={Flogo1} alt="" className="h-10 absolute left-0 top-0"/>
+                <img src={Flogo1} alt="" className="h-10 absolute left-0 top-0" />
                 <img src={Flogo2} alt="" className="h-14 pl-11" />
               </div>
             </a>
@@ -48,19 +48,19 @@ function Footer() {
           </div>
 
           <div className="space-y-2 text-sm lg:ps-7 md:ps-5">
-          <p className=" font-bold text-lg tracking-wide text-gray-900">
+            <p className=" font-bold text-lg tracking-wide text-gray-900">
               Services
             </p>
             <div className="text-sm text-gray-800">
-             <li className="list-none hover:text-[--second-color]"><Link className="pb-1" to="/service/web-development">Web Design</Link></li> 
-             <li className="list-none hover:text-[--second-color]"> <Link className="pb-1" to="/service/web-development">Web Application Development</Link></li> 
-             <li className="list-none hover:text-[--second-color]"> <Link className="pb-1" to="/service/app-development">Android Application</Link></li> 
-             <li className="list-none hover:text-[--second-color]"> <Link className="pb-1" to="/service/app-development">IOS Application</Link></li> 
-             <li className="list-none hover:text-[--second-color]"> <Link className="pb-1" to="/service/web-development">API Integration & Development</Link></li> 
-             <li className="list-none hover:text-[--second-color]"> <Link className="pb-1" to="/service/web-development">Payment Gateway Integration</Link></li> 
-             <li className="list-none hover:text-[--second-color]"> <Link className="pb-1" to="/service/web-development">E-Commerce Website</Link></li> 
-             <li className="list-none hover:text-[--second-color]"> <Link className="pb-1" to="/service/web-development">Cloud Based ERP Solutions</Link></li> 
-             <li className="list-none hover:text-[--second-color]"> <Link to="/service/web-development">Website Maintenance Service</Link></li> 
+              <li className="list-none hover:text-[--second-color]"><Link className="pb-1" to="/service/web-development">Web Design</Link></li>
+              <li className="list-none hover:text-[--second-color]"> <Link className="pb-1" to="/service/web-development">Web Application Development</Link></li>
+              <li className="list-none hover:text-[--second-color]"> <Link className="pb-1" to="/service/app-development">Android Application</Link></li>
+              <li className="list-none hover:text-[--second-color]"> <Link className="pb-1" to="/service/app-development">IOS Application</Link></li>
+              <li className="list-none hover:text-[--second-color]"> <Link className="pb-1" to="/service/web-development">API Integration & Development</Link></li>
+              <li className="list-none hover:text-[--second-color]"> <Link className="pb-1" to="/service/web-development">Payment Gateway Integration</Link></li>
+              <li className="list-none hover:text-[--second-color]"> <Link className="pb-1" to="/service/web-development">E-Commerce Website</Link></li>
+              <li className="list-none hover:text-[--second-color]"> <Link className="pb-1" to="/service/web-development">Cloud Based ERP Solutions</Link></li>
+              <li className="list-none hover:text-[--second-color]"> <Link to="/service/web-development">Website Maintenance Service</Link></li>
             </div>
           </div>
 
@@ -82,12 +82,12 @@ function Footer() {
             <div className="flex text-sm text-gray-800">
               <p className="mr-1 text-gray-800">Email:</p>
               <a
-                href="mailto:infolanze.tech@gmail.com"
+                href="mailto:techteam.infolanze@gmail.com"
                 aria-label="Our email"
                 title="Our email"
                 className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
               >
-                infolanze.tech@gmail.com
+                techteam.infolanze@gmail.com
               </a>
             </div>
             <div className="flex text-sm text-gray-800">
@@ -101,7 +101,9 @@ function Footer() {
                 className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
               >
                 A-807, Empire Business Hub, Science City Road, Sola, Ahmedabad,
-                380060.
+                380060.<br/><br />
+                102-103, Ganesh Rivera, Nikol Road, Nikol,
+                Ahmedabad, 382350.
               </a>
             </div>
           </div>

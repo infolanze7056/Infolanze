@@ -1,27 +1,29 @@
 import React, { useState, useRef } from "react";
-import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./ContactUS.css";
 
 function ContactUS() {
   const form = useRef();
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
 
   const notifySuccess = () => toast.success("Submit Successfully");
   const notifyError = () => toast.error("Failed to Submit");
 
   const [formData, setFormData] = useState({
     name: "",
-    phone_number: "",
+    phone: "",
     email: "",
-    company_name: "",
+    description: "",
   });
 
   const [errors, setErrors] = useState({
     name: "",
-    phone_number: "",
+    phone: "",
     email: "",
-    company_name: "",
+    description: "",
   });
 
   const handleChangeInput = (e) => {
@@ -31,40 +33,60 @@ function ContactUS() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (validateForm()) {
-      emailjs
-        .sendForm("service_izrxqrf", "template_mtaqgyg", form.current, {
-          publicKey: "K7uMJi0Y5vlmwltXZ",
-        })
-        .then(
-          () => {
-            console.log("SUCCESS!");
-            setFormData({
-              name: "",
-              phone_number: "",
-              email: "",
-              company_name: "",
-            });
-            setErrors({
-              name: "",
-              phone_number: "",
-              email: "",
-              company_name: "",
-            });
-            notifySuccess();
-          },
-          (error) => {
-            console.log("FAILED...", error.text);
-            notifyError();
+      setLoading(true);   // start loader
+      setSubmitted(false);
+
+      try {
+        const response = await fetch(
+          "https://contact-backend-zeta.vercel.app/api/contact/Infolanze-contact",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              name: formData.name,
+              email: formData.email,
+              phone: formData.phone,
+              description: formData.description, // maps to description in backend
+            }),
           }
         );
+
+        const data = await response.json();
+
+        if (data.success) {
+          console.log("SUCCESS!", data);
+          setFormData({
+            name: "",
+            phone: "",
+            email: "",
+            description: "",
+          });
+          setErrors({
+            name: "",
+            phone: "",
+            email: "",
+            description: "",
+          });
+          notifySuccess();
+        } else {
+          console.log("FAILED...", data);
+          notifyError();
+        }
+      } catch (error) {
+        console.log("FAILED...", error);
+        notifyError();
+      }
     } else {
       console.log("Form contains errors, cannot submit.");
     }
   };
+
 
   const validateForm = () => {
     let valid = true;
@@ -77,14 +99,14 @@ function ContactUS() {
     }
 
     // Phone number validation
-    if (!formData.phone_number.trim()) {
-      newErrors.phone_number = "Phone number is required";
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Phone number is required";
       valid = false;
     } else if (
-        !/^\d{10}$/.test(formData.phone_number)
+      !/^\d{10}$/.test(formData.phone)
     ) {
-        newErrors.phone_number = "Invalid phone number";
-        valid = false;
+      newErrors.phone = "Invalid phone number";
+      valid = false;
     }
 
     // Email validation
@@ -99,8 +121,8 @@ function ContactUS() {
     }
 
     // Company name validation
-    if (!formData.company_name.trim()) {
-      newErrors.company_name = "Company name is required";
+    if (!formData.description.trim()) {
+      newErrors.description = "Company name is required";
       valid = false;
     }
 
@@ -125,76 +147,102 @@ function ContactUS() {
                 onSubmit={handleSubmit}
                 className="mx-auto py-6 px-4"
               >
-              <div className="lg:flex md:flex ">
-              <div className="lg:pe-5 md:pe-4 pt-3">
-              <label className="text-sm font-semibold">Your Name *</label>
-              <input
-                  onChange={handleChangeInput}
-                  value={formData.name}
-                  name="name"
-                  type="text"
-                  placeholder=""
-                  className="w-full rounded-md h-12 px-6 bg-white text-sm outline-none border-none"
-                />
-                {errors.name && (
-                  <span className="text-red-500 text-xs">{errors.name}</span>
-                )}
-                    </div>
-                    <div className="pt-3">
-                <label className="text-sm font-semibold" >Your Number *</label>
-                <input
-                  onChange={handleChangeInput}
-                  value={formData.phone_number}
-                  name="phone_number"
-                  type="phone"
-                  placeholder=""
-                  className="w-full rounded-md h-12 px-6 bg-white text-sm outline-none border-none"
-                />
-                {errors.phone_number && (
-                  <span className="text-red-500 text-xs">
-                    {errors.phone_number}
-                  </span>
-                )}
-                </div>
-              </div>
-                <div className="pt-3">
-                <label  className="text-sm font-semibold">Your Email *</label>
-                <input
-                  onChange={handleChangeInput}
-                  value={formData.email}
-                  name="email"
-                  type="email"
-                  placeholder=""
-                  className="w-full rounded-md h-12 px-6 bg-white text-sm outline-none border-none"
-                />
-                {errors.email && (
-                  <span className="text-red-500 text-xs">{errors.email}</span>
-                )}
+                <div className="lg:flex md:flex ">
+                  <div className="lg:pe-5 md:pe-4 pt-3">
+                    <label className="text-sm font-semibold">Your Name *</label>
+                    <input
+                      onChange={handleChangeInput}
+                      value={formData.name}
+                      name="name"
+                      type="text"
+                      placeholder=""
+                      className="w-full rounded-md h-12 px-6 bg-white text-sm outline-none border-none"
+                    />
+                    {errors.name && (
+                      <span className="text-red-500 text-xs">{errors.name}</span>
+                    )}
+                  </div>
+                  <div className="pt-3">
+                    <label className="text-sm font-semibold" >Your Number *</label>
+                    <input
+                      onChange={handleChangeInput}
+                      value={formData.phone}
+                      name="phone"
+                      type="tel"
+                      placeholder=""
+                      className="w-full rounded-md h-12 px-6 bg-white text-sm outline-none border-none"
+                    />
+                    {errors.phone && (
+                      <span className="text-red-500 text-xs">
+                        {errors.phone}
+                      </span>
+                    )}
+                  </div>
                 </div>
                 <div className="pt-3">
-                <label className="text-sm font-semibold">Please describe what you need *</label>
-                <textarea
-                  onChange={handleChangeInput}
-                  value={formData.company_name}
-                  name="company_name"
-                  type="text"
-                  placeholder=""
-                  className="w-full rounded-md h-28 px-6  bg-white text-sm outline-none border-none"
-                />
-                {errors.company_name && (
-                  <span className="text-red-500 text-xs">
-                    {errors.company_name}
-                  </span>
-                )}
+                  <label className="text-sm font-semibold">Your Email *</label>
+                  <input
+                    onChange={handleChangeInput}
+                    value={formData.email}
+                    name="email"
+                    type="email"
+                    placeholder=""
+                    className="w-full rounded-md h-12 px-6 bg-white text-sm outline-none border-none"
+                  />
+                  {errors.email && (
+                    <span className="text-red-500 text-xs">{errors.email}</span>
+                  )}
                 </div>
-                
+                <div className="pt-3">
+                  <label className="text-sm font-semibold">Please Describe your business needs</label>
+                  <textarea
+                    onChange={handleChangeInput}
+                    value={formData.description}
+                    name="description"
+                    type="text"
+                    placeholder=""
+                    className="w-full rounded-md h-28 px-6  bg-white text-sm outline-none border-none"
+                  />
+                  {errors.description && (
+                    <span className="text-red-500 text-xs">
+                      {errors.description}
+                    </span>
+                  )}
+                </div>
+
                 <div>
                   <button
-                    className="text-white bg-[--second-color] hover:bg-[rgb(105,145,221)] font-semibold rounded-md text-sm px-6 py-3 mt-4 block"
+                    className="text-white bg-[--second-color] hover:bg-[rgb(105,145,221)] font-semibold rounded-md text-sm px-6 py-3 mt-4 block flex items-center justify-center"
                     type="submit"
-                    onClick={handleSubmit}
+                    disabled={loading}
                   >
-                    Get Started
+                    {loading ? (
+                      <span className="flex items-center gap-2">
+                        <svg
+                          className="animate-spin h-5 w-5 text-white"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                        >
+                          <circle
+                            className="opacity-25"
+                            cx="12"
+                            cy="12"
+                            r="10"
+                            stroke="currentColor"
+                            strokeWidth="4"
+                          ></circle>
+                          <path
+                            className="opacity-75"
+                            fill="currentColor"
+                            d="M4 12a8 8 0 018-8v8H4z"
+                          ></path>
+                        </svg>
+                        Submitting...
+                      </span>
+                    ) : (
+                      "Get Started"
+                    )}
                   </button>
                 </div>
               </form>
