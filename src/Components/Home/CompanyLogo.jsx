@@ -8,9 +8,11 @@ import logo2 from "../../Images/logo-main.webp";
 import logo3 from "../../Images/ABSS-LOGO-png.png";
 import logo4 from "../../Images/doshion-logo.png";
 import logo5 from "../../Images/Quosha-logo.png";
+import logo6 from "../../Images/Hydropod_Logo.png";
+import logo7 from "../../Images/Betterwatater-logo.png";
 
 const CompanyLogo = () => {
-    const logos = [logo1, logo2, logo3, logo4, logo5];
+    const logos = [logo1, logo2, logo3, logo4, logo5,logo6,logo7];
 
     const logoStyles = [
         { margin: "10px", padding: "5px", width: "90px", filter: "grayscale(0%)" },
