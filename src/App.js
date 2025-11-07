@@ -20,6 +20,8 @@ import UiUxProject from "./Components/Portfolio/Projects/UI-UX/UiUxProject";
 import WebProject from "./Components/Portfolio/Projects/Web-Project/WebProject";
 import AppProject from "./Components/Portfolio/Projects/App-Project/AppProject";
 import BlockchainProject from "./Components/Portfolio/Projects/Blockchain-Project/BlockchainProject";
+import Blog from "./Pages/Blog";
+import BlogDetails from "./Pages/BlogDetails";
 
 
 function App() {
@@ -40,6 +42,8 @@ function App() {
             <Route path="/service" element={<Service />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blogDetails" element={<BlogDetails />} />
             <Route path="/portfolio/ui-ux-design" element={<UiUxProject />} />
             <Route path="/portfolio/web-development" element={<WebProject />} />
             <Route path="/portfolio/app-development" element={<AppProject />} />
