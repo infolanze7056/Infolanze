@@ -1,146 +1,220 @@
-import React from "react";
-import img1 from "../Images/appdev.jpg";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { createBucketClient } from "@cosmicjs/sdk";
+import { Helmet } from "react-helmet";
 
 const BlogDetails = () => {
-    const navigate = useNavigate();
+  const { slug } = useParams();
+  const navigate = useNavigate();
+  const [blog, setBlog] = useState(null);
+  console.log("blog", blog)
+  const [popularPosts, setPopularPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  // 🔹 For image modal
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const bucket = createBucketClient({
+    bucketSlug: "dashboard-production",
+    readKey: "ccoIwYVf1HWujfu3nTptWHrCq8qidSApj6XJ0pyOJfjVDBDzWp",
+  });
+
+  useEffect(() => {
+    bucket.objects
+      .findOne({ type: "blogs", slug })
+      .then(({ object }) => setBlog(object))
+      .catch((err) => console.error("Error fetching blog:", err))
+      .finally(() => setLoading(false));
+
+    bucket.objects
+      .find({ type: "blogs", limit: 4 })
+      .then(({ objects }) => setPopularPosts(objects))
+      .catch(console.error);
+  }, [slug]);
+
+  // 🔹 Close modal on Esc
+  useEffect(() => {
+    const handleEsc = (e) => e.key === "Escape" && setSelectedImage(null);
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, []);
+
+  if (loading)
+    return (
+      <div className="flex items-center justify-center h-[80vh] text-gray-600 text-lg">
+        Loading blog details...
+      </div>
+    );
+
+  if (!blog)
+    return <div className="text-center py-20 text-red-600">Blog not found.</div>;
+
+  const sections = blog.metadata?.sections || [];
 
   return (
-    <div className="py-16">
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 lg:px-28 md:px-20 px-6">
-        {/* LEFT SIDE MAIN IMAGE + CONTENT */}
-        <div className="col-span-2">
-          {/* MAIN IMAGE */}
-          <img
-            src={img1}
-            alt="Main Blog"
-            className="w-full h-[520px] object-cover rounded-md mb-10"
-          />
+    <div>
+      <Helmet>
+        <title>
+          {blog?.metadata?.meta_title
+            ? `BlogDetails - ${blog.metadata.meta_title} | Infolanze`
+            : "BlogDetails | Infolanze"}
+        </title>
+        <meta
+          name="description"
+          content={blog?.metadata?.meta_description || "Read the latest blog from Infolanze."}
+        />
+        <meta name="keywords" content={blog?.metadata?.meta_tags || "Infolanze, Blog"} />
+      </Helmet>
+      <div className="py-16">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 lg:px-28 md:px-20 px-6">
+          <div className="col-span-2">
+            {blog.metadata?.main_image?.url && (
+              <img
+                src={blog.metadata.main_image.url}
+                alt={blog.title}
+                className="w-full h-[480px] object-cover rounded-xl shadow-md mb-8"
+              />
+            )}
 
-          {/* BLOG CONTENT */}
-          <div className="leading-relaxed text-gray-800">
-            <h2 className="text-2xl font-semibold mb-4 text-gray-900">
-              Impact on Hearing After COVID-19
-            </h2>
-            <p className="mb-4">
-              After recovering from a COVID-19 infection, some individuals may experience an impact on their hearing.
-              This impact can manifest in various ways, and while not everyone will encounter hearing issues,
-              it's crucial to be aware of the potential consequences.
-            </p>
+            <div className="border-l-4 border-[#00bfff] pl-4 mb-4">
+              <h1 className="text-3xl font-bold text-gray-900 mb-1">
+                {blog.metadata?.main_title || blog.title}
+              </h1>
+              <p className="text-gray-500 text-sm">
+                {new Date(blog.created_at).toLocaleDateString("en-GB", {
+                  day: "2-digit",
+                  month: "short",
+                  year: "numeric",
+                })}
+              </p>
+            </div>
 
-            <h3 className="text-xl font-semibold mt-6 mb-2">
-              Here are some common ways in which COVID-19 can affect hearing:
-            </h3>
+            {sections[0]?.section_images?.length > 0 && (
+              <div className="flex flex-wrap gap-3 mb-6">
+                {sections[0].section_images.map((img, imgIndex) => (
+                  <div
+                    key={imgIndex}
+                    onClick={() => setSelectedImage(img.url)}
+                    className="w-28 h-20 overflow-hidden rounded-md shadow-sm hover:shadow-md cursor-pointer transition-all duration-300"
+                  >
+                    <img
+                      src={img.url}
+                      alt={`Preview ${imgIndex + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
 
-            <h4 className="font-semibold mt-4 mb-1 text-[#0077b6]">Sudden Hearing Loss:</h4>
-            <p>
-              Some COVID-19 survivors may experience sudden hearing loss in one or both ears.
-              This abrupt reduction in hearing ability can be distressing and requires immediate medical attention.
-            </p>
-
-            <h4 className="font-semibold mt-4 mb-1 text-[#0077b6]">Tinnitus:</h4>
-            <p>
-              Tinnitus is a condition characterized by a persistent ringing, buzzing, or humming sound in the ears.
-              COVID-19 has been associated with an increased risk of tinnitus, which can be bothersome and impact
-              concentration and sleep quality.
-            </p>
-
-            <h4 className="font-semibold mt-4 mb-1 text-[#0077b6]">Dizziness and Balance Problems:</h4>
-            <p>
-              COVID-19 can affect the vestibular system, responsible for balance and spatial orientation.
-              As a result, some individuals may experience dizziness or balance problems after infection.
-            </p>
-
-            <h4 className="font-semibold mt-4 mb-1 text-[#0077b6]">Auditory Processing Issues:</h4>
-            <p>
-              Some COVID-19 survivors may find it challenging to process and understand sounds, particularly
-              in noisy environments. This can lead to communication problems and frustration.
-            </p>
-
-            <h4 className="font-semibold mt-4 mb-1 text-[#0077b6]">Exacerbation of Existing Hearing Issues:</h4>
-            <p>
-              For those with pre-existing hearing conditions, COVID-19 may worsen hearing problems or lead
-              to additional complications.
-            </p>
-
-            <h3 className="text-xl font-semibold mt-8 mb-3">
-              Preventive Measures Individuals Can Take:
-            </h3>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>
-                <strong>Protect Your Ears:</strong> Limit exposure to loud noises and wear ear protection in noisy environments.
-              </li>
-              <li>
-                <strong>Follow Medical Advice:</strong> Seek immediate help if you experience hearing-related symptoms after COVID.
-              </li>
-              <li>
-                <strong>Avoid Self-Medication:</strong> Always consult a healthcare professional before taking medications.
-              </li>
-              <li>
-                <strong>Manage Stress:</strong> Stress can exacerbate tinnitus and hearing issues. Try relaxation or mindfulness exercises.
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* RIGHT SIDE — POPULAR POSTS + CONTACT BOX */}
-        <div className="space-y-8">
-          {/* POPULAR POSTS */}
-          <div className="bg-gray-100 p-7 rounded-lg shadow-sm">
-            <h1 className="text-gray-800 text-xl font-semibold pb-3 border-b border-gray-300">
-              Popular Posts
-            </h1>
-
-            {[1, 2, 3, 4].map((item, index) => (
-              <div
-                key={index}
-                className="py-3 flex gap-5 border-b border-gray-300 last:border-none"
-              >
-                <img
-                  src={img1}
-                  alt="Popular Post"
-                  className="w-[160px] h-[80px] object-cover rounded-md"
+            <div className="space-y-12">
+              {sections.length > 0 ? (
+                sections.map((section, index) => (
+                  <div key={index} className="pb-8">
+                    {section.section_title && (
+                      <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+                        {section.section_title}
+                      </h2>
+                    )}
+                    <div
+                      className="prose max-w-none text-gray-700 leading-relaxed prose-headings:text-gray-900 prose-a:text-[#00bfff] prose-a:no-underline hover:prose-a:underline"
+                      dangerouslySetInnerHTML={{ __html: section.paragraphs }}
+                    />
+                  </div>
+                ))
+              ) : (
+                <div
+                  className="prose prose-lg max-w-none text-gray-800 leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: blog.content }}
                 />
-                <div>
-                  <h1 className="text-gray-800 text-lg font-semibold">
-                    Popular Post {item}
-                  </h1>
-                  <p className="text-gray-700 text-sm">
-                    Building seamless and modern digital experiences.
-                  </p>
-                </div>
-              </div>
-            ))}
+              )}
+            </div>
           </div>
 
-          {/* CONTACT BOX */}
-          <div className="bg-[--main-color] backdrop-blur-md p-8 text-center rounded-xl shadow-md">
-            {/* Phone */}
-            <div className="flex items-center justify-center space-x-4 mb-6 pr-14">
-              <div className="bg-[#00bfff]/20 p-3 rounded-full text-2xl">📞</div>
-              <div className="text-left">
-                <h3 className="text-lg font-semibold text-black">Contact Us Free</h3>
-                <p className="text-black font-medium">+91 9558231515</p>
-              </div>
+          <div className="space-y-10">
+            <div className="bg-gray-100 p-7 rounded-xl shadow-sm">
+              <h2 className="text-gray-800 text-xl font-semibold pb-3 border-b border-gray-300">
+                Popular Posts
+              </h2>
+
+              {popularPosts.map((item) => (
+                <div
+                  key={item.slug}
+                  onClick={() => navigate(`/blogDetails/${item.slug}`)}
+                  className="py-3 flex gap-4 border-b border-gray-300 last:border-none cursor-pointer hover:bg-gray-200 transition-all duration-200 p-2 rounded-lg"
+                >
+                  <img
+                    src={item.metadata?.main_image?.url}
+                    alt={item.title}
+                    className="w-[90px] h-[70px] object-cover rounded-md"
+                  />
+                  <div>
+                    <h3 className="text-gray-800 font-semibold text-base line-clamp-2">
+                      {item.metadata?.main_title || item.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm mt-1 line-clamp-2">
+                      {item.metadata?.meta_description?.slice(0, 60)}...
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
 
-            {/* Email */}
-            <div className="flex items-center justify-center space-x-4 mb-6">
-              <div className="bg-[#00bfff]/20 p-3 rounded-full text-2xl">✉️</div>
-              <div className="text-left">
-                <h3 className="text-lg font-semibold text-black">Mail Us Free</h3>
-                <p className="text-black font-medium break-all">nandkishor45@gmail.com</p>
+            <div className="bg-[#00bfff]/10 border border-[#00bfff]/30 p-8 text-center rounded-2xl shadow-md">
+              <div className="space-y-6">
+                <div className="flex items-center justify-center space-x-4 pr-20">
+                  <div className="bg-[#00bfff]/20 p-3 rounded-full text-2xl">📞</div>
+                  <div className="text-left">
+                    <h3 className="text-lg font-semibold text-gray-800">Contact Us</h3>
+                    <p className="text-gray-700 font-medium">+91 95582 31515</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-center space-x-4">
+                  <div className="bg-[#00bfff]/20 p-3 rounded-full text-2xl">✉️</div>
+                  <div className="text-left">
+                    <h3 className="text-lg font-semibold text-gray-800">Email Us</h3>
+                    <p className="text-gray-700 font-medium break-all">
+                      nandkishor45@gmail.com
+                    </p>
+                  </div>
+                </div>
+
+                <button
+                  onClick={() => navigate("/contact")}
+                  className="mt-2 bg-[#00bfff] hover:bg-[#0099cc] text-white font-semibold py-2.5 px-8 rounded-full transition-all duration-300 shadow-md"
+                >
+                  Contact Us
+                </button>
               </div>
             </div>
-
-            {/* Button */}
-            <button 
-            onClick={() => navigate("/contact")}
-            className="mt-2 bg-[#00bfff] hover:bg-[#0099cc] text-white font-semibold py-2.5 px-8 rounded-full transition-all duration-300 shadow-md">
-              Contact Us
-            </button>
           </div>
         </div>
+
+        {selectedImage && (
+          <div
+            onClick={() => setSelectedImage(null)}
+            className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50"
+          >
+            <div
+              onClick={(e) => e.stopPropagation()}
+              className="relative w-[90%] sm:w-[70%] md:w-[60%] lg:w-[45%] xl:w-[40%] max-h-[80vh] flex flex-col items-center"
+            >
+              <img
+                src={selectedImage}
+                alt="Preview"
+                className="w-full h-auto max-h-[75vh] object-contain rounded-xl shadow-2xl border border-white/20"
+              />
+              <button
+                onClick={() => setSelectedImage(null)}
+                className="absolute top-3 right-3 bg-white/80 hover:bg-white text-gray-800 text-xl font-bold w-9 h-9 flex items-center justify-center rounded-full shadow-md transition-all"
+              >
+                ✕
+              </button>
+            </div>
+          </div>
+        )}
+
       </div>
     </div>
   );

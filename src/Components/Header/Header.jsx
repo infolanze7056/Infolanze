@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { FaBars } from "react-icons/fa6";
 import { AiOutlineClose } from "react-icons/ai";
 import { FaAngleUp, FaAngleDown, FaAngleDoubleRight } from "react-icons/fa";
@@ -31,15 +31,20 @@ function Header() {
       case "/service":
         setIsActive(4);
         break;
-      case "/career":
-      case "/courses":
-        setIsActive(5);
+      case "/portfolio":
+        setIsActive(7);
         break;
       case "/blog":
         setIsActive(8);
         break;
+      case "/career":
+        setIsActive("career");
+        break;
+      case "/courses":
+        setIsActive("courses");
+        break;
       default:
-        setIsActive(1);
+        setIsActive(null);
         break;
     }
     window.scrollTo(0, 0);
@@ -56,7 +61,9 @@ function Header() {
       <div className="shadow-xl w-full bg-[--second-color] py-3">
         <div className="lg:px-16 md:px-7 px-5 lg:flex justify-between items-center">
           <div className="z-40">
-            <img className="w-48 z-400" src={Logo} alt="logo" />
+            <Link to="/">
+              <img className="w-48" src={Logo} alt="logo" />
+            </Link>
           </div>
 
           <div
@@ -72,11 +79,10 @@ function Header() {
 
           <nav
             className={`nav-menu lg:flex lg:pb-0 lg:py-0 md:py-7 py-7 lg:items-center text-base absolute lg:static bg-[--second-color] z-30 right-0 w-full lg:w-auto md:pl-0 transition-all duration-500 ease-in 
-          ${
-            isOpen
-              ? "top-[-230px] z-[-1] lg:z-0"
-              : "top-[65px] z-[-1] lg:z-0"
-          }`}
+          ${isOpen
+                ? "top-[-230px] z-[-1] lg:z-0"
+                : "top-[65px] z-[-1] lg:z-0"
+              }`}
           >
             <div className="bg-[--second-color] lg:flex gap-1 text-start lg:ps-0 md:ps-5 ps-3 font-family z-30">
 
@@ -86,9 +92,8 @@ function Header() {
                   to="/"
                   id="1"
                   onClick={(e) => handleNavSelected(e)}
-                  className={`mr-5 hover:text-black cursor-pointer flex link ${
-                    isActive === 1 ? "active" : ""
-                  }`}
+                  className={`mr-5 hover:text-black cursor-pointer flex link ${isActive === 1 ? "active" : ""
+                    }`}
                 >
                   Home
                 </NavLink>
@@ -100,9 +105,8 @@ function Header() {
                   to="/about"
                   id="2"
                   onClick={(e) => handleNavSelected(e)}
-                  className={`mr-5 hover:text-black cursor-pointer flex link ${
-                    isActive === 2 ? "active" : ""
-                  }`}
+                  className={`mr-5 hover:text-black cursor-pointer flex link ${isActive === 2 ? "active" : ""
+                    }`}
                 >
                   About Us
                 </NavLink>
@@ -114,9 +118,8 @@ function Header() {
                   to="/contact"
                   id="3"
                   onClick={(e) => handleNavSelected(e)}
-                  className={`mr-5 hover:text-black cursor-pointer flex link ${
-                    isActive === 3 ? "active" : ""
-                  }`}
+                  className={`mr-5 hover:text-black cursor-pointer flex link ${isActive === 3 ? "active" : ""
+                    }`}
                 >
                   Contact Us
                 </NavLink>
@@ -131,9 +134,8 @@ function Header() {
                 <NavLink
                   to="/service"
                   id="4"
-                  className={`mr-5 hover:text-black cursor-pointer flex items-center link ${
-                    isActive === 4 ? "active" : ""
-                  }`}
+                  className={`mr-5 hover:text-black cursor-pointer flex items-center link ${isActive === 4 ? "active" : ""
+                    }`}
                 >
                   Services&nbsp;
                   {isDropdownVisible === "services" ? (
@@ -147,7 +149,7 @@ function Header() {
                   <div className="absolute top-full right-0 w-[1000px] pt-5 z-50 hidden lg:block">
                     <div className="bg-white border border-gray-200 rounded shadow-lg p-5">
                       <div className="grid grid-cols-5 gap-5">
-                        {[ 
+                        {[
                           { to: "/service/ui-ux", img: image1, label: "UI-UX Designing" },
                           { to: "/service/web-development", img: image2, label: "Web Development" },
                           { to: "/service/app-development", img: image3, label: "App Development" },
@@ -171,39 +173,44 @@ function Header() {
               </div>
 
               {/* WHY CHOOSE US DROPDOWN */}
+              {/* WHY CHOOSE US DROPDOWN */}
               <div
                 className="lg:px-2 relative"
                 onMouseEnter={() => setIsDropdownVisible("why")}
                 onMouseLeave={() => setIsDropdownVisible(null)}
               >
                 <NavLink
-                  to="#"
+                  to=""
                   id="5"
-                  className={`mr-5 hover:text-black cursor-pointer flex items-center link ${
-                    isActive === 5 ? "active" : ""
-                  }`}
+                  onClick={(e) => handleNavSelected(e)}
+                  className={`mr-5 cursor-pointer flex items-center link transition-colors duration-200
+                    ${isActive === 5 || isActive === "career" || isActive === "courses"
+                      ? "active text-black"
+                      : "hover:text-black"
+                    }
+    `}
                 >
                   Why Choose Us&nbsp;
-                  {isDropdownVisible === "why" ? (
-                    <FaAngleUp />
-                  ) : (
-                    <FaAngleDown />
-                  )}
+                  {isDropdownVisible === "why" ? <FaAngleUp /> : <FaAngleDown />}
                 </NavLink>
 
                 {isDropdownVisible === "why" && (
                   <div className="absolute top-full left-0 bg-white border border-gray-200 rounded shadow-lg w-52 z-50">
                     <NavLink
                       to="/career"
+                      id="career"
                       onClick={(e) => handleNavSelected(e)}
-                      className="flex items-center px-4 py-2 text-gray-800 hover:bg-gray-100"
+                      className={`flex items-center px-4 py-2 text-gray-800 hover:bg-gray-100 ${isActive === "career" ? "active" : ""
+                        }`}
                     >
                       <FaAngleDoubleRight className="mr-2" /> Career
                     </NavLink>
                     <NavLink
                       to="/courses"
+                      id="courses"
                       onClick={(e) => handleNavSelected(e)}
-                      className="flex items-center px-4 py-2 text-gray-800 hover:bg-gray-100"
+                      className={`flex items-center px-4 py-2 text-gray-800 hover:bg-gray-100 ${isActive === "courses" ? "active" : ""
+                        }`}
                     >
                       <FaAngleDoubleRight className="mr-2" /> Courses
                     </NavLink>
@@ -211,15 +218,16 @@ function Header() {
                 )}
               </div>
 
+
+
               {/* Portfolio */}
               <div className="lg:px-2">
                 <NavLink
                   to="/portfolio"
                   id="7"
                   onClick={(e) => handleNavSelected(e)}
-                  className={`mr-5 hover:text-black cursor-pointer flex link ${
-                    isActive === 7 ? "active" : ""
-                  }`}
+                  className={`mr-5 hover:text-black cursor-pointer flex link ${isActive === 7 ? "active" : ""
+                    }`}
                 >
                   Portfolio
                 </NavLink>
@@ -231,9 +239,8 @@ function Header() {
                   to="/blog"
                   id="8"
                   onClick={(e) => handleNavSelected(e)}
-                  className={`mr-5 hover:text-black cursor-pointer flex link ${
-                    isActive === 8 ? "active" : ""
-                  }`}
+                  className={`mr-5 hover:text-black cursor-pointer flex link ${isActive === 8 ? "active" : ""
+                    }`}
                 >
                   Blog
                 </NavLink>

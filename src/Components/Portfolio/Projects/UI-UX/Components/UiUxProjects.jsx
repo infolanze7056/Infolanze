@@ -9,7 +9,14 @@ import teamofassam from '../../../../../Images/teaofassamnew.png'
 const UiUxProjects = () => {
   return (
     <div className='bg-white lg:px-28 md:px-20 px-5 py-10 pb-20'>
-        <h1 className='text-xl lg:text-4xl text-[--second-color] font-semibold pb-8 text-center'>UI / UX Projects</h1>
+        <div className="relative z-10 text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-3 tracking-tight font-poppins">
+          Our <span className="text-[--second-color]">UI/UX</span> Projects
+        </h2>
+        <p className="text-gray-600 max-w-2xl mx-auto font-nunito text-base md:text-lg leading-relaxed">
+          Explore our best design work — each crafted with strategy, aesthetics, and user experience in mind.
+        </p>
+      </div>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 xl:gap-10 md:gap-5 gap-8'>
       
         <div className='shadow-2xl rounded-3xl border border-[#eee]'>

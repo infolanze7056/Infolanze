@@ -12,12 +12,17 @@ import Gym from "../../../../../Images/Gymshark.png";
 const WebProjects = () => {
   return (
     <div className="bg-white lg:px-28 md:px-20 px-5 py-10 pb-20">
-      <h1 className="text-xl lg:text-4xl text-[--second-color] font-semibold pb-8 text-center">
-        Web Development Projects
-      </h1>
+      <div className="relative z-10 text-center mb-20">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight mb-5 font-poppins">
+          Our <span className="text-[--second-color]">Web Development</span> Projects
+        </h1>
+        <p className="text-gray-600 max-w-2xl mx-auto font-nunito text-lg md:text-xl leading-relaxed">
+          Explore our finest digital creations — blending innovation, precision, and seamless user experience for modern brands.
+        </p>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 xl:gap-10 md:gap-5 gap-8">
 
-      <a
+        <a
           href="https://quosha-ink.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
