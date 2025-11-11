@@ -1,12 +1,10 @@
 import React from "react";
 import Main from "../../../Images/person.jpg";
-import Darshil from "../../../Images/Darshil Patel.jpeg"
-// import Mayur from "../../../Images/Mayur.jpg"
-import Manish from "../../../Images/Manish.jpg"
-import Kush from "../../../Images/Kush.png"
-import Nishant from "../../../Images/Nishant.png"
-import FounderCard from "./FounderCard/FounderCard";
-
+import Darshil from "../../../Images/Darshil Patel.jpeg";
+import Manish from "../../../Images/Manish.jpg";
+import Kush from "../../../Images/KushPhoto.png";
+import Nishant from "../../../Images/NishantPhoto.png";
+// import Vishal from "../../../Images/vishalPhoto.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -16,85 +14,211 @@ const Founder = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 600,
     slidesToShow: 3,
     slidesToScroll: 1,
-    centerMode: true, // Set centerMode to true
-    centerPadding: "0px", // Adjust the value as per your requirement
-    autoplay: true, // Set autoplay to true
-    autoplaySpeed: 2000,
+    centerMode: true,
+    centerPadding: "0px",
+    autoplay: true,
+    autoplaySpeed: 2500,
+    pauseOnHover: true,
     responsive: [
       {
         breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true
-        }
+        settings: { slidesToShow: 2, slidesToScroll: 1 },
       },
       {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1
-        }
-      }
-    ]
+        breakpoint: 640,
+        settings: { slidesToShow: 1, slidesToScroll: 1 },
+      },
+    ],
   };
 
   return (
-    <div className="font-family bg-[#e9f6fc] py-10">
-      <div className="py-3">
-      <h3 className="text-center lg:text-3xl md:text-3xl text-2xl font-bold ">Meet Our Team</h3>
-      <p className="text-center lg:text-lg md:text-lg text-sm">
-        Discover more about our high performing team
-      </p>
+    <section className="relative bg-gradient-to-br from-[#e8f5ff] via-[#f5fcff] to-[#f0faff] py-16 overflow-hidden">
+      <div className="absolute -top-20 -left-20 w-60 h-60 bg-blue-200 rounded-full blur-3xl opacity-40"></div>
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-blue-300 rounded-full blur-3xl opacity-30"></div>
+
+      <div className="relative max-w-7xl mx-auto px-6 text-center">
+        <h3 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-700 to-cyan-500 bg-clip-text text-transparent mb-3">
+          Meet Our Team
+        </h3>
+        <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-10">
+          A passionate team of innovators, creators, and problem-solvers driving digital excellence.
+        </p>
+
+        <Slider {...settings}>
+          <div className="px-4 py-4">
+            <div className="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-[1.02] p-6 border border-gray-100">
+              <a
+                href="https://darshil-patel.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+                className="absolute top-4 right-4 bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-800 text-sm font-semibold px-3 py-1 rounded-full transition-all duration-300 shadow-sm"
+              >
+                View Profile →
+              </a>
+              <img
+                src={Darshil}
+                alt="Darshil Patel"
+                className="w-40 h-40 object-cover rounded-full mx-auto mb-4 border-4 border-blue-200 shadow-md"
+              />
+              <h4 className="text-xl font-semibold text-gray-800">
+                Darshil Patel
+              </h4>
+              <p className="text-sm text-blue-500 font-medium mb-3">
+                Director / Full-Stack Blockchain Developer
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Darshil Patel, our CEO at Infolanze, leads with vision and innovation, driving our company towards growth and success in the tech industry.
+              </p>
+            </div>
+          </div>
+
+          <div className="px-4 py-4">
+            <div className="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-[1.02] p-6 border border-gray-100">
+              <img
+                src={Main}
+                alt="Shreya Patel"
+                className="w-40 h-40 object-cover rounded-full mx-auto mb-4 border-4 border-blue-200 shadow-md"
+              />
+              <h4 className="text-xl font-semibold text-gray-800">
+                Shreya Patel
+              </h4>
+              <p className="text-sm text-blue-500 font-medium mb-3">
+                Director / Chief Marketing Head
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Shreya Patel, our Chief Marketing Head, drives strategic initiatives, enhancing brand presence and market reach with innovative and effective marketing campaigns.
+              </p>
+            </div>
+          </div>
+
+          <div className="px-4 py-4">
+            <div className="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-[1.02] p-6 border border-gray-100">
+              <img
+                src={Nishant}
+                alt="Nishant Timbadiya"
+                className="w-40 h-40 object-cover rounded-full mx-auto mb-4 border-4 border-blue-200 shadow-md"
+              />
+              <h4 className="text-xl font-semibold text-gray-800">
+                Nishant Timbadiya
+              </h4>
+              <p className="text-sm text-blue-500 font-medium mb-3">
+                Frontend Developer
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Nishant, Our Frontend Developer, crafts stunning, intuitive user interfaces with cutting-edge web technologies, ensuring exceptional performance.
+              </p>
+            </div>
+          </div>
+
+          <div className="px-4 py-4">
+            <div className="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-[1.02] p-6 border border-gray-100">
+              <img
+                src={Manish}
+                alt="Manish Chaudhary"
+                className="w-40 h-40 object-cover rounded-full mx-auto mb-4 border-4 border-blue-200 shadow-md"
+              />
+              <h4 className="text-xl font-semibold text-gray-800">
+                Manish Chaudhary
+              </h4>
+              <p className="text-sm text-blue-500 font-medium mb-3">
+                Full Stack Developer
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Manish, our Full Stack Developer, specializes in building dynamic and scalable web applications using React.js and Node.js.
+              </p>
+            </div>
+          </div>
+
+          <div className="px-4 py-4">
+            <div className="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-[1.02] p-6 border border-gray-100">
+              <a
+                href="https://kush-mevada.vercel.app"
+                target="_blank"
+                rel="noreferrer"
+                className="absolute top-4 right-4 bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-800 text-sm font-semibold px-3 py-1 rounded-full transition-all duration-300 shadow-sm"
+              >
+                View Profile →
+              </a>
+              <img
+                src={Kush}
+                alt="Kush Mevada"
+                className="w-40 h-40 object-cover rounded-full mx-auto mb-4 border-4 border-blue-200 shadow-md"
+              />
+              <h4 className="text-xl font-semibold text-gray-800">
+                Kush Mevada
+              </h4>
+              <p className="text-sm text-blue-500 font-medium mb-3">
+                UI/UX Designer
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Kush, our UI/UX Developer, designs intuitive, user-friendly interfaces, enhancing user experience with innovative and efficient solutions.
+              </p>
+            </div>
+          </div>
+
+          <div className="px-4 py-4">
+            <div className="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-[1.02] p-6 border border-gray-100">
+              <img
+                src={Main}
+                alt="Vishal Chauhan"
+                className="w-40 h-40 object-cover rounded-full mx-auto mb-4 border-4 border-blue-200 shadow-md"
+              />
+              <h4 className="text-xl font-semibold text-gray-800">
+                Vishal Chauhan
+              </h4>
+              <p className="text-sm text-blue-500 font-medium mb-3">
+                MERN Stack Developer
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Vishal, our MERN Stack Developer, builds modern and scalable web applications,
+                blending efficiency and innovation across MongoDB, Express, React, and Node.js.
+              </p>
+            </div>
+          </div>
+          <div className="px-4 py-4">
+            <div className="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-[1.02] p-6 border border-gray-100">
+              <img
+                src={Main}
+                alt="Meet Agarwal"
+                className="w-40 h-40 object-cover rounded-full mx-auto mb-4 border-4 border-blue-200 shadow-md"
+              />
+              <h4 className="text-xl font-semibold text-gray-800">
+                Meet Agarwal
+              </h4>
+              <p className="text-sm text-blue-500 font-medium mb-3">
+                Full Stack Developer
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Meet, Our Fullstack Developer bridges design and functionality, turning ideas into reliable, interactive web applications while exploring new technologies.
+              </p>
+            </div>
+          </div>
+
+          <div className="px-4 py-4">
+            <div className="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-[1.02] p-6 border border-gray-100">
+              <img
+                src={Main}
+                alt="Karan Dhamecha"
+                className="w-40 h-40 object-cover rounded-full mx-auto mb-4 border-4 border-blue-200 shadow-md"
+              />
+              <h4 className="text-xl font-semibold text-gray-800">
+                Karan Dhamecha
+              </h4>
+              <p className="text-sm text-blue-500 font-medium mb-3">
+                React.js Developer
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Karan, our React.js Developer, builds dynamic and responsive web applications
+                with elegant UIs and seamless user experiences using React.js and Tailwind CSS.
+              </p>
+            </div>
+          </div>
+        </Slider>
       </div>
-      <div >
-      <Slider {...settings}>
-        <FounderCard
-          name="Darshil Patel"
-          role="Director/Full-Stack Blockchain Developer"
-          description="Darshil Patel, our CEO at Infolanze, leads with vision and innovation, driving our company towards growth and success in the tech industry."
-          image={Darshil}
-          link="https://darshil-patel.vercel.app/"
-        />
-        <FounderCard
-          name="Shreya Patel"
-          role="Director/Chief Marketing Head"
-          description="Shreya Patel, our Chief Marketing Head, drives strategic initiatives, enhancing brand presence and market reach with innovative and effective marketing campaigns."
-          image={Main}
-        />
-        <FounderCard
-          name="Nishant Timbadiya"
-          role="Frontend Developer"
-          description="Nishant, Our Frontend Developer, crafts stunning, intuitive user interfaces with cutting-edge web technologies, ensuring exceptional performance."
-          image={Nishant}
-        />
-        <FounderCard
-          name="Manish Chaudhary"
-          role="Full Stack Developer"
-          description="Manish, our Full Stack Developer, specializes in building dynamic and scalable web applications using React.js and Node.js."
-          image={Manish}
-        /> 
-        {/* <FounderCard
-          name="Mayur Prajapati"
-          role="Graphic Designer"
-          description="Mayur, our Graphic Designer, creates stunning visuals and impactful designs, ensuring our brand's aesthetic excellence and visual appeal."
-          image={Mayur}
-        />  */}
-        <FounderCard
-          name="Kush Mevada"
-          role="UI-UX Designer"
-          description="Kush, our UI/UX Developer, designs intuitive, user-friendly interfaces, enhancing user experience with innovative and efficient solutions."
-          image={Kush}
-          link="https://kush-mevada.vercel.app"
-        /> 
-      </Slider>
-      </div>
-    </div>
+    </section>
   );
 };
 

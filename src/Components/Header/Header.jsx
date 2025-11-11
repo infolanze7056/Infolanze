@@ -172,8 +172,6 @@ function Header() {
                 )}
               </div>
 
-              {/* WHY CHOOSE US DROPDOWN */}
-              {/* WHY CHOOSE US DROPDOWN */}
               <div
                 className="lg:px-2 relative"
                 onMouseEnter={() => setIsDropdownVisible("why")}

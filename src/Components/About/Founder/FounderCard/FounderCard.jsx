@@ -10,9 +10,9 @@ const FounderCard = ({ name, role, description, image, link }) => {
         <p className="font-semibold text-[--second-color] px-5">{role}</p>
         <p className="p-5">{description}</p>
         <a href={link} target="_blank" rel="noreferrer">
-          <button className="btn rounded bg-[#d6eff9] px-5 py-2">
+          {/* <button className="btn rounded bg-[#d6eff9] px-5 py-2">
             View More
-          </button>
+          </button> */}
         </a>
       </div>
     </div>
