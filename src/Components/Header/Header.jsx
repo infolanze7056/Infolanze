@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { FaBars } from "react-icons/fa6";
 import { AiOutlineClose } from "react-icons/ai";
-import { FaAngleUp, FaAngleDown, FaAngleDoubleRight } from "react-icons/fa";
+import { FaAngleUp, FaAngleDown } from "react-icons/fa";
 import "./Header.css";
 import Logo from "../../Images/InfoLanze Logo White.png";
 import image1 from "../../Images/website-designing.png";
@@ -171,7 +171,7 @@ function Header() {
                   </div>
                 )}
               </div>
-              
+
               <div className="lg:px-2">
                 <NavLink
                   to="/career"

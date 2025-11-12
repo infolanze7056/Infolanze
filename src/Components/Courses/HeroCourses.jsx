@@ -35,7 +35,7 @@ const HeroCourses = () => {
             <div className="lg:h-[400px] lg:w-[400px] md:h-[550px] md:w-[550px] h-[280px] w-[280px] m-auto pb-10 md:pb-10 lg:pb-0 xl:pb-0">
               <img
                 src={Course}
-                alt="course image"
+                alt="Course"
                 className="h-full w-full"
               />
             </div>

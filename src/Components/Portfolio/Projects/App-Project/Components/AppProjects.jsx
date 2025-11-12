@@ -22,7 +22,7 @@ const AppProjects = () => {
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 xl:gap-10 md:gap-5 gap-8'>
 
-                 <a href='' target="_blank" rel="noopener noreferrer">
+                 <a href='#' target="_blank" rel="noopener noreferrer">
                     <div className='shadow-2xl rounded-3xl border border-[#eee]'>
                         <div className='relative m-auto overflow-hidden rounded-t-3xl'>
                             <img src={Hydropod} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
@@ -33,7 +33,7 @@ const AppProjects = () => {
                     </div>
                 </a>
 
-                <a href='' target="_blank" rel="noopener noreferrer">
+                <a href='#' target="_blank" rel="noopener noreferrer">
                     <div className='shadow-2xl rounded-3xl border border-[#eee]'>
                         <div className='relative m-auto overflow-hidden rounded-t-3xl'>
                             <img src={Doshion} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
