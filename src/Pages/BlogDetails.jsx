@@ -162,11 +162,11 @@ const BlogDetails = () => {
 
             <div className="bg-[#00bfff]/10 border border-[#00bfff]/30 p-8 text-center rounded-2xl shadow-md">
               <div className="space-y-6">
-                <div className="flex items-center justify-center space-x-4 pr-20">
+                <div className="flex items-center justify-center space-x-4 pr-28">
                   <div className="bg-[#00bfff]/20 p-3 rounded-full text-2xl">📞</div>
                   <div className="text-left">
                     <h3 className="text-lg font-semibold text-gray-800">Contact Us</h3>
-                    <p className="text-gray-700 font-medium">+91 95582 31515</p>
+                    <p className="text-gray-700 font-medium">+91 70161 60435</p>
                   </div>
                 </div>
 
@@ -175,7 +175,7 @@ const BlogDetails = () => {
                   <div className="text-left">
                     <h3 className="text-lg font-semibold text-gray-800">Email Us</h3>
                     <p className="text-gray-700 font-medium break-all">
-                      nandkishor45@gmail.com
+                      techteam.infolanze@gmail.com
                     </p>
                   </div>
                 </div>
