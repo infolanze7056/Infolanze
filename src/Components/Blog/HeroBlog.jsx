@@ -16,7 +16,7 @@ const HeroBlog = () => {
       .find({ type: "blogs" })
       .then(({ objects }) => setBlogs(objects))
       .catch(console.error);
-  }, []);
+  }, [bucket]);
 
   return (
     <div className="py-16">

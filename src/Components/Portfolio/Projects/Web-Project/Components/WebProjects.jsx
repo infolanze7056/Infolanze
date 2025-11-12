@@ -8,6 +8,12 @@ import Quosha from "../../../../../Images/Quosha-ink.png";
 import Popsocket from "../../../../../Images/Popsockets.png";
 import Partake from "../../../../../Images/Partake.png";
 import Gym from "../../../../../Images/Gymshark.png";
+import Biogenix from "../../../../../Images/biogenix.png";
+import BetterrWater from "../../../../../Images/betterwater-web.png"
+import Hydropod from "../../../../../Images/hydropod-web.png"
+import Isx from "../../../../../Images/isx.png"
+import Doshion from "../../../../../Images/doshion-web.png"
+
 
 const WebProjects = () => {
   return (
@@ -23,7 +29,83 @@ const WebProjects = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 xl:gap-10 md:gap-5 gap-8">
 
         <a
-          href="https://quosha-ink.vercel.app/"
+          href="https://isx-frontend.store/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="shadow-2xl rounded-3xl border border-[#eee]">
+            <div className="relative m-auto overflow-hidden rounded-t-3xl">
+              <img
+                src={Isx}
+                alt=""
+                className="hover:transform hover:scale-[1.08] transition-all duration-[0.5s]"
+              />
+            </div>
+            <div className="bg-white text-black text-center lg:text-sm rounded-b-3xl p-2 uppercase">
+              <h1>ISX Canada</h1>
+            </div>
+          </div>
+        </a>
+
+         <a
+          href="https://hydropod.in/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="shadow-2xl rounded-3xl border border-[#eee]">
+            <div className="relative m-auto overflow-hidden rounded-t-3xl">
+              <img
+                src={Hydropod}
+                alt=""
+                className="hover:transform hover:scale-[1.08] transition-all duration-[0.5s]"
+              />
+            </div>
+            <div className="bg-white text-black text-center lg:text-sm rounded-b-3xl p-2 uppercase">
+              <h1>Hydropod</h1>
+            </div>
+          </div>
+        </a>
+
+         <a
+          href="https://resin-admin-panel.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="shadow-2xl rounded-3xl border border-[#eee]">
+            <div className="relative m-auto overflow-hidden rounded-t-3xl">
+              <img
+                src={BetterrWater}
+                alt=""
+                className="hover:transform hover:scale-[1.08] transition-all duration-[0.5s]"
+              />
+            </div>
+            <div className="bg-white text-black text-center lg:text-sm rounded-b-3xl p-2 uppercase">
+              <h1>Better Water</h1>
+            </div>
+          </div>
+        </a>
+
+         <a
+          href="https://www.biogenixcompostable.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="shadow-2xl rounded-3xl border border-[#eee]">
+            <div className="relative m-auto overflow-hidden rounded-t-3xl">
+              <img
+                src={Biogenix}
+                alt=""
+                className="hover:transform hover:scale-[1.08] transition-all duration-[0.5s]"
+              />
+            </div>
+            <div className="bg-white text-black text-center lg:text-sm rounded-b-3xl p-2 uppercase">
+              <h1>Biogenix</h1>
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="https://www.quosha.store/"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -35,8 +117,27 @@ const WebProjects = () => {
                 className="hover:transform hover:scale-[1.08] transition-all duration-[0.5s]"
               />
             </div>
-            <div className="bg-white text-black text-center lg:text-sm rounded-b-3xl p-2">
+            <div className="bg-white text-black text-center lg:text-sm rounded-b-3xl p-2 uppercase">
               <h1>Quosha</h1>
+            </div>
+          </div>
+        </a>
+
+        <a
+          href=""
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="shadow-2xl rounded-3xl border border-[#eee]">
+            <div className="relative m-auto overflow-hidden rounded-t-3xl">
+              <img
+                src={Doshion}
+                alt=""
+                className="hover:transform hover:scale-[1.08] transition-all duration-[0.5s]"
+              />
+            </div>
+            <div className="bg-white text-black text-center lg:text-sm rounded-b-3xl p-2 uppercase">
+              <h1>Doshion</h1>
             </div>
           </div>
         </a>
@@ -54,7 +155,7 @@ const WebProjects = () => {
                 className="hover:transform hover:scale-[1.08] transition-all duration-[0.5s]"
               />
             </div>
-            <div className="bg-white text-black text-center lg:text-sm rounded-b-3xl p-2">
+            <div className="bg-white text-black text-center lg:text-sm rounded-b-3xl p-2 uppercase">
               <h1>Popsockets</h1>
             </div>
           </div>
@@ -73,7 +174,7 @@ const WebProjects = () => {
                 className="hover:transform hover:scale-[1.08] transition-all duration-[0.5s]"
               />
             </div>
-            <div className="bg-white text-black text-center lg:text-sm rounded-b-3xl p-2">
+            <div className="bg-white text-black text-center lg:text-sm rounded-b-3xl p-2 uppercase">
               <h1>Partake Foods</h1>
             </div>
           </div>
@@ -92,7 +193,7 @@ const WebProjects = () => {
                 className="hover:transform hover:scale-[1.08] transition-all duration-[0.5s]"
               />
             </div>
-            <div className="bg-white text-black text-center lg:text-sm rounded-b-3xl p-2">
+            <div className="bg-white text-black text-center lg:text-sm rounded-b-3xl p-2 uppercase">
               <h1>Gym Shark</h1>
             </div>
           </div>
@@ -111,7 +212,7 @@ const WebProjects = () => {
                 className="hover:transform hover:scale-[1.08] transition-all duration-[0.5s]"
               />
             </div>
-            <div className="bg-white text-black text-center lg:text-sm rounded-b-3xl p-2">
+            <div className="bg-white text-black text-center lg:text-sm rounded-b-3xl p-2 uppercase">
               <h1>X-BEAT</h1>
             </div>
           </div>
@@ -149,7 +250,7 @@ const WebProjects = () => {
                 className="hover:transform hover:scale-[1.08] transition-all duration-[0.5s]"
               />
             </div>
-            <div className="bg-white text-black text-center lg:text-sm rounded-b-3xl p-2">
+            <div className="bg-white text-black text-center lg:text-sm rounded-b-3xl p-2 uppercase">
               <h1>SHOP IT</h1>
             </div>
           </div>
@@ -168,7 +269,7 @@ const WebProjects = () => {
                 className="hover:transform hover:scale-[1.08] transition-all duration-[0.5s]"
               />
             </div>
-            <div className="bg-white text-black text-center lg:text-sm rounded-b-3xl p-2">
+            <div className="bg-white text-black text-center lg:text-sm rounded-b-3xl p-2 uppercase">
               <h1>BEACH RESORT</h1>
             </div>
           </div>
@@ -187,7 +288,7 @@ const WebProjects = () => {
                 className="hover:transform hover:scale-[1.08] transition-all duration-[0.5s]"
               />
             </div>
-            <div className="bg-white text-black text-center lg:text-sm rounded-b-3xl p-2">
+            <div className="bg-white text-black text-center lg:text-sm rounded-b-3xl p-2 ">
               <h1>TEA OF ASSAM</h1>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import UI from '../../../../../Images/UI&UX.jpg'
+
 const UiUxABout = () => {
   return (
     <div>

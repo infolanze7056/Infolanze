@@ -31,17 +31,17 @@ function Header() {
       case "/service":
         setIsActive(4);
         break;
+        case "/career":
+        setIsActive(5);
+        break;
+      case "/courses":
+        setIsActive(6);
+        break;
       case "/portfolio":
         setIsActive(7);
         break;
       case "/blog":
         setIsActive(8);
-        break;
-      case "/career":
-        setIsActive("career");
-        break;
-      case "/courses":
-        setIsActive("courses");
         break;
       default:
         setIsActive(null);
@@ -87,7 +87,7 @@ function Header() {
             <div className="bg-[--second-color] lg:flex gap-1 text-start lg:ps-0 md:ps-5 ps-3 font-family z-30">
 
               {/* Home */}
-              <div className="lg:px-2">
+              {/* <div className="lg:px-2">
                 <NavLink
                   to="/"
                   id="1"
@@ -97,7 +97,7 @@ function Header() {
                 >
                   Home
                 </NavLink>
-              </div>
+              </div> */}
 
               {/* About */}
               <div className="lg:px-2">
@@ -171,49 +171,29 @@ function Header() {
                   </div>
                 )}
               </div>
-
-              <div
-                className="lg:px-2 relative"
-                onMouseEnter={() => setIsDropdownVisible("why")}
-                onMouseLeave={() => setIsDropdownVisible(null)}
-              >
+              
+              <div className="lg:px-2">
                 <NavLink
-                  to=""
+                  to="/career"
                   id="5"
                   onClick={(e) => handleNavSelected(e)}
-                  className={`mr-5 cursor-pointer flex items-center link transition-colors duration-200
-                    ${isActive === 5 || isActive === "career" || isActive === "courses"
-                      ? "active text-black"
-                      : "hover:text-black"
-                    }
-    `}
+                  className={`mr-5 hover:text-black cursor-pointer flex link ${isActive === 5 ? "active" : ""
+                    }`}
                 >
-                  Why Choose Us&nbsp;
-                  {isDropdownVisible === "why" ? <FaAngleUp /> : <FaAngleDown />}
+                  Career
                 </NavLink>
+              </div>
 
-                {isDropdownVisible === "why" && (
-                  <div className="absolute top-full left-0 bg-white border border-gray-200 rounded shadow-lg w-52 z-50">
-                    <NavLink
-                      to="/career"
-                      id="career"
-                      onClick={(e) => handleNavSelected(e)}
-                      className={`flex items-center px-4 py-2 text-gray-800 hover:bg-gray-100 ${isActive === "career" ? "active" : ""
-                        }`}
-                    >
-                      <FaAngleDoubleRight className="mr-2" /> Career
-                    </NavLink>
-                    <NavLink
-                      to="/courses"
-                      id="courses"
-                      onClick={(e) => handleNavSelected(e)}
-                      className={`flex items-center px-4 py-2 text-gray-800 hover:bg-gray-100 ${isActive === "courses" ? "active" : ""
-                        }`}
-                    >
-                      <FaAngleDoubleRight className="mr-2" /> Courses
-                    </NavLink>
-                  </div>
-                )}
+              <div className="lg:px-2">
+                <NavLink
+                  to="/courses"
+                  id="6"
+                  onClick={(e) => handleNavSelected(e)}
+                  className={`mr-5 hover:text-black cursor-pointer flex link ${isActive === 6 ? "active" : ""
+                    }`}
+                >
+                  Courses
+                </NavLink>
               </div>
 
 

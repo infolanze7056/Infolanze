@@ -30,7 +30,7 @@ const BlogDetails = () => {
       .find({ type: "blogs", limit: 4 })
       .then(({ objects }) => setPopularPosts(objects))
       .catch(console.error);
-  }, [slug]);
+  }, [slug, bucket]);
 
   // 🔹 Close modal on Esc
   useEffect(() => {

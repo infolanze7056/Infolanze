@@ -1,5 +1,4 @@
 import React from 'react';
-import { IoCheckboxSharp } from "react-icons/io5";
 import { RiTeamFill } from "react-icons/ri";
 import { FaHandshakeAngle,FaBusinessTime } from "react-icons/fa6";
 import { FaUserTie,FaChalkboardTeacher } from "react-icons/fa";

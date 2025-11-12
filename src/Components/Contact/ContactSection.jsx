@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import emailjs from "emailjs-com";
+import { useState } from "react";
+// import emailjs from "emailjs-com";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./ContactSection.css"
@@ -13,7 +13,6 @@ const ContactSection = () => {
     company_name: "",
   });
   const [loading, setLoading] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -21,7 +20,6 @@ const ContactSection = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(false);
 
     if (!validateEmail(formData.email)) {
       toast.error("Please enter a valid email address");
@@ -56,7 +54,6 @@ const ContactSection = () => {
 
       if (data.success) {
         toast.success("Message sent successfully!");
-        setSubmitted(true);
         setFormData({
           name: "",
           email: "",

@@ -6,8 +6,6 @@ import "./ContactUS.css";
 function ContactUS() {
   const form = useRef();
   const [loading, setLoading] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-
 
   const notifySuccess = () => toast.success("Submit Successfully");
   const notifyError = () => toast.error("Failed to Submit");
@@ -37,9 +35,7 @@ function ContactUS() {
     e.preventDefault();
 
     if (validateForm()) {
-      setLoading(true);   // start loader
-      setSubmitted(false);
-
+      setLoading(true);  
       try {
         const response = await fetch(
           "https://contact-backend-zeta.vercel.app/api/contact/Infolanze-contact",

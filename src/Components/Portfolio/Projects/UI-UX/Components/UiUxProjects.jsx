@@ -1,6 +1,5 @@
 import React from 'react'
 import xbeat from '../../../../../Images/xbeatnew.png'
-import flowycart from '../../../../../Images/flowy-cart-ui-ux.png'
 import fastpizza from '../../../../../Images/fast-pizza-ui-ux.png'
 import shopit from '../../../../../Images/shopitnew.png'
 import beach from '../../../../../Images/beachnew.png'

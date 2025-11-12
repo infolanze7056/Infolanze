@@ -1,7 +1,4 @@
 import React from "react";
-import { SiHiveBlockchain } from "react-icons/si";
-import { MdOutlineWeb } from "react-icons/md";
-import { FaAppStoreIos } from "react-icons/fa";
 import Web from "../../Images/Web-Design-and-Development.b2380d273412f3cbaf4f.gif";
 import App from "../../Images/Mobile-app-development.3aa540737e7c3c3b50b3.gif";
 import Block from "../../Images/Blockcahin.gif";
