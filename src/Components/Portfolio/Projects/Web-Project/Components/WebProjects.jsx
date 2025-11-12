@@ -123,11 +123,7 @@ const WebProjects = () => {
           </div>
         </a>
 
-        <a
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div>
           <div className="shadow-2xl rounded-3xl border border-[#eee]">
             <div className="relative m-auto overflow-hidden rounded-t-3xl">
               <img
@@ -140,7 +136,7 @@ const WebProjects = () => {
               <h1>Doshion</h1>
             </div>
           </div>
-        </a>
+        </div>
 
         <a
           href="https://www.popsockets.com/"
