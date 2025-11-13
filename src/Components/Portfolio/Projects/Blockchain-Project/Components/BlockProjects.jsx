@@ -14,7 +14,7 @@ const BlockProjects = () => {
                     Our <span className="text-[--second-color]">Blockchain Development</span> Projects
                 </h1>
                 <p className="text-gray-600 max-w-2xl mx-auto font-nunito text-base md:text-lg leading-relaxed">
-                    Explore our cutting-edge blockchain solutions — secure, scalable, and designed for modern digital ecosystems.
+                    Explore our cutting-edge blockchain solutions secure, scalable, and designed for modern digital ecosystems.
                 </p>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 xl:gap-10 md:gap-5 gap-8'>
@@ -23,7 +23,7 @@ const BlockProjects = () => {
                         <div className='relative m-auto overflow-hidden rounded-t-3xl'>
                             <img src={AID} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
                         </div>
-                        <div className='bg-white text-black text-center lg:text-sm rounded-b-3xl p-2'>
+                        <div className='bg-white text-black text-center lg:text-sm rounded-b-3xl p-2 uppercase'>
                             <h1>Kyiv Aid</h1>
                         </div>
                     </div>
@@ -34,7 +34,7 @@ const BlockProjects = () => {
                         <div className='relative m-auto overflow-hidden rounded-t-3xl'>
                             <img src={LION} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
                         </div>
-                        <div className='bg-white text-black text-center lg:text-sm rounded-b-3xl p-2'>
+                        <div className='bg-white text-black text-center lg:text-sm rounded-b-3xl p-2 uppercase'>
                             <h1>Roaring Lion</h1>
                         </div>
                     </div>
@@ -45,7 +45,7 @@ const BlockProjects = () => {
                         <div className='relative m-auto overflow-hidden rounded-t-3xl'>
                             <img src={FROG} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
                         </div>
-                        <div className='bg-white text-black text-center lg:text-sm rounded-b-3xl p-2'>
+                        <div className='bg-white text-black text-center lg:text-sm rounded-b-3xl p-2 uppercase'>
                             <h1>Defrogs</h1>
                         </div>
                     </div>
@@ -56,7 +56,7 @@ const BlockProjects = () => {
                         <div className='relative m-auto overflow-hidden rounded-t-3xl'>
                             <img src={CAPY} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
                         </div>
-                        <div className='bg-white text-black text-center lg:text-sm rounded-b-3xl p-2'>
+                        <div className='bg-white text-black text-center lg:text-sm rounded-b-3xl p-2 uppercase'>
                             <h1>Capybara World</h1>
                         </div>
                     </div>
@@ -67,7 +67,7 @@ const BlockProjects = () => {
                         <div className='relative m-auto overflow-hidden rounded-t-3xl'>
                             <img src={MARKET} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
                         </div>
-                        <div className='bg-white text-black text-center lg:text-sm rounded-b-3xl p-2'>
+                        <div className='bg-white text-black text-center lg:text-sm rounded-b-3xl p-2 uppercase'>
                             <h1>Market Move</h1>
                         </div>
                     </div>
@@ -78,7 +78,7 @@ const BlockProjects = () => {
                         <div className='relative m-auto overflow-hidden rounded-t-3xl'>
                             <img src={ATL} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
                         </div>
-                        <div className='bg-white text-black text-center lg:text-sm rounded-b-3xl p-2'>
+                        <div className='bg-white text-black text-center lg:text-sm rounded-b-3xl p-2 uppercase'>
                             <h1>Altn Token</h1>
                         </div>
                     </div>

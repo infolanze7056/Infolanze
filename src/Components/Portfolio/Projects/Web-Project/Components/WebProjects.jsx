@@ -13,7 +13,7 @@ import BetterrWater from "../../../../../Images/betterwater-web.png"
 import Hydropod from "../../../../../Images/hydropod-web.png"
 import Isx from "../../../../../Images/isx.png"
 import Doshion from "../../../../../Images/doshion-web.png"
-
+import Bsynk from "../../../../../Images/bsync.png";
 
 const WebProjects = () => {
   return (
@@ -23,10 +23,25 @@ const WebProjects = () => {
           Our <span className="text-[--second-color]">Web Development</span> Projects
         </h1>
         <p className="text-gray-600 max-w-2xl mx-auto font-nunito text-lg md:text-xl leading-relaxed">
-          Explore our finest digital creations — blending innovation, precision, and seamless user experience for modern brands.
+          Explore our finest digital creations  blending innovation, precision, and seamless user experience for modern brands.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 xl:gap-10 md:gap-5 gap-8">
+
+         <a
+          href="https://accounts.abss.ai"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className='shadow-2xl rounded-3xl border border-[#eee]'>
+            <div className='relative m-auto overflow-hidden rounded-t-3xl'>
+              <img src={Bsynk} alt="" className='hover:transform hover:scale-[1.07] transition-all duration-[0.5s]' />
+            </div>
+            <div className='bg-white text-black text-center lg:text-sm rounded-b-3xl p-2 uppercase'>
+              <h1>Bsynk</h1>
+            </div>
+          </div>
+        </a>
 
         <a
           href="https://isx-frontend.store/"
@@ -47,7 +62,7 @@ const WebProjects = () => {
           </div>
         </a>
 
-         <a
+        <a
           href="https://hydropod.in/"
           target="_blank"
           rel="noopener noreferrer"
@@ -66,7 +81,7 @@ const WebProjects = () => {
           </div>
         </a>
 
-         <a
+        <a
           href="https://resin-admin-panel.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
@@ -85,7 +100,7 @@ const WebProjects = () => {
           </div>
         </a>
 
-         <a
+        <a
           href="https://www.biogenixcompostable.com/"
           target="_blank"
           rel="noopener noreferrer"

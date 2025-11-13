@@ -48,9 +48,10 @@ function Footer() {
           </div>
 
           <div className="space-y-2 text-sm lg:ps-7 md:ps-5">
-            <p className=" font-bold text-lg tracking-wide text-gray-900">
+            <h3 className="font-bold text-lg tracking-wide text-gray-900 mb-4 relative inline-block">
               Services
-            </p>
+              <span className="absolute left-0 -bottom-1 w-12 h-[2px] bg-[--second-color]"></span>
+            </h3>
             <div className="text-sm text-gray-800">
               <li className="list-none hover:text-[--second-color]"><Link className="pb-1" to="/service/web-development">Web Design</Link></li>
               <li className="list-none hover:text-[--second-color]"> <Link className="pb-1" to="/service/web-development">Web Application Development</Link></li>
@@ -65,9 +66,10 @@ function Footer() {
           </div>
 
           <div className="space-y-2 text-sm">
-            <p className="text-lg font-bold tracking-wide text-gray-900">
+             <h3 className="font-bold text-lg tracking-wide text-gray-900 mb-4 relative inline-block">
               Contacts
-            </p>
+              <span className="absolute left-0 -bottom-1 w-12 h-[2px] bg-[--second-color]"></span>
+            </h3>
             <div className="flex text-sm text-gray-800">
               <p className="mr-1 text-gray-800">Phone:</p>
               <a
@@ -108,34 +110,35 @@ function Footer() {
             </div>
           </div>
 
-          <div className="md:ps-5">
-            <span className="text-lg font-bold tracking-wide text-gray-900">
-              Social
-            </span>
-            <div className="flex items-center mt-1 space-x-3">
+          <div>
+            <h3 className="font-bold text-lg tracking-wide text-gray-900 mb-4 relative inline-block">
+              Follow Us
+              <span className="absolute left-0 -bottom-1 w-12 h-[2px] bg-[--second-color]"></span>
+            </h3>
+            <div className="flex gap-4 mt-2">
               <a
                 href="https://www.linkedin.com/company/infolanze24/"
                 target="_blank"
                 rel="noreferrer"
-                className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                className="p-2 rounded-full hover:bg-[--second-color] hover:text-white transition-all duration-300 transform hover:scale-110"
               >
-                <FaLinkedinIn className="text-lg" />
+                <FaLinkedinIn />
               </a>
               <a
-                href="https://www.instagram.com/infolanze?igsh=OXR2d2I4Mm1mMDZt"
+                href="https://www.instagram.com/infolanze"
                 target="_blank"
                 rel="noreferrer"
-                className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                className="p-2 rounded-full hover:bg-pink-500 hover:text-white transition-all duration-300 transform hover:scale-110"
               >
-                <AiFillInstagram className="text-xl" />
+                <AiFillInstagram />
               </a>
               <a
                 href="https://www.facebook.com/profile.php?id=61555278311151"
                 target="_blank"
                 rel="noreferrer"
-                className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                className="p-2 rounded-full hover:bg-[--second-color] hover:text-white transition-all duration-300 transform hover:scale-110"
               >
-                <FaFacebook className="text-lg" />
+                <FaFacebook />
               </a>
             </div>
             <p className="mt-4 text-sm text-gray-800">

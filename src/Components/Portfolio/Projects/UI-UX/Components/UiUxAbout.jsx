@@ -1,63 +1,62 @@
-import React from 'react'
+import React from "react";
 
 const UiUxABout = () => {
-  return (
-    <div>
-      <div className='bg-[--main-color] lg:px-28 md:px-20 px-5 py-10'>
-        <h1 className='lg:text-4xl text-xl text-[--second-color] font-semibold pb-8 text-center'>UI / UX Design Tools</h1>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:items-center gap-6'>
-            <div className='grid grid-cols-6 items-center bg-white rounded-2xl'>
-                <div className='col-span-2'>
-                    <img src="https://uxtools.co/img/database/logos/figma.png" alt=""  className='w-full h-full rounded-l-2xl p-5'/>
-                </div>
-                <div className='col-span-4 rounded-r-2xl text-lg md:text-xl'>Figma</div>
-            </div>
-            <div className='grid grid-cols-6 items-center bg-white rounded-2xl'>
-                <div className='col-span-2 '>
-                    <img src="https://uxtools.co/img/database/logos/adobe-xd.png" alt=""  className='w-full h-full rounded-l-2xl p-5'/>
-                </div>
-                <div className='col-span-4 rounded-r-2xl text-lg md:text-xl'>Adobe XD</div>
-            </div>
-            <div className='grid grid-cols-6 items-center bg-white rounded-2xl'>
-                <div className='col-span-2 '>
-                    <img src="https://uxtools.co/img/database/logos/sketch.png" alt=""  className='w-full h-full rounded-l-2xl p-5'/>
-                </div>
-                <div className='col-span-4 rounded-r-2xl text-lg md:text-xl'>Sketch</div>
-            </div>
-            <div className='grid grid-cols-6 items-center bg-white rounded-2xl'>
-                <div className='col-span-2 '>
-                    <img src="https://uxtools.co/img/database/logos/adobe-illustrator.png" alt=""  className='w-full h-full rounded-l-2xl p-5'/>
-                </div>
-                <div className='col-span-4 rounded-r-2xl text-lg md:text-xl'>Adobe illustrator</div>
-            </div>
-            <div className='grid grid-cols-6 items-center bg-white rounded-2xl'>
-                <div className='col-span-2 '>
-                    <img src="https://uxtools.co/img/database/logos/adobe-photoshop.png" alt=""  className='w-full h-full rounded-l-2xl p-5'/>
-                </div>
-                <div className='col-span-4 rounded-r-2xl text-lg md:text-xl'>Adobe Photoshop</div>
-            </div>
-            <div className='grid grid-cols-6 items-center bg-white rounded-2xl'>
-                <div className='col-span-2 '>
-                    <img src="https://uxtools.co/img/database/logos/axure.png" alt=""  className='w-full h-full rounded-l-2xl p-5'/>
-                </div>
-                <div className='col-span-4 rounded-r-2xl text-lg md:text-xl'>Axure</div>
-            </div>
-            <div className='grid grid-cols-6 items-center bg-white rounded-2xl'>
-                <div className='col-span-2 '>
-                    <img src="https://uxtools.co/img/database/logos/framer.png" alt=""  className='w-full h-full rounded-l-2xl p-5'/>
-                </div>
-                <div className='col-span-4 rounded-r-2xl text-lg md:text-xl'>Framer</div>
-            </div>
-            <div className='grid grid-cols-6 items-center bg-white rounded-2xl'>
-                <div className='col-span-2'>
-                    <img src="https://uxtools.co/img/database/logos/lunacy.png" alt=""  className='w-full h-full rounded-l-2xl p-5'/>
-                </div>
-                <div className='col-span-4 rounded-r-2xl text-lg md:text-xl'>Luncey</div>
-            </div>
-        </div>
-                </div>
-        </div>
-  )
-}
+  const tools = [
+    { name: "Figma", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
+    { name: "Adobe XD", img: "https://cdn.worldvectorlogo.com/logos/adobe-xd-1.svg" },
+    { name: "Sketch", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sketch/sketch-original.svg" },
+    { name: "Adobe Illustrator", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-original.svg" },
+    { name: "Adobe Photoshop", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg" },
+    { 
+  name: "Axure", 
+  img: "https://worldvectorlogo.com/logos/axure-2.svg" 
+},
+    { name: "Framer", img: "https://cdn.worldvectorlogo.com/logos/framer-1.svg" },
+    { name: "Lunacy", img: "https://img.icons8.com/color/96/000000/lunacy.png" },
+  ];
 
-export default UiUxABout
+  return (
+    <section className="bg-[var(--main-color)] py-16 px-5 md:px-10 lg:px-20">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--second-color)] mb-4">
+            UI / UX Design Tools
+          </h1>
+          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+            We master industry-leading design tools to create intuitive, beautiful, and user-centered interfaces.
+          </p>
+        </div>
+
+        {/* Tool Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {tools.map((tool, idx) => (
+            <div
+              key={idx}
+              className="bg-white border border-cyan-200 rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center space-y-4"
+            >
+              <div className="w-16 h-16 flex items-center justify-center">
+                <img
+                  src={tool.img}
+                  alt={`${tool.name} logo`}
+                  className="w-full h-full object-contain"
+                  loading="lazy"
+                />
+              </div>
+              <h3 className="text-lg md:text-xl font-semibold text-gray-800">
+                {tool.name}
+              </h3>
+            </div>
+          ))}
+        </div>
+
+        {/* Gradient Underline */}
+        <div className="mt-16 flex justify-center">
+          <div className="h-1 w-32 bg-gradient-to-r from-[var(--second-color)] to-blue-600 rounded-full"></div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default UiUxABout;

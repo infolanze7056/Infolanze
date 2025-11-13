@@ -13,7 +13,7 @@ const UiUxProjects = () => {
           Our <span className="text-[--second-color]">UI/UX</span> Projects
         </h2>
         <p className="text-gray-600 max-w-2xl mx-auto font-nunito text-base md:text-lg leading-relaxed">
-          Explore our best design work — each crafted with strategy, aesthetics, and user experience in mind.
+          Explore our best design work each crafted with strategy, aesthetics, and user experience in mind.
         </p>
       </div>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 xl:gap-10 md:gap-5 gap-8'>

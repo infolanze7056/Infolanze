@@ -43,7 +43,7 @@ const Founder = () => {
         <h3 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-700 to-cyan-500 bg-clip-text text-transparent mb-3">
           Meet Our Team
         </h3>
-        <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-10">
+        <p className="text-gray-700 text-lg max-w-2xl mx-auto mb-10">
           A passionate team of innovators, creators, and problem-solvers driving digital excellence.
         </p>
 
@@ -151,10 +151,10 @@ const Founder = () => {
                 Kush Mevada
               </h4>
               <p className="text-sm text-blue-500 font-medium mb-3">
-                UI/UX Designer
+                Backend Developer
               </p>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Kush, our UI/UX Developer, designs intuitive, user-friendly interfaces, enhancing user experience with innovative and efficient solutions.
+                Kush, our Backend Developer, builds powerful, scalable server-side systems using modern technologies, ensuring seamless functionality and top-notch performance.
               </p>
             </div>
           </div>

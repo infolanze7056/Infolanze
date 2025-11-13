@@ -1,14 +1,6 @@
 // src/Components/Portfolio/TestimonialsSection.jsx
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 
-// Import avatars (Vite/CRA compatible)
-// import sarah from "../../../Images/avatars/sarah.jpg";
-// import michael from "../../../Images/avatars/michael.jpg";
-// import emma from "../../../Images/avatars/emma.jpg";
-// import james from "../../../Images/avatars/james.jpg";
-
-// Star Rating with Gradient
 const StarRating = ({ rating = 5 }) => {
   return (
     <div className="flex gap-1">
