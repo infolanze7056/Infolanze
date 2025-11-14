@@ -51,7 +51,7 @@ const Founder = () => {
           <div className="px-4 py-4">
             <div className="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-[1.02] p-6 border border-gray-100">
               <a
-                href="https://darshil-patel.vercel.app/"
+                href="https://www.linkedin.com/in/darshilpatel7056/"
                 target="_blank"
                 rel="noreferrer"
                 className="absolute top-4 right-4 bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-800 text-sm font-semibold px-3 py-1 rounded-full transition-all duration-300 shadow-sm"

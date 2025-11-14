@@ -33,6 +33,10 @@
     background-clip:content-box;
 }
 
+.skeleton {
+  @apply bg-gray-300 rounded-md animate-pulse;
+}
+
 
 /* Add this CSS to your stylesheet or within a <style> tag in your component */
   
