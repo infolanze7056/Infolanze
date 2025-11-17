@@ -19,18 +19,23 @@ const BlogDetails = () => {
     readKey: "ccoIwYVf1HWujfu3nTptWHrCq8qidSApj6XJ0pyOJfjVDBDzWp",
   });
 
-  useEffect(() => {
-    bucket.objects
-      .findOne({ type: "blogs", slug })
-      .then(({ object }) => setBlog(object))
-      .catch((err) => console.error("Error fetching blog:", err))
-      .finally(() => setLoading(false));
+useEffect(() => {
+  setLoading(true); // 👈 when slug changes, start loading
+  
+  bucket.objects
+    .findOne({ type: "blogs", slug })
+    .then(({ object }) => setBlog(object))
+    .catch((err) => console.error("Error fetching blog:", err))
+    .finally(() => setLoading(false));
 
-    bucket.objects
-      .find({ type: "blogs", limit: 4 })
-      .then(({ objects }) => setPopularPosts(objects))
-      .catch(console.error);
-  }, [slug, bucket]);
+  bucket.objects
+    .find({ type: "blogs", limit: 4, props: "slug,title,metadata" })
+    .then(({ objects }) => {
+        const filtered = objects.filter((b) => b.slug !== slug);
+        setPopularPosts(filtered);
+      })
+    .catch(console.error);
+}, [slug]);
 
   // 🔹 Close modal on Esc
   useEffect(() => {
@@ -50,6 +55,24 @@ const BlogDetails = () => {
     return <div className="text-center py-20 text-red-600">Blog not found.</div>;
 
   const sections = blog.metadata?.sections || [];
+
+const formatEditorHtml = (html) => {
+  if (!html) return "";
+
+  let formatted = html;
+
+  // 1️⃣ Convert <h1> to bold section title
+  formatted = formatted.replace(
+    /<h1>(.*?)<\/h1>/g,
+    `<h2 class="text-xl font-semibold text-gray-800 mb-4">$1</h2>`
+  );
+
+  // 2️⃣ Add a break after each paragraph
+  formatted = formatted.replace(/<\/p>/g, "</p><br/>");
+
+  return formatted;
+};
+
 
   return (
     <div>
@@ -72,15 +95,15 @@ const BlogDetails = () => {
               <img
                 src={blog.metadata.main_image.url}
                 alt={blog.title}
-                className="w-full h-[480px] object-cover rounded-xl shadow-md mb-8"
+                className="w-full h-[550px] object-cover rounded-xl shadow-md mb-8"
               />
             )}
 
             <div className="border-l-4 border-[#00bfff] pl-4 mb-4">
-              <h1 className="text-3xl font-bold text-gray-900 mb-1">
+              <h1 className="text-3xl font-bold text-gray-900 mb-1 text-[#00bfff]">
                 {blog.metadata?.main_title || blog.title}
               </h1>
-              <p className="text-gray-500 text-sm">
+              <p className="text-gray-700 text-sm font-medium">
                 {new Date(blog.created_at).toLocaleDateString("en-GB", {
                   day: "2-digit",
                   month: "short",
@@ -112,20 +135,21 @@ const BlogDetails = () => {
                 sections.map((section, index) => (
                   <div key={index} className="pb-8">
                     {section.section_title && (
-                      <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+                      <h2 className="text-3xl font-semibold text-gray-800 mb-4">
                         {section.section_title}
                       </h2>
                     )}
                     <div
                       className="prose max-w-none text-gray-700 leading-relaxed prose-headings:text-gray-900 prose-a:text-[#00bfff] prose-a:no-underline hover:prose-a:underline"
-                      dangerouslySetInnerHTML={{ __html: section.paragraphs }}
+                     dangerouslySetInnerHTML={{ __html: formatEditorHtml(section.paragraphs) }}
                     />
                   </div>
                 ))
               ) : (
                 <div
                   className="prose prose-lg max-w-none text-gray-800 leading-relaxed"
-                  dangerouslySetInnerHTML={{ __html: blog.content }}
+                  dangerouslySetInnerHTML={{ __html: formatRichText(blog.content) }}
+
                 />
               )}
             </div>
