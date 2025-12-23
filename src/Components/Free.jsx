@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Free() {
+const Free = () => {
   return (
     <div>
         <div className='pt-10 pb-9'>
@@ -10,4 +10,4 @@ function Free() {
   )
 }
 
-export default Free;
+export default Free
