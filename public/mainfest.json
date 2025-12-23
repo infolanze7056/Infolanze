@@ -1,4 +1,8 @@
 {
+  "name": "Infolanze",
+  "short_name": "Infolanze",
+  "start_url": "/",
+  "display": "standalone",
     "icons": [
       {
         "src": "favicon",
@@ -16,4 +20,4 @@
         "sizes": "512x512"
       }
     ]
-  }
+}

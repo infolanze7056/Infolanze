@@ -89,7 +89,7 @@ function HeroSection() {
                   <div className="text-md pb-4">
                     We help our clients to boost the growth of their business by
                     making their online presence with the help of Our Website
-                    Desiging & Development Service. At InfoLanze Tech, we understand
+                    Desiging & Development Service. At Infolanze Tech, we understand
                     the importance of having a website that is accessible on any
                     device.We specialize in responsive design for optimal user experience.
                   </div>

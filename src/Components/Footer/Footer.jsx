@@ -35,7 +35,7 @@ function Footer() {
             </a>
             <div className="mt-6 lg:max-w-sm">
               <p className="text-sm text-gray-800">
-                InfoLanze Technologies is a reputed IT company in Ahmedabad,
+                Infolanze Technologies is a reputed IT company in Ahmedabad,
                 helping Startups and Fintech by providing result-oriented Web
                 and Mobile application development services, and Cloud and
                 DevOps consulting.
