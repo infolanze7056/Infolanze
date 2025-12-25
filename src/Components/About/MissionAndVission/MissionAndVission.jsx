@@ -1,75 +1,67 @@
 import React from "react";
 import mission from "../../../Images/our-mission.svg";
 import vission from "../../../Images/our-vision.svg";
-import "./MissionAndVission.css"
 
 const MissionAndVission = () => {
   return (
-    <>  
-      <div className="flex flex-col lg:flex-row lg:px-28 md:px-20 px-5 font-family py-10">
-        <div className="lg:w-1/2 bg-pink p-6 p-md-5 h-100">
-          <h2 className="text-2xl font-bold">Core Values</h2>
-          <p className="mt-4">
-            <b>Agility:</b> Embracing change and swiftly adapting to veering
-            with the dynamic demands of the market is our formula for success.
-            With a customer-centric approach, our tech solutions are built to
-            survive on robust frameworks that are relevant and effective.
-          </p>
-          <p className="mt-4">
-            <b>Accountability:</b> We hold ourselves accountable and assume
-            responsibility for every action or consequence, both individually
-            and collectively. This level of persistence enables us to develop a
-            benchmark for dependable success and attain excellence.
-          </p>
-          <p className="mt-4">
-            <b>Trailblazing:</b> At the heart of our operations lies the cult
-            of groundbreaking innovation and discovery. Our team continuously
-            challenges the status quo and seeks endless progress to retain our
-            position as tech innovators.
-          </p>
-          <p className="mt-4">
-            <b>Customer First:</b> Our active engagement in client requirements
-            enables us to understand their unique needs and deliver bespoke
-            solutions that perform exceptionally. From paramount priority to
-            customer satisfaction to fostering long-term partnerships, we
-            always exceed expectations.
-          </p>
-          <p className="mt-4">
-            <b>Integrity:</b> Our business conduct encompasses unwavering
-            honesty, transparency, and upholding ourselves to high ethical
-            standards. Hence, every solution delivered is immaculate and
-            precise.
+    <section className="relative py-24 overflow-hidden bg-[#f9fafb]">
+
+      {/* Soft Light Blue Background Blobs */}
+      <div className="absolute -top-32 -left-40 w-[520px] h-[520px] rounded-full bg-blue-100/40" />
+      <div className="absolute bottom-0 -right-40 w-[520px] h-[520px] rounded-full bg-blue-200/40" />
+
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-14 z-10">
+        {/* Header */}
+        <div className="text-center mb-20">
+          <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-indigo-500 mb-6">
+            <span className="w-2 h-2 rounded-full bg-indigo-500"></span>
+            Core Values
+          </span>
+          <h2 className="mt-3 text-4xl lg:text-5xl font-bold text-gray-900">
+            Our Mission & Vision
+          </h2>
+          <p className="mt-5 max-w-3xl mx-auto text-gray-600 text-lg">
+            Driving innovation and delivering scalable digital solutions that
+            empower businesses globally.
           </p>
         </div>
-        <div className="lg:w-1/2 flex flex-col justify-center items-center lg:p-4 lg:pt-0 lg:pb-0 md:px-0 py-5" >
-          <div className="flex flex-col py-10 mb-4 items-center border-collapse p-4 border shadow">
-            <img src={mission} alt="mission" className="w-32 h-auto place-self-start" />
-            <div>
-              <h2 className="text-2xl font-bold">Our Mission</h2>
-              <p className="mt-2">
-                At Infolanze Tech, we believe in empowering businesses
-                with complete digital transformation by engineering
-                groundbreaking and scalable solutions. Our mission is to tackle
-                every tech challenge and pave the path for fresh opportunities
-                and positive ROIs.
-              </p>
-            </div>
+
+        {/* Cards */}
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-10">
+          {/* Core Values */}
+          <div className="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-all">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Core Values</h3>
+            <ul className="space-y-3 text-gray-600 text-sm">
+              <li><b>Agility:</b> Adapting fast with modern frameworks.</li>
+              <li><b>Accountability:</b> Ownership at every level.</li>
+              <li><b>Innovation:</b> Breaking boundaries with ideas.</li>
+              <li><b>Customer First:</b> Tailored digital solutions.</li>
+              <li><b>Integrity:</b> Transparency & ethics.</li>
+            </ul>
           </div>
-          <div className="flex flex-col items-center py-10 p-4 border shadow">
-            <img src={vission} alt="vission" className="w-32  h-auto place-self-start" />
-            <div>
-              <h2 className="text-2xl font-bold">Our Vision</h2>
-              <p className="mt-2">
-                We believe in charting the path to technological innovation in
-                every aspect. From driving business growth to pioneering
-                cutting-edge solutions that transform industries, we catalyze
-                the tech revolution.
-              </p>
-            </div>
+
+          {/* Mission */}
+          <div className="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-all text-center">
+            <img src={mission} alt="Mission" className="w-20 mx-auto mb-6" />
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Our Mission</h3>
+            <p className="text-gray-600 text-sm">
+              Empowering businesses through scalable, secure, and high-performing
+              digital solutions.
+            </p>
+          </div>
+
+          {/* Vision */}
+          <div className="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-all text-center">
+            <img src={vission} alt="Vision" className="w-20 mx-auto mb-6" />
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Our Vision</h3>
+            <p className="text-gray-600 text-sm">
+              To lead global innovation and shape the future of digital
+              transformation.
+            </p>
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

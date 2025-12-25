@@ -29,7 +29,7 @@ function App() {
     <div>
       <Helmet>
         <title>Home | Infolanze</title>
-        <meta name="description" content="Welcome to InfoLanze Tech Pvt Ltd, your gateway to exceptional blockchain development and web solutions. Explore our featured projects and services today!"/>
+        <meta name="description" content="Welcome to Infolanze Tech Pvt Ltd, your gateway to exceptional blockchain development and web solutions. Explore our featured projects and services today!"/>
       </Helmet>
       <BrowserRouter>
         <Header />

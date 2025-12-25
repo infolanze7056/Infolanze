@@ -1,54 +1,123 @@
 import React from "react";
-import "./AboutHero.css";
-import img from "../../../Images/about-us (1).png"
 import { NavLink } from "react-router-dom";
+import img from "../../../Images/about-us (1).png";
 
 const AboutHero = () => {
   return (
-    <>
-    <div className="font-family lg:px-28 md:px-20 px-5 lg:pt-14 md:pt-10 pt-5 lg:pb-24 md:pb-16 pb-5 background-image">
-      {/* <div className="text-center text-4xl font-bold">About Us</div>
-      <div className="About pt-7">
-        <div className="text-center lg:px-40 md:px-20 px-5 aboutus text-sm md:text-lg lg:text-lg"> 
-          Infolanze Technologies is in top software development solutions that
-          stimulate your business with our comprehensive modern app development
-          services. We offer customized digital solutions that will help engage
-          your audience in the competitive era.
-          
-        </div>
-        <div className="text-center lg:px- md:px-20 px-5 aboutus pt-3 text-sm md:text-lg lg:text-lg">
-          We work with the best tools and technologies for iOS, Android, and web
-          applications. You can have the most reliable and cost-effective
-          next-gen solutions for your requirement by having us as your IT
-          outsourcing partner. Our experienced team offers research-based
-          insights to enhance software experience.
-        </div>
-      </div> */}
-        <div className="grid lg:grid-cols-2 grid-cols-1 items-center">
-          <div className="lg:pb-0 md:pb-5 pb-5"><img className="lg:w-[600px] md:w-[500px] mx-auto" src={img} alt="img" /></div>
-          <div className="lg:ps-10 text-center lg:text-start">
-            <div className=" lg:text-3xl md:text-3xl text-xl text-[--second-color] pb-2 font-bold">About Us</div>
-            <div className="opacity-90 lg:text-base md:text-base text-sm"> 
-              Infolanze Technologies is in top software development solutions that
-              stimulate your business with our comprehensive modern app development
-              services. We offer customized digital solutions that will help engage
-              your audience in the competitive era.
-              
-            </div>
-            <div className="opacity-90 lg:text-base md:text-base text-sm pt-3">
-              We work with the best tools and technologies for iOS, Android, and web
-              applications. You can have the most reliable and cost-effective
-              next-gen solutions for your requirement by having us as your IT
-              outsourcing partner. Our experienced team offers research-based
-              insights to enhance software experience.
-            </div>
-            <div className="pt-4">
-              <NavLink to="/contact" className="text-sm bg-[--second-color] p-2 px-4 text-white rounded-md">Contact For More..</NavLink>
+    <section className="relative bg-white overflow-hidden">
+
+      {/* SVG Grid Pattern */}
+      <svg
+        className="absolute inset-0 w-full h-full"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <pattern
+            id="smallGrid"
+            width="40"
+            height="40"
+            patternUnits="userSpaceOnUse"
+          >
+            <path
+              d="M 40 0 L 0 0 0 40"
+              fill="none"
+              stroke="#e5e7eb"
+              strokeWidth="1"
+            />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#smallGrid)" />
+      </svg>
+
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-14 py-28">
+        <div className="grid lg:grid-cols-2 gap-24 items-center">
+
+          {/* Content */}
+          <div className="relative text-center lg:text-left">
+
+            {/* Decorative SVG Line */}
+            <svg
+              className="absolute -top-10 left-0 hidden lg:block"
+              width="80"
+              height="4"
+              viewBox="0 0 80 4"
+              fill="none"
+            >
+              <rect width="80" height="4" rx="2" fill="#2563eb" />
+            </svg>
+
+            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-blue-600 mb-6">
+              <span className="w-2 h-2 rounded-full bg-blue-600"></span>
+              About Infolanze
+            </span>
+
+            <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight">
+              Engineering{" "}
+              <span className="text-blue-600">Digital Solutions</span>{" "}
+              That Scale Globally
+            </h1>
+
+            <p className="mt-6 text-gray-700 text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
+              Infolanze Technologies is a technology-driven software development
+              company delivering secure, scalable, and future-ready digital
+              products for modern enterprises.
+            </p>
+
+            <p className="mt-4 text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
+              We combine engineering excellence, modern frameworks, and cloud
+              infrastructure to transform ideas into impactful technology.
+            </p>
+
+            {/* CTA */}
+            <div className="mt-10 flex justify-center lg:justify-start">
+              <NavLink
+                to="/contact"
+                className="inline-flex items-center gap-3 px-8 py-3 text-sm
+                  font-medium rounded-lg bg-blue-600 text-white
+                  hover:bg-blue-700 transition-all shadow-lg"
+              >
+                Contact for More
+                <span>→</span>
+              </NavLink>
             </div>
           </div>
+
+          {/* Image with SVG Frame */}
+          <div className="relative flex justify-center lg:justify-end">
+
+            {/* SVG Frame */}
+            <svg
+              className="absolute -top-10 -left-10"
+              width="420"
+              height="420"
+              viewBox="0 0 420 420"
+              fill="none"
+            >
+              <rect
+                x="10"
+                y="10"
+                width="400"
+                height="400"
+                rx="32"
+                stroke="#2563eb"
+                strokeWidth="2"
+                strokeDasharray="8 8"
+              />
+            </svg>
+
+            <div className="relative bg-white rounded-3xl border border-gray-200 p-3 shadow-xl">
+              <img
+                src={img}
+                alt="About Infolanze"
+                className="w-full max-w-md rounded-2xl"
+              />
+            </div>
+
+          </div>
+
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

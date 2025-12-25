@@ -1,98 +1,85 @@
 import React from "react";
-import "./WhyInfolanze.css";
+
+const items = [
+  {
+    title: "Multi-Domain Expertise",
+    desc: "Expertise across web, mobile, cloud, and enterprise solutions with proven delivery excellence.",
+  },
+  {
+    title: "IP & Data Protection",
+    desc: "Strict intellectual property rights and data security practices to protect your digital assets.",
+  },
+  {
+    title: "Experienced Professionals",
+    desc: "Certified engineers and domain experts delivering scalable, high-performance solutions.",
+  },
+  {
+    title: "Structured Reporting",
+    desc: "Clear hierarchy, real-time progress updates, and transparent project communication.",
+  },
+  {
+    title: "Escalation Framework",
+    desc: "Defined escalation paths for faster decisions and seamless project execution.",
+  },
+  {
+    title: "24/7 Support",
+    desc: "Round-the-clock technical support to keep your business running without interruptions.",
+  },
+];
 
 const WhyInfolanze = () => {
   return (
-    <>
-      <div className="font-family lg:px-28 md:px-20 px-5 bg-[--main-color] py-14 main">
-        <div className="pb-10">
-          <h3 className="lg:text-3xl text-2xl font-bold text-center lg:pt-0">
-            Why Infolanze Technologies?
-          </h3>
-          <p className="pt-2 text-center text-sm lg:text-base md:text-base lg:px-36">
-            With more than a decade of experience, Infolanze Technologies has
-            possessed the capabilities and skilled resources to offer
-            competitive and performance-driven mobile and web development
-            services.
+    <section className="relative py-24 overflow-hidden 
+      bg-gradient-to-br from-[#020617] via-[#0f172a] to-[#1e3a8a]">
+
+      {/* Glow Effects */}
+      <div className="absolute top-[-120px] left-[-120px] w-[420px] h-[420px] bg-blue-500/30 rounded-full blur-[120px]" />
+      <div className="absolute bottom-[-120px] right-[-120px] w-[420px] h-[420px] bg-indigo-500/30 rounded-full blur-[120px]" />
+
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-14 z-10">
+
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          {/* <span className="inline-block mb-4 text-sm font-semibold tracking-widest text-blue-400 uppercase">
+            Why Choose Us
+          </span> */}
+           <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-blue-400 mb-5">
+              <span className="w-2 h-2 rounded-full bg-blue-400"></span>
+              Why Choose Us
+            </span>
+          <h2 className="text-4xl lg:text-5xl font-bold text-white">
+            Why <span className="text-blue-400">Infolanze</span> Technologies?
+          </h2>
+          <p className="mt-6 text-blue-100/80 text-lg">
+            A technology partner focused on innovation, performance, and long-term success.
           </p>
         </div>
-        <div>
-          <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-10 md:gap-6 gap-6">
-            <div className="">
-              <div className="leading-company-box lcb13 bg-fc9290 rounded-md p-4 lg:p-8 xl:p-4 md:p-4 2xl:p-8">
-                <h3 className="text-lg font-bold manish">
-                  Expertise in Multiple Domains
-                </h3>
-                <p className="manish text-sm">
-                  We are a team of highly skilled professionals with proven
-                  expertise in custom software development across diverse
-                  industries and technologies.
-                </p>
-              </div>
+
+        {/* Cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {items.map((item, index) => (
+            <div
+              key={index}
+              className="group relative p-7 rounded-2xl 
+                bg-white/5 backdrop-blur-xl border border-white/10 
+                hover:border-blue-400/40 transition-all duration-300
+                hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(59,130,246,0.15)]">
+
+              {/* Accent Line */}
+              <div className="absolute left-0 top-6 h-10 w-1 rounded-full 
+                bg-gradient-to-b from-blue-400 to-cyan-400" />
+
+              <h3 className="text-xl font-semibold text-white mb-3">
+                {item.title}
+              </h3>
+              <p className="text-blue-100/70 text-sm leading-relaxed">
+                {item.desc}
+              </p>
             </div>
-            <div className="">
-              <div className="leading-company-box lcb14 bg-ffb379 rounded-md p-4 lg:p-8 xl:p-4 md:p-4 2xl:p-8">
-                <h3 className="text-lg font-bold manish">
-                  Intellectual Property Rights Protection
-                </h3>
-                <p className="text-sm">
-                Our experienced and IT professionals are skilled in multiple programming languages, ensuring competitive and dedicated solutions.
-                </p>
-              </div>
-            </div>
-            <div className="">
-              <div className="leading-company-box lcb15 bg-5fdbba rounded-md p-4 mt-8 pt-0 lg:p-8 xl:p-4 md:p-4">
-                <h3 className="text-lg font-bold manish">
-                  Experienced and Productive Professionals
-                </h3>
-                <p className="manish text-sm">
-                  Our experienced IT professionals have hands-on expertise in
-                  various programming languages and technologies. With dedicated
-                  resources, we deliver competitive solutions.
-                </p>
-              </div>
-            </div>
-            <div className="">
-              <div className="leading-company-box lcb16 bg-b2e388 rounded-md p-4 mt-8 pt-0 lg:p-8 xl:p-4 md:p-4">
-                <h3 className="text-lg font-bold manish">
-                  Hierarchy and Reporting Structure
-                </h3>
-                <p className="manish text-sm">
-                  We use various project management tools to efficiently plan,
-                  execute, and deploy projects, aiming to generate customized
-                  daily or weekly reports for our clients.
-                </p>
-              </div>
-            </div>
-            <div className="">
-              <div className="leading-company-box lcb17 bg-93d6f2 rounded-md p-4 mt-8 pt-0 lg:p-8 xl:p-4 md:p-4">
-                <h3 className="text-lg font-bold manish">
-                  Proper Hierarchy and Escalation Path
-                </h3>
-                <p className="manish text-sm">
-                  We maintain a strict management policy by implementing a
-                  proper hierarchy and escalation path. This ensures that
-                  employees receive all decisions and orders in a systematic
-                  manner.
-                </p>
-              </div>
-            </div>
-            <div className="">
-              <div className="leading-company-box lcb18 bg-fc9290 rounded-md p-4 mt-8 pt-0 lg:p-8 xl:p-4 md:p-4">
-                <h3 className="text-lg font-bold manish">
-                  24/7 Support Availability
-                </h3>
-                <p className="manish text-sm">
-                  We don't look at the clock when our clients are having any
-                  issues. Once you are connected with us then we consider your
-                  problems to be ours, thus, providing round the clock support.
-                </p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
