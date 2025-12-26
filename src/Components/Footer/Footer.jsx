@@ -4,17 +4,16 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa6";
 import Flogo1 from "../../Images/logo-1.png";
-import Flogo2 from "../../Images/footer-logo.png";
+import Flogo2 from "../../Images/InfoLanze Logo White.png";
 
 const Footer = () => {
   return (
     <footer className="relative bg-gradient-to-br from-[#020617] via-[#0f172a] to-[#1e3a8a] text-gray-200 overflow-hidden">
       
-      {/* Decorative Background Shapes */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-blue-600/20 skew-x-[-20deg] -z-10" />
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-indigo-500/20 skew-x-[20deg] -z-10" />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-14 py-14 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 py-8 relative z-10">
         <div className="grid gap-8 lg:grid-cols-4">
 
           {/* Logo & About */}

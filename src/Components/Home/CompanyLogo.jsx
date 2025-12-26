@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import { motion } from "framer-motion";
+
 import logo1 from "../../Images/logo1.png";
 import logo2 from "../../Images/logo-main.webp";
 import logo3 from "../../Images/ABSS-LOGO-png.png";
@@ -12,63 +13,94 @@ import logo6 from "../../Images/Hydropod_Logo.png";
 import logo7 from "../../Images/Betterwatater-logo.png";
 
 const CompanyLogo = () => {
-    const logos = [logo1, logo2, logo3, logo4, logo5, logo6, logo7];
+  const logos = [logo1, logo2, logo3, logo4, logo5, logo6, logo7];
 
-    const logoStyle = {
-        width: "140px",      // Increased size
-        height: "90px",      // Increased size
-        padding: "10px",     // More breathing room
-        margin: "0 auto",
-        display: "block",
-        objectFit: "contain",
-        filter: "none"
-    };
+  return (
+    <section className="relative py-24 overflow-hidden bg-white">
 
-    return (
-        <div className="lg:px-24 md:px-14 sm:px-6 px-6 py-10 sm:py-8 bg-img-2">
-            <div className="text-center pb-10 font-family">
-                <div className="uppercase text-4xl font-bold text-[--second-color]">
-                    Our Client
-                </div>
-                <div className="text-sm font-medium pt-2 opacity-90">
-                    We take pride in serving diverse clients, delivering high-quality website themes that enhance their digital presence and drive success.
-                </div>
-            </div>
-            <div className="text-center py-5">
-                <Swiper
-                    spaceBetween={20}  // Slightly more space between slides
-                    slidesPerView={5}
-                    autoplay={{
-                        delay: 2000,
-                        disableOnInteraction: false
-                    }}
-                    loop={true}
-                    modules={[Autoplay]}
-                    breakpoints={{
-                        320: { slidesPerView: 2, spaceBetween: 15 },
-                        375: { slidesPerView: 2, spaceBetween: 15 },
-                        480: { slidesPerView: 3, spaceBetween: 18 },
-                        640: { slidesPerView: 3, spaceBetween: 20 },
-                        768: { slidesPerView: 4, spaceBetween: 20 },
-                        1024: { slidesPerView: 5, spaceBetween: 20 },
-                    }}
-                >
-                    {[...Array(14)].map((_, index) => (  // More slides for smoother loop
-                        <SwiperSlide key={index}>
-                            <motion.img
-                                src={logos[index % logos.length]}
-                                className="drop-shadow-lg"
-                                style={logoStyle}
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.5, delay: index * 0.08 }}
-                            />
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-            </div>
+      {/* Subtle SVG Background */}
+      <svg
+        className="absolute inset-0 w-full h-full pointer-events-none"
+        viewBox="0 0 1440 600"
+        preserveAspectRatio="none"
+      >
+        <defs>
+          <linearGradient id="softGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="#eff6ff" />
+            <stop offset="100%" stopColor="#ecfeff" />
+          </linearGradient>
+        </defs>
+        <path
+          d="M0,200 C240,260 480,140 720,160 960,180 1200,260 1440,200 L1440,0 L0,0 Z"
+          fill="url(#softGrad)"
+        />
+      </svg>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
+
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-blue-600 mb-4">
+            <span className="w-2 h-2 rounded-full bg-blue-600"></span>
+            Trusted By
+          </span>
+
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900">
+            Our <span className="text-blue-600">Clients</span>
+          </h2>
+
+          <p className="mt-4 text-slate-600 text-lg">
+            We partner with forward-thinking brands to build impactful digital
+            experiences.
+          </p>
         </div>
-    );
+
+        {/* Logo Slider */}
+        <Swiper
+          spaceBetween={30}
+          slidesPerView={5}
+          autoplay={{
+            delay: 1800,
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          modules={[Autoplay]}
+          breakpoints={{
+            320: { slidesPerView: 2 },
+            480: { slidesPerView: 3 },
+            768: { slidesPerView: 4 },
+            1024: { slidesPerView: 5 },
+          }}
+        >
+          {[...Array(14)].map((_, index) => (
+            <SwiperSlide key={index}>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
+                className="group flex items-center justify-center
+                  h-28 rounded-2xl bg-white
+                  border border-blue-200
+                  shadow-sm hover:shadow-xl
+                  transition-all duration-300"
+              >
+                <img
+                  src={logos[index % logos.length]}
+                  alt="Client logo"
+                  className="
+                    max-h-16 max-w-[140px] object-contain
+                  
+                    group-hover:grayscale-0 group-hover:opacity-100
+                    transition duration-300
+                  "
+                />
+              </motion.div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </section>
+  );
 };
 
 export default CompanyLogo;

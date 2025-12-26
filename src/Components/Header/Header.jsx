@@ -31,7 +31,7 @@ function Header() {
       case "/service":
         setIsActive(4);
         break;
-        case "/career":
+      case "/career":
         setIsActive(5);
         break;
       case "/courses":
@@ -102,26 +102,13 @@ function Header() {
               {/* About */}
               <div className="lg:px-2">
                 <NavLink
-                  to="/about"
-                  id="2"
+                  to="/"
+                  id="1"
                   onClick={(e) => handleNavSelected(e)}
-                  className={`mr-5 hover:text-black cursor-pointer flex link ${isActive === 2 ? "active" : ""
+                  className={`mr-5 hover:text-black cursor-pointer flex link ${isActive === 1 ? "active" : ""
                     }`}
                 >
-                  About Us
-                </NavLink>
-              </div>
-
-              {/* Contact */}
-              <div className="lg:px-2">
-                <NavLink
-                  to="/contact"
-                  id="3"
-                  onClick={(e) => handleNavSelected(e)}
-                  className={`mr-5 hover:text-black cursor-pointer flex link ${isActive === 3 ? "active" : ""
-                    }`}
-                >
-                  Contact Us
+                  Home
                 </NavLink>
               </div>
 
@@ -172,7 +159,19 @@ function Header() {
                 )}
               </div>
 
-              <div className="lg:px-2">
+               <div className="lg:px-2">
+                <NavLink
+                  to="/about"
+                  id="2"
+                  onClick={(e) => handleNavSelected(e)}
+                  className={`mr-5 hover:text-black cursor-pointer flex link ${isActive === 2 ? "active" : ""
+                    }`}
+                >
+                  About Us
+                </NavLink>
+              </div>
+
+               <div className="lg:px-2">
                 <NavLink
                   to="/career"
                   id="5"
@@ -181,6 +180,18 @@ function Header() {
                     }`}
                 >
                   Career
+                </NavLink>
+              </div>
+
+               <div className="lg:px-2">
+                <NavLink
+                  to="/contact"
+                  id="3"
+                  onClick={(e) => handleNavSelected(e)}
+                  className={`mr-5 hover:text-black cursor-pointer flex link ${isActive === 3 ? "active" : ""
+                    }`}
+                >
+                  Contact Us
                 </NavLink>
               </div>
 

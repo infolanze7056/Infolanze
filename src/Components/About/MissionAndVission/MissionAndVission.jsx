@@ -29,7 +29,7 @@ const MissionAndVission = () => {
         {/* Cards */}
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-10">
           {/* Core Values */}
-          <div className="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-all">
+          <div className="bg-white rounded-3xl p-8 border border-blue-400 shadow-sm hover:shadow-md transition-all">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Core Values</h3>
             <ul className="space-y-3 text-gray-600 text-sm">
               <li><b>Agility:</b> Adapting fast with modern frameworks.</li>
@@ -41,7 +41,7 @@ const MissionAndVission = () => {
           </div>
 
           {/* Mission */}
-          <div className="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-all text-center">
+          <div className="bg-white rounded-3xl p-8 border border-blue-400 shadow-sm hover:shadow-md transition-all text-center">
             <img src={mission} alt="Mission" className="w-20 mx-auto mb-6" />
             <h3 className="text-xl font-semibold text-gray-900 mb-3">Our Mission</h3>
             <p className="text-gray-600 text-sm">
@@ -51,7 +51,7 @@ const MissionAndVission = () => {
           </div>
 
           {/* Vision */}
-          <div className="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-all text-center">
+          <div className="bg-white rounded-3xl p-8 border border-blue-400 shadow-sm hover:shadow-md transition-all text-center">
             <img src={vission} alt="Vision" className="w-20 mx-auto mb-6" />
             <h3 className="text-xl font-semibold text-gray-900 mb-3">Our Vision</h3>
             <p className="text-gray-600 text-sm">
