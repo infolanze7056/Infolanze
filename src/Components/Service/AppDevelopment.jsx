@@ -8,6 +8,7 @@ import img1 from "../../Images/app.png"
 import img2 from "../../Images/3543932.jpg"
 import img3 from "../../Images/4799410.jpg"
 import img4 from "../../Images/4851443.jpg"
+import ServiceProcess from "./ServiceComponent/ServiceProcess";
 
 function AppDevelopment() {
   return (
@@ -131,6 +132,7 @@ function AppDevelopment() {
           },
         ]}
       />
+      <ServiceProcess />
     </div>
   );
 }

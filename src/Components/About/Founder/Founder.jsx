@@ -107,8 +107,13 @@ const Founder = () => {
           strokeWidth="2"
         />
       </svg> */}
+      
 
       <div className="relative max-w-7xl mx-auto px-6 text-center">
+        <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-blue-400 mb-6">
+            <span className="w-2 h-2 rounded-full bg-blue-400"></span>
+           Our Team
+          </span>
         <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900">
           The People Who Power <span className="text-blue-600">Infolanze</span>
         </h2>

@@ -68,7 +68,6 @@ const AboutHero = () => {
               infrastructure to transform ideas into impactful technology.
             </p>
 
-            {/* CTA */}
             <div className="mt-10 flex justify-center lg:justify-start">
               <NavLink
                 to="/contact"

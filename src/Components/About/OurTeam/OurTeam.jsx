@@ -15,7 +15,7 @@ const OurTeam = () => {
           <div className="text-center max-w-4xl mx-auto mb-24">
           <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-blue-400 mb-6">
             <span className="w-2 h-2 rounded-full bg-blue-400"></span>
-            Our Team
+            Leadership & Talent
           </span>
 
           <h2 className="text-4xl lg:text-5xl font-bold text-white">
