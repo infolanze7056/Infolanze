@@ -71,7 +71,7 @@ function CareerOpening() {
                   </div>
                   <div className="pt-5">
                     <button
-                      className="rounded-full p-3 px-7 text-sm bg-[--second-color] transition duration-300 ease-in-out  text-white hover:text-black hover:bg-white flex items-center"
+                      className="rounded-full p-3 px-7 text-sm bg-[--second-color] transition duration-300 ease-in-out  "
                       onClick={() => openPopup(post)}
                     >
                       Apply Now&nbsp;&nbsp;

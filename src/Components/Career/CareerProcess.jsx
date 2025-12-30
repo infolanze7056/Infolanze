@@ -1,124 +1,114 @@
 import React from "react";
-import "./Career.css";
 import img1 from "../../Images/Tremendous-Transparency.png";
 import img2 from "../../Images/Expert-Team-Guidance.png";
 import img3 from "../../Images/Superior-Support.png";
 
 function CareerProcess() {
+  const steps = [
+    {
+      title: "CV Submission",
+      desc: "We look for curious minds who are passionate about learning, growing, and executing ideas with excellence.",
+      img: img1,
+    },
+    {
+      title: "Phone Screening",
+      desc: "Great teams multiply value. We seek communicators who adapt fast and grow together.",
+      img: img2,
+    },
+    {
+      title: "Skill Assessment",
+      desc: "We value unconventional thinking and problem-solving that creates meaningful impact.",
+      img: img3,
+    },
+    {
+      title: "Final Interview",
+      desc: "Clarity, honesty, and purpose matter. We hire people aligned with our values.",
+      img: img3,
+    },
+  ];
+
   return (
-    <div className="font-family">
-      <div className="lg:px-28 md:px-20 px-5 py-16">
-        <div className="">
-          <div className="lg:text-4xl md:text-4xl text-3xl font-semibold uppercase text-center text-[--second-color]">
-            Learn Our Recruitment Process
-          </div>
+    <section className="relative overflow-hidden">
+
+      {/* BACKGROUND LAYERS */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-[#f6f9ff] to-[#eef4ff]" />
+      <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-blue-300/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 -right-40 w-[450px] h-[450px] bg-indigo-300/10 rounded-full blur-3xl" />
+
+      <svg
+        className="absolute top-0 left-0 w-full h-64"
+        viewBox="0 0 1440 320"
+        preserveAspectRatio="none"
+      >
+        <path
+          fill="#2563eb"
+          fillOpacity="0.05"
+          d="M0,224L120,213.3C240,203,480,181,720,186.7C960,192,1200,224,1320,240L1440,256L1440,0L0,0Z"
+        />
+      </svg>
+
+      <div className="relative lg:px-28 md:px-20 px-5 py-28">
+
+        {/* HEADER */}
+        <div className="text-center max-w-3xl mx-auto">
+          {/* <span className="inline-block mb-5 px-6 py-1 text-xs tracking-[0.2em] uppercase font-semibold text-blue-600 bg-blue-100 rounded-full">
+            Hiring Process
+          </span> */}
+            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-blue-600 mb-6">
+              <span className="w-2 h-2 rounded-full bg-blue-600"></span>
+               Hiring Process
+            </span>
+
+          <h2 className="text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">
+            Our <span className="text-blue-600">Recruitment Journey</span>
+          </h2>
+
+          <p className="mt-4 text-slate-600 text-lg">
+            A transparent, thoughtful, and people-first approach to building
+            exceptional teams.
+          </p>
         </div>
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10 lg:px-20 pt-16">
-          <div className="bg-[--main-color] shadow-lg pt-4 pb-7 lg:mb-16 md:mb-10">
-            <div className="px-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                version="1.0"
-                viewBox="0 0 115 127"
-                width="120"
-              >
-                <path
-                  fill="white"
-                  d="M59.6 14.1C43.5 16.4 29.2 28.9 20 48.5c-4.1 8.7-7 19-7 24.8 0 2-.4 3.7-1 3.7-.5 0-1 .7-1 1.5s.5 1.5 1 1.5c.6 0 1 1.9 1 4.2.1 8.2 6.2 17.3 12.4 18.2 1.7.3 6.3.8 10.1 1.1 4.1.4 12.5 2.5 20.5 5.1 15 5 19.8 5.5 26.2 2.7 12.1-5.4 18.9-21.7 18.9-45.8.1-23.8-5.7-38-18.9-46.3-7.7-4.9-14-6.3-22.6-5.1"
-                />
-                <image href={img1} x="30%" y="28%" width="50" height="50" />
-              </svg>
-            </div>
-            <div className="px-7">
-              <div className="text-2xl font-semibold pt-3 pb-3">
-                CV Submition
-              </div>
-              <div className="">
-                We love hiring people who are passionate about their skills and
-                career. Someone who is hungry to learn, know and execute.
-              </div>
-            </div>
-          </div>
-          <div className="bg-[--main-color] shadow-lg pt-4 pb-7 lg:mt-16 md:mt-10">
-            <div className="px-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                version="1.0"
-                viewBox="0 0 115 127"
-                width="120"
-              >
-                <path
-                  fill="white"
-                  d="M59.6 14.1C43.5 16.4 29.2 28.9 20 48.5c-4.1 8.7-7 19-7 24.8 0 2-.4 3.7-1 3.7-.5 0-1 .7-1 1.5s.5 1.5 1 1.5c.6 0 1 1.9 1 4.2.1 8.2 6.2 17.3 12.4 18.2 1.7.3 6.3.8 10.1 1.1 4.1.4 12.5 2.5 20.5 5.1 15 5 19.8 5.5 26.2 2.7 12.1-5.4 18.9-21.7 18.9-45.8.1-23.8-5.7-38-18.9-46.3-7.7-4.9-14-6.3-22.6-5.1"
-                />
-                <image href={img2} x="30%" y="28%" width="50" height="50" />
-              </svg>
-            </div>
-            <div className="px-7">
-              <div className="text-2xl font-semibold pt-3 pb-3">
-                Phone scoring
-              </div>
-              <div className="">
-              1 plus 1 is 11. That’s the mathematics for Team players who learn
-              faster, add more value, and have a fantastic career trajectory.
+
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12 mt-24">
+
+          {steps.map((step, index) => (
+            <div
+              key={index}
+              className={`relative group ${
+                index % 2 !== 0 ? "lg:mt-16" : ""
+              }`}
+            >
+              {/* Gradient Border */}
+              <div className="absolute inset-0 rounded-[28px] bg-gradient-to-br from-blue-500/30 to-indigo-500/30 opacity-0 group-hover:opacity-100 transition" />
+
+              {/* Glass Card */}
+              <div className="relative h-full rounded-[26px] p-8 bg-white/70 backdrop-blur-xl border border-white/60 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3">
+
+                {/* Step Number */}
+                <div className="absolute -top-6 left-6 w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 text-white font-bold shadow-lg">
+                  {index + 1}
+                </div>
+
+                {/* Icon */}
+                <div className="mt-8 w-20 h-20 mx-auto flex items-center justify-center rounded-2xl bg-blue-100">
+                  <img src={step.img} alt={step.title} className="w-10 h-10" />
+                </div>
+
+                {/* Text */}
+                <h3 className="mt-6 text-xl font-semibold text-center text-slate-900">
+                  {step.title}
+                </h3>
+
+                <p className="mt-3 text-center text-slate-600 text-sm leading-relaxed">
+                  {step.desc}
+                </p>
               </div>
             </div>
-          </div>
-          <div className="bg-[--main-color] shadow-lg pt-4 pb-7 lg:mb-16 md:mb-10">
-            <div className="px-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                version="1.0"
-                viewBox="0 0 115 127"
-                width="120"
-              >
-                <path
-                  fill="white"
-                  d="M59.6 14.1C43.5 16.4 29.2 28.9 20 48.5c-4.1 8.7-7 19-7 24.8 0 2-.4 3.7-1 3.7-.5 0-1 .7-1 1.5s.5 1.5 1 1.5c.6 0 1 1.9 1 4.2.1 8.2 6.2 17.3 12.4 18.2 1.7.3 6.3.8 10.1 1.1 4.1.4 12.5 2.5 20.5 5.1 15 5 19.8 5.5 26.2 2.7 12.1-5.4 18.9-21.7 18.9-45.8.1-23.8-5.7-38-18.9-46.3-7.7-4.9-14-6.3-22.6-5.1"
-                />
-                <image href={img3} x="30%" y="28%" width="50" height="50" />
-              </svg>
-            </div>
-            <div className="px-7">
-              <div className="text-2xl font-semibold pt-3 pb-3">
-              Skill Assignment
-              </div>
-              <div className="">
-              We encourage a culture that accepts the differences and cultivates
-              best with them. Being conventionally unconventional we ought to
-              bring out the best with anything we do.
-              </div>
-            </div>
-          </div>
-          <div className="bg-[--main-color] shadow-lg pt-4 pb-7 lg:mt-16 md:mt-10">
-            <div className="px-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                version="1.0"
-                viewBox="0 0 115 127"
-                width="120"
-              >
-                <path
-                  fill="white"
-                  d="M59.6 14.1C43.5 16.4 29.2 28.9 20 48.5c-4.1 8.7-7 19-7 24.8 0 2-.4 3.7-1 3.7-.5 0-1 .7-1 1.5s.5 1.5 1 1.5c.6 0 1 1.9 1 4.2.1 8.2 6.2 17.3 12.4 18.2 1.7.3 6.3.8 10.1 1.1 4.1.4 12.5 2.5 20.5 5.1 15 5 19.8 5.5 26.2 2.7 12.1-5.4 18.9-21.7 18.9-45.8.1-23.8-5.7-38-18.9-46.3-7.7-4.9-14-6.3-22.6-5.1"
-                />
-                <image href={img3} x="30%" y="28%" width="50" height="50" />
-              </svg>
-            </div>
-            <div className="px-7">
-              <div className="text-2xl font-semibold pt-3 pb-3">
-              Final Interview
-              </div>
-              <div className="">
-              We love people who have clarity. Honesty is non-negotiable for us
-              and something which we always look for before giving an
-              opportunity.
-              </div>
-            </div>
-          </div>
+          ))}
+
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
